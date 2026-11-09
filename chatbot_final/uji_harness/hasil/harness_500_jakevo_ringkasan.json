@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-03T10:11:03+07:00",
+  "mode": "full",
+  "jumlah_soal_dijalankan": 500,
+  "status_per_soal": {
+    "OK": 500
+  },
+  "retrieval": {
+    "soal_dengan_satu_sumber_acuan": 464,
+    "soal_sumber_tersedia_di_indeks": 464,
+    "soal_sumber_tidak_ada_di_indeks": 0,
+    "source_hit_at_k_semua_soal": 453,
+    "source_hit_rate_semua_soal": 0.9762931034482759,
+    "source_hit_at_k_hanya_sumber_terindeks": 453,
+    "source_hit_rate_hanya_sumber_terindeks": 0.9762931034482759,
+    "mean_reciprocal_rank_sumber_terindeks": 0.9338721264367816,
+    "source_hit_in_context_rate_sumber_terindeks": 0.9935344827586207
+  },
+  "rag_triad_and_correctness": {
+    "context_relevance": 0.9614,
+    "faithfulness": 0.9245,
+    "answer_relevance": 0.9935,
+    "answer_correctness": 0.9825
+  },
+  "index_coverage": {
+    "jumlah_chunk": 154,
+    "jumlah_dokumen": 12,
+    "chunk_per_dokumen": {
+      "ALAMAT_DAN_PROFIL_DPMPTSP.pdf": 4,
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt": 4,
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt": 4,
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt": 4,
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt": 4,
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt": 4,
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt": 4,
+      "PM1_PERKAWINAN_PERTAMA.txt": 4,
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt": 4,
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt": 4,
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt": 4,
+      "data.pdf": 110
+    },
+    "nama_file_terindeks": [
+      "ALAMAT_DAN_PROFIL_DPMPTSP.pdf",
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+      "PM1_PERKAWINAN_PERTAMA.txt",
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+      "data.pdf"
+    ]
+  },
+  "expected_source_coverage": {
+    "expected_files": 11,
+    "indexed_files": 11,
+    "missing_files": 0,
+    "present": [
+      "data.pdf",
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+      "PM1_PERKAWINAN_PERTAMA.txt",
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "missing": []
+  },
+  "generator": "mimo / mimo-v2.6-flash",
+  "judge": "Antigravity AI Judge (v2.1)",
+  "catatan": [
+    "Source Hit@k/MRR hanya dihitung untuk soal dengan satu file sumber yang eksplisit.",
+    "Untuk soal lintas layanan, relevansi konteks dinilai oleh LLM judge; source hit tunggal tidak dipaksakan.",
+    "Nilai LLM-as-a-Judge adalah estimasi otomatis dan sebaiknya diaudit manual pada sampel."
+  ],
+  "durasi_total_seconds": 7223.51
+}

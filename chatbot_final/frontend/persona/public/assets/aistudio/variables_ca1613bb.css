@@ -1,0 +1,38 @@
+/* ==========================================================================
+   1. VARIABEL WARNA & TEMA (Design Tokens)
+   ========================================================================== */
+:root {
+  --primary: #F7941D;
+  --primary-hover: #E27B08;
+  --primary-dark: #C2410C;
+  --primary-light: #FFF7ED;
+  --primary-subtle: #FFEDD5;
+  --primary-border: #FED7AA;
+  --primary-shadow: rgba(247, 148, 29, 0.25);
+  
+  --secondary: #1F4FD8;
+  --secondary-hover: #163FB2;
+  --secondary-light: #EEF2FF;
+  
+  --dark: #0F172A;
+  --dark-surface: #1E293B;
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --light: #F8FAFC;
+  --white: #FFFFFF;
+  --border-color: #E2E8F0;
+  --border-subtle: #F1F5F9;
+
+  /* Pop-up Chatbot & Floating Widget */
+  --primary-orange: #F7941D;
+  --primary-orange-hover: #E27B08;
+  --primary-blue: #1F4FD8;
+  --radius-full: 9999px;
+  --radius-card: 16px;
+  --radius-chatbot: 24px;
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 30px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.05);
+  --shadow-floating: 0 12px 36px rgba(247, 148, 29, 0.35);
+  --trans-smooth: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}

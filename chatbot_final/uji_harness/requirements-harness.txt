@@ -1,0 +1,8 @@
+# Dependensi yang digunakan harness dan pipeline retrieval proyek JAKEVO.
+chromadb
+sentence-transformers
+pydantic
+pydantic-settings
+python-dotenv
+google-genai
+httpx

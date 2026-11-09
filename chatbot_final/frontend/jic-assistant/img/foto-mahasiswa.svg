@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 380" width="300" height="380">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF7ED"/>
+      <stop offset="100%" stop-color="#FED7AA"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7941D"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="300" height="380" rx="16" fill="url(#bgGrad)"/>
+  <rect x="8" y="8" width="284" height="364" rx="12" fill="none" stroke="#F7941D" stroke-width="2" stroke-dasharray="6 4" opacity="0.6"/>
+  
+  <!-- Silhouette Student -->
+  <g transform="translate(0, 10)">
+    <!-- Toga Hat / Graduation Cap -->
+    <path d="M150 70 L230 105 L150 140 L70 105 Z" fill="#1E293B"/>
+    <polygon points="150,75 220,105 150,135 80,105" fill="#334155"/>
+    <circle cx="150" cy="105" r="5" fill="#F7941D"/>
+    <!-- Tassel -->
+    <path d="M150 105 Q190 120 195 155" stroke="#F7941D" stroke-width="3" fill="none"/>
+    <circle cx="195" cy="158" r="4" fill="#E27B08"/>
+
+    <!-- Head -->
+    <circle cx="150" cy="170" r="45" fill="#FED7AA"/>
+    <path d="M115 170 C115 130 185 130 185 170 Z" fill="#475569" opacity="0.4"/>
+
+    <!-- Body / Formal Suit / Jas Almamater -->
+    <path d="M70 340 C70 250 110 230 150 230 C190 230 230 250 230 340 Z" fill="url(#bodyGrad)"/>
+    <!-- Kemeja Putih & Dasi -->
+    <polygon points="150,230 135,275 165,275" fill="#FFFFFF"/>
+    <polygon points="150,245 145,295 150,310 155,295" fill="#1E293B"/>
+  </g>
+
+  <!-- Label Text -->
+  <rect x="40" y="325" width="220" height="32" rx="16" fill="#1E293B" opacity="0.85"/>
+  <text x="150" y="346" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    📸 Ganti Foto Mahasiswa
+  </text>
+</svg>

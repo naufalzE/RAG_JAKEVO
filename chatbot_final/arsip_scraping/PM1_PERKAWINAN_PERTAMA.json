@@ -1,0 +1,28 @@
+{
+  "source_type": "webpage",
+  "source_url": "https://jakevo.jakarta.go.id/perizinan/perizinan-nonperizinan/PM1-LurahCamat-SURAT-PENGANTAR-PERKAWINAN-PERTAMA-%28UMUM%29-633f84c475d8bc9ad9",
+  "final_url": "https://jakevo.jakarta.go.id/perizinan/perizinan-nonperizinan/PM1-LurahCamat-SURAT-PENGANTAR-PERKAWINAN-PERTAMA-%28UMUM%29-633f84c475d8bc9ad9",
+  "nama_dokumen": "PM1 Lurah/Camat - SURAT PENGANTAR PERKAWINAN PERTAMA (UMUM)",
+  "fetched_at_utc": "2026-10-29T06:26:43.160726+00:00",
+  "http_status": 200,
+  "content_type": "text/html",
+  "bagian_terdeteksi": [
+    "persyaratan",
+    "alur proses",
+    "dasar hukum",
+    "biaya retribusi"
+  ],
+  "teks_halaman": "Masuk\nPM1 Lurah/Camat - SURAT PENGANTAR PERKAWINAN PERTAMA (UMUM)\nTipe Perizinan\nPilih Tipe Perizinan\nperorangan\nTipe Pengajuan\nPilih Tipe Pengajuan\nbaru\nEstimasi Waktu Pelayanan\n1 hari Kerja\nBiaya Retribusi\nTanpa Retribusi\nPersyaratan\n1\nIdentitas Pemohon\n2\nSurat Pengantar yang ditandatangani RT/ RW\n3\nSurat Pernyataan Belum Pernah Menikah dari Pemohon yang ditandatangani 2 orang saksi (yang tidak ada hubungan keluarga) bermaterai 10.000\nTemplate Unduh Disini\n4\nSurat Kuasa bermaterai 10.000 beserta scan asli KTP Penerima Kuasa (apabila dikuasakan)\nTemplate Unduh Disini\n5\nScan Asli KTP dan Kartu Keluarga Pemohon\n6\nScan Asli Akta Kelahiran Pemohon\n7\nScan asli KTP dan Kartu Keluarga Calon\n8\nScan Asli KTP 2 orang Saksi\n9\nScan asli Sertifikat Layak Kawin Pemohon dari Puskesmas Kecamatan setempat\n10\nScan asli KTP dan KK orang tua pemohon (apabila masih hidup)/ Akta kematian (jika sudah meninggal)/ Akte Kematian / Surat Keterangan Kematian (jika sudah meninggal)/ Akte Cerai (jika telah bercerai)\nAlur Proses\n1\nPengajuan\nPemohon\nPemohon mengisi formulir pendaftaran dan mengunggah dokumen persyaratan\n2\nVerifikasi Administrasi\nKasie Kelurahan\nPetugas memvalidasi kelengkapan berkas. Jika tidak lengkap, berkas akan dikembalikan ke pemohon untuk diperbaiki.\n3\nPenetapan\nLurah\nPenandatanganan draf dokumen izin secara elektronik oleh Kepala Kantor atau Pejabat berwenang.\n4\nIzin Terbit\nSistem\nDokumen resmi diterbitkan dan siap diunduh oleh pemohon melalui jakevo\nDasar Hukum\n4 regulasi\nInstruksi Sekda\naktif\nBerlaku 6 Desember 2023\nInstruksi Sekretaris Daerah Provinsi DKI Jakarta Nomor e-0024 tahun 2023 tentang Pedoman Pelayanan Administrasi Kelurahan\nUndang-Undang\naktif\nBerlaku 24 Desember 2013\nUndang-Undang Nomor 24 Tahun 2013 tentang Perubahan Atas UU Nomor 23 Tahun 2006 tentang Administrasi Kependudukan\nPeraturan Daerah\naktif\nBerlaku 12 Desember 2013\nPerda Provinsi DKI Jakarta Nomor 12 Tahun 2013 tentang Penyelenggaraan Pelayanan Terpadu Satu Pintu\nUndang-Undang\naktif\nBerlaku 18 Juli 2009\nUndang-Undang Nomor 25 Tahun 2009 tentang Pelayanan Publik\nAjukan Permohonan\nKonsultasi",
+  "tautan_lampiran": [
+    {
+      "teks_tautan": "Template Unduh Disini",
+      "url": "https://jakevo.jakarta.go.id/documents/Surat_Pernyataan_Belum_Pernah_Kawin.docx",
+      "kemungkinan_file": true
+    },
+    {
+      "teks_tautan": "Template Unduh Disini",
+      "url": "https://jakevo.jakarta.go.id/documents/Surat_Kuasa.docx",
+      "kemungkinan_file": true
+    }
+  ]
+}

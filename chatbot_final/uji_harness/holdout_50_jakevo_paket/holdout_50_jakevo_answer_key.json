@@ -1,0 +1,690 @@
+[
+  {
+    "id": 501,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Untuk lokasi yang disewa, halaman layanan meminta surat pernyataan bermaterai dari pemilik tanah/bangunan yang menyatakan tidak keberatan tempat tersebut digunakan, serta KTP pemilik tanah/bangunan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1945,
+      "closest_old_question_id": 324
+    }
+  },
+  {
+    "id": 502,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Selain scan asli STNK kendaraan, pemohon diminta scan asli hasil uji kelayakan kendaraan (KIR). Usia kendaraan yang digunakan harus kurang dari 5 tahun.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.3635,
+      "closest_old_question_id": 34
+    }
+  },
+  {
+    "id": 503,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Tahap berikutnya adalah Survey Lapangan bersama. Pelaksananya Petugas Lapangan yang melakukan verifikasi dan peninjauan lapangan. Tahap ini berlangsung sebelum Penetapan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2027,
+      "closest_old_question_id": 238
+    }
+  },
+  {
+    "id": 504,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt"
+    ],
+    "ground_truth": "Ya. Selain Surat Keterangan Kematian dari Puskesmas/Rumah Sakit, daftar persyaratan juga mencantumkan Surat Keterangan Laporan Kematian dari Kelurahan setempat. Keduanya merupakan butir persyaratan yang terpisah.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2384,
+      "closest_old_question_id": 256
+    }
+  },
+  {
+    "id": 505,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt"
+    ],
+    "ground_truth": "Surat Keterangan Kehilangan dari Kepolisian.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1922,
+      "closest_old_question_id": 163
+    }
+  },
+  {
+    "id": 506,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Halaman layanan meminta surat pernyataan bermaterai Rp10.000 dari pemilik tanah/bangunan yang menyatakan tidak keberatan tempat itu digunakan, serta KTP pemilik tanah/bangunan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1202,
+      "closest_old_question_id": 312
+    }
+  },
+  {
+    "id": 507,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Anggaran Dasar atau Anggaran Rumah Tangga (AD-ART).",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1287,
+      "closest_old_question_id": 40
+    }
+  },
+  {
+    "id": 508,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Belum sesuai. Persyaratan menyebut Sertifikat Nomor Kontrol Veteriner (NKV) yang sudah di-surveillance berkala sesuai dengan level sertifikasi.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1045,
+      "closest_old_question_id": 344
+    }
+  },
+  {
+    "id": 509,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Halaman mencantumkan NPWP Perusahaan dan NPWP Penanggungjawab sebagai dua persyaratan yang berbeda.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1855,
+      "closest_old_question_id": 344
+    }
+  },
+  {
+    "id": 510,
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Sertifikat Kompetensi Juru Sembelih Halal.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2376,
+      "closest_old_question_id": 44
+    }
+  },
+  {
+    "id": 511,
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "ground_truth": "Diperlukan perjanjian kerja sama pengelolaan limbah medis padat dan cair dengan pihak lain yang telah memiliki Izin Pengelolaan Limbah sesuai peraturan, atau dengan Tempat Penampungan Lain yang ditetapkan/disetujui Dinas Kesehatan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2317,
+      "closest_old_question_id": 226
+    }
+  },
+  {
+    "id": 512,
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "ground_truth": "Perjanjian kerja sama dukungan fasilitas pelayanan kesehatan terhadap program kesehatan nasional dan daerah dengan Puskesmas.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2334,
+      "closest_old_question_id": 28
+    }
+  },
+  {
+    "id": 513,
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ],
+    "ground_truth": "Dokumen mencantumkan Surat Pernyataan Pengganti RT/RW dan Surat Pernyataan Tidak Mampu di atas kertas bermaterai Rp10.000. Keduanya merupakan dua persyaratan terpisah; surat kedua menyatakan kondisi tidak mampu, sedangkan surat pertama menggantikan pengantar RT/RW.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1693,
+      "closest_old_question_id": 400
+    }
+  },
+  {
+    "id": 514,
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ],
+    "ground_truth": "Daftar persyaratan menyebut Surat Pernyataan Belum Pernah Menikah dari Pemohon, yang ditandatangani/disaksikan dua orang saksi yang tidak ada hubungan keluarga dan bermaterai Rp10.000. Tidak disebutkan surat pernyataan serupa dari calon pasangan pada layanan ini.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2248,
+      "closest_old_question_id": 153
+    }
+  },
+  {
+    "id": 515,
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ],
+    "ground_truth": "Formulir N1 dan PM 1 untuk pernikahan harus sudah ditandatangani Lurah sebelum dipindai dan dilampirkan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2729,
+      "closest_old_question_id": 162
+    }
+  },
+  {
+    "id": 516,
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ],
+    "ground_truth": "Tautan Google Drive atau Dropbox dilampirkan pada box pesan di bawah kolom persyaratan. Setelah mengisi formulir dan mengunggah berkas, pemohon menekan tombol “Ajukan Permohonan”.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1865,
+      "closest_old_question_id": 445
+    }
+  },
+  {
+    "id": 517,
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ],
+    "ground_truth": "Pemohon diharapkan memeriksa kembali permohonan setelah memperbaiki isian dan berkas. Setelah itu pemohon dapat menekan tombol “Ajukan” atau “Ajukan Perbaikan Berkas”.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.0953,
+      "closest_old_question_id": 72
+    }
+  },
+  {
+    "id": 518,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+      "PM1_PERKAWINAN_PERTAMA.txt",
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ],
+    "ground_truth": "Dokumen Surat Pendaftaran/Pencatatan Nikah dari KUA Kecamatan tercantum pada layanan PM1 Surat Dispensasi Perkawinan. Dokumen tersebut tidak tercantum sebagai persyaratan pada halaman perkawinan pertama umum atau perkawinan di bawah umur.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2109,
+      "closest_old_question_id": 163
+    }
+  },
+  {
+    "id": 519,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ],
+    "ground_truth": "Perkawinan di bawah umur: verifikasi oleh Kasie Kelurahan dan penetapan oleh Lurah. Dispensasi perkawinan: verifikasi oleh Kasie Kecamatan dan penetapan oleh Camat.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.331,
+      "closest_old_question_id": 482
+    }
+  },
+  {
+    "id": 520,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt",
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ],
+    "ground_truth": "Tidak sama. Surat Pengantar Perkawinan Pertama meminta scan asli Sertifikat Layak Kawin Pemohon. Surat Dispensasi Perkawinan meminta Sertifikat Layak Kawin Pemohon dan Calon dari Puskesmas.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.3469,
+      "closest_old_question_id": 480
+    }
+  },
+  {
+    "id": 521,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Izin Penggunaan Tanah Makam mencantumkan tipe perizinan perorangan. Izin Usaha Jasa Pelayanan Pemakaman mencantumkan tipe perizinan perusahaan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1206,
+      "closest_old_question_id": 312
+    }
+  },
+  {
+    "id": 522,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Kedua layanan meminta perjanjian sewa-menyewa, surat pernyataan dari pemilik yang menyatakan tidak keberatan tempat digunakan, dan KTP pemilik. Pada layanan jasa pelayanan pemakaman, surat pernyataan tersebut secara eksplisit bermaterai Rp10.000; pada layanan angkutan kebersihan tertulis bermaterai sesuai peraturan yang berlaku.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2171,
+      "closest_old_question_id": 312
+    }
+  },
+  {
+    "id": 523,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "ground_truth": "Izin angkutan kebersihan memiliki tahap tersendiri bernama “Survey Lapangan bersama” oleh Petugas Lapangan. SIP dokter umum memiliki “Evaluasi Teknis” dan “Rekomendasi Teknis” oleh OPD teknis; peninjauan lapangan dilakukan jika diperlukan sebagai bagian dasar rekomendasi, bukan tahap bernama Survey Lapangan bersama.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1412,
+      "closest_old_question_id": 30
+    }
+  },
+  {
+    "id": 524,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ],
+    "ground_truth": "Ya. Kedua halaman mencantumkan Kartu Izin Tinggal Terbatas (KITAS) atau VISA/Paspor untuk Warga Negara Asing.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.0653,
+      "closest_old_question_id": 473
+    }
+  },
+  {
+    "id": 525,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt",
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ],
+    "ground_truth": "Pada layanan perkawinan pertama dan di bawah umur, persyaratan menyebut surat pernyataan belum pernah menikah dari Pemohon yang disaksikan dua orang saksi yang tidak ada hubungan keluarga. Pada layanan dispensasi, selain pernyataan dari Pemohon yang disaksikan dua saksi, juga dicantumkan Surat Pernyataan Belum Pernah Menikah dari Calon pengantin.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.3646,
+      "closest_old_question_id": 105
+    }
+  },
+  {
+    "id": 526,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Izin angkutan kebersihan meminta STNK kendaraan yang usianya kurang dari 5 tahun dan hasil uji kelayakan kendaraan (KIR), serta bukti pembayaran retribusi tiga bulan terakhir. Izin pemotongan ternak meminta NKV yang sudah di-surveillance berkala sesuai level sertifikasi dan Sertifikat Kompetensi Juru Sembelih Halal; bukan dokumen STNK/KIR.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1425,
+      "closest_old_question_id": 44
+    }
+  },
+  {
+    "id": 527,
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Tidak. SIP Dokter (Dokter Umum Perorangan) mencantumkan tipe perizinan perorangan. Izin Usaha Pemotongan Ternak mencantumkan tipe perizinan perorangan dan perusahaan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2557,
+      "closest_old_question_id": 224
+    }
+  },
+  {
+    "id": 528,
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya meminta klarifikasi jenis layanan: Surat Pengantar Perkawinan Pertama (Umum), Surat Pengantar Perkawinan di Bawah Umur, atau Surat Dispensasi Perkawinan. Ketiganya memiliki daftar persyaratan yang berbeda; jangan memilih salah satu tanpa konfirmasi.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1731,
+      "closest_old_question_id": 5
+    }
+  },
+  {
+    "id": 529,
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya menanyakan nama layanan/izin yang dimaksud karena estimasi pada sumber berbeda-beda, misalnya 1, 7, atau 14 hari kerja.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1174,
+      "closest_old_question_id": 283
+    }
+  },
+  {
+    "id": 530,
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya meminta nama layanan dan tahap yang dimaksud. Pelaksana verifikasi serta pejabat penetap berbeda antar layanan; jangan menebak satu pejabat.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2251,
+      "closest_old_question_id": 265
+    }
+  },
+  {
+    "id": 531,
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya menanyakan jenis izin usaha yang dimaksud, misalnya angkutan di bidang kebersihan, jasa pelayanan pemakaman, atau pemotongan ternak, karena persyaratannya berbeda.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1887,
+      "closest_old_question_id": 134
+    }
+  },
+  {
+    "id": 532,
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya meminta nama layanan atau jenis surat pernyataan yang dimaksud. Beberapa layanan mempunyai template berbeda, dan tidak semua surat pernyataan memiliki tautan unduh.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2897,
+      "closest_old_question_id": 380
+    }
+  },
+  {
+    "id": 533,
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya menanyakan layanan yang ingin diajukan terlebih dahulu. Tipe perizinan berbeda antar layanan; tidak boleh menyimpulkan kelayakan hanya dari pilihan perorangan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1353,
+      "closest_old_question_id": 92
+    }
+  },
+  {
+    "id": 534,
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya menanyakan nama layanan. Alur layanan berbeda; sebagian mencantumkan survey lapangan atau tahapan teknis, sementara layanan lain tidak mencantumkannya.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1124,
+      "closest_old_question_id": 93
+    }
+  },
+  {
+    "id": 535,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Tidak. Persyaratan menyebut usia kendaraan kurang dari 5 tahun. Kendaraan yang tepat berusia 5 tahun tidak memenuhi rumusan “kurang dari 5 tahun”.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2332,
+      "closest_old_question_id": 493
+    }
+  },
+  {
+    "id": 536,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Tidak. Persyaratan secara eksplisit meminta NKV yang sudah di-surveillance berkala sesuai dengan level sertifikasi.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1155,
+      "closest_old_question_id": 368
+    }
+  },
+  {
+    "id": 537,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Tidak. Izin Penggunaan Tanah Makam mencantumkan tipe perizinan perorangan, sedangkan Izin Usaha Jasa Pelayanan Pemakaman mencantumkan tipe perusahaan. Keduanya adalah layanan berbeda.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2513,
+      "closest_old_question_id": 492
+    }
+  },
+  {
+    "id": 538,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Tidak. Tipe perizinan yang tercantum pada halaman Izin Usaha Jasa Pelayanan Pemakaman hanya perusahaan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.3067,
+      "closest_old_question_id": 41
+    }
+  },
+  {
+    "id": 539,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ],
+    "ground_truth": "Tidak. Daftar persyaratan SKTM mencantumkan keduanya sebagai butir terpisah: Surat Pernyataan Pengganti RT/RW dan Surat Pernyataan Tidak Mampu bermaterai Rp10.000.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.3283,
+      "closest_old_question_id": 19
+    }
+  },
+  {
+    "id": 540,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "ground_truth": "Tidak. Alur SIP mencakup Evaluasi Teknis oleh OPD teknis dan Rekomendasi Teknis oleh OPD teknis sebelum Penetapan dan Izin Terbit.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1416,
+      "closest_old_question_id": 30
+    }
+  },
+  {
+    "id": 541,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ],
+    "ground_truth": "Tidak. Pada daftar persyaratan Surat Pengantar Perkawinan Pertama (Umum), Formulir N1/PM1 dan surat pendaftaran/pencatatan nikah dari KUA tidak tercantum. Dokumen tersebut tercantum pada layanan Surat Dispensasi Perkawinan.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1939,
+      "closest_old_question_id": 11
+    }
+  },
+  {
+    "id": 542,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ],
+    "ground_truth": "Sertifikat Layak Kawin tidak tercantum pada daftar persyaratan halaman PM1 Perkawinan di Bawah Umur. Jangan memindahkan persyaratan dari layanan perkawinan pertama atau dispensasi ke layanan ini.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.2686,
+      "closest_old_question_id": 480
+    }
+  },
+  {
+    "id": 543,
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ],
+    "ground_truth": "Tidak boleh menyamakan kedua daftar. Halaman KPR (Surat Pengantar Keterangan Belum Memiliki Rumah) tidak mencantumkan KK pemohon, sedangkan halaman SKTM mencantumkan Kartu Keluarga (KK) Pemohon.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.0745,
+      "closest_old_question_id": 386
+    }
+  },
+  {
+    "id": 544,
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot tidak dapat memeriksa status transaksi atau permohonan individual secara real-time dan tidak boleh meminta atau menggunakan NIK untuk mengakses akun. Arahkan pengguna memeriksa melalui akun/portal resmi JAKEVO atau kanal resmi petugas.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1098,
+      "closest_old_question_id": 401
+    }
+  },
+  {
+    "id": 545,
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Di luar cakupan kemampuan chatbot. Chatbot informasi tidak dapat mengakses akun, mengunggah dokumen, mengubah data, atau mengajukan permohonan atas nama pengguna.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.0843,
+      "closest_old_question_id": 61
+    }
+  },
+  {
+    "id": 546,
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Tidak. Chatbot tidak dapat melakukan pembayaran atau mengakses akun/transaksi pengguna. Pengguna perlu mengikuti proses pembayaran pada kanal resmi JAKEVO.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.0968,
+      "closest_old_question_id": 457
+    }
+  },
+  {
+    "id": 547,
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Informasi ketersediaan petak makam secara real-time tidak tersedia pada dokumen layanan yang diberikan. Chatbot harus menyatakan tidak dapat memastikan ketersediaan dan mengarahkan pengguna ke pengelola TPU/kanal resmi.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.0923,
+      "closest_old_question_id": 32
+    }
+  },
+  {
+    "id": 548,
+    "category": "Di luar cakupan",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Tidak boleh menjamin tanggal terbit. Halaman hanya mencantumkan estimasi waktu pelayanan 14 hari kerja, bukan jaminan selesai dalam 14 hari kalender. Waktu aktual dapat bergantung pada proses dan kelengkapan berkas; sumber tidak memberi jaminan individual.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.0914,
+      "closest_old_question_id": 94
+    }
+  },
+  {
+    "id": 549,
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot tidak dapat membuka akun atau mengambil kembali file pribadi dari fitur Berkas Saya. Pengguna perlu mengunduhnya sendiri melalui akun JAKEVO; chatbot tidak boleh mengklaim memiliki akses ke file akun.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.1857,
+      "closest_old_question_id": 62
+    }
+  },
+  {
+    "id": 550,
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Tidak dapat dipastikan hanya dari snapshot dokumen. Chatbot boleh menyebut status dan tanggal berlaku sebagaimana tercatat pada sumber, tetapi harus menjelaskan bahwa perubahan setelah tanggal pengambilan data perlu diverifikasi pada kanal/regulasi resmi terbaru.",
+    "similarity_audit": {
+      "max_tfidf_similarity_to_old_500": 0.0719,
+      "closest_old_question_id": 124
+    }
+  }
+]

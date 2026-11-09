@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Proyek PKL - Implementasi Chatbot RAG JAKEVO Assistant DPMPTSP Provinsi DKI Jakarta">
+  <title>Portofolio Proyek - Chatbot RAG JAKEVO Assistant | DPMPTSP DKI Jakarta</title>
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icon Font Stylesheet (Font Awesome 5 & Bootstrap Icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap 5 Stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet (Portfolio Edition) -->
+  <!-- Modular Custom Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/widget.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- ==========================================
+       1. SPINNER PRELOADER
+       ========================================== -->
+  <div id="spinner" class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       2. MODERN PORTFOLIO NAVBAR
+       ========================================== -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top portfolio-navbar" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#beranda">
+        <div class="brand-icon-box me-2">
+          <i class="fa fa-robot"></i>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title">JAKEVO Assistant</span>
+          <span class="brand-badge">Portfolio Proyek</span>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger Toggler -->
+      <button class="navbar-toggler custom-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavContent" aria-controls="portfolioNavContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="portfolioNavContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#beranda">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tentang">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fitur">Fitur Unggulan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#demo-live">Live Demo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#arsitektur">Arsitektur RAG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#knowledge-base">Matriks SOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tim-pengembang">Tim Pengembang</a>
+          </li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <button type="button" class="btn btn-primary rounded-pill px-3 py-2 btn-nav-cta shadow-sm" id="openChatNavBtn" title="Buka / Tutup Chatbot JAKEVO Assistant">
+              <i class="fa fa-comments me-2"></i>Tanya JAKEVO Bot
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       3. HERO SECTION (PORTOFOLIO SHOWCASE)
+       ========================================== -->
+  <header class="hero-portfolio-section" id="beranda">
+    <div class="hero-bg-shapes">
+      <div class="shape-circle-1"></div>
+      <div class="shape-circle-2"></div>
+    </div>
+    
+    <div class="container position-relative py-5">
+      <div class="row align-items-center g-5 pt-4">
+        
+        <!-- Kolom Kiri: Copywriting Portofolio -->
+        <div class="col-lg-7">
+          <div class="hero-badge-pill mb-3">
+            <span class="badge-dot"></span>
+            <span>Portofolio Proyek Praktik Kerja Lapangan (PKL)</span>
+          </div>
+
+          <h1 class="hero-main-title mb-3">
+            Implementasi Chatbot AI Berbasis <span class="text-gradient">RAG Pipeline</span>
+          </h1>
+
+          <p class="hero-subtitle mb-4">
+            Purwarupa asisten cerdas <strong>JAKEVO DPMPTSP DKI Jakarta (JAKEVO Assistant)</strong> yang dirancang untuk memfasilitasi konsultasi perizinan investasi, panduan JAKEVO, dan informasi regulasi terverifikasi pada <strong>DPMPTSP Provinsi DKI Jakarta</strong> tanpa risiko halusinasi informasi.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <button type="button" class="btn btn-primary rounded-pill px-4 py-3 fw-bold shadow-sm" id="scrollChatHeroBtn">
+              <i class="fa fa-robot me-2"></i>Uji Chatbot Interaktif
+            </button>
+            <a href="#arsitektur" class="btn btn-outline-secondary rounded-pill px-4 py-3 fw-bold hero-btn-outline">
+              <i class="fa fa-project-diagram me-2"></i>Eksplorasi Arsitektur RAG
+            </a>
+            <a href="#tim-pengembang" class="btn btn-light rounded-pill px-3 py-3 fw-bold text-muted border">
+              <i class="fa fa-users me-2"></i>Profil Mahasiswa
+            </a>
+          </div>
+
+          <!-- Highlight Key Metrics -->
+          <div class="row g-3 hero-metrics-row pt-2">
+            <div class="col-6 col-sm-3">
+              <div class="hero-metric-box">
+                <span class="metric-num">5</span>
+                <span class="metric-label">Dokumen SOP Resmi</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="hero-metric-box">
+                <span class="metric-num">&ge; 15%</span>
+                <span class="metric-label">Ambang Cosine Relevansi</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="hero-metric-box">
+                <span class="metric-num">100%</span>
+                <span class="metric-label">Sitasi Bersumber Dokumen</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="hero-metric-box">
+                <span class="metric-num">24/7</span>
+                <span class="metric-label">Layanan Siaga Mandiri</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Interactive Card Teaser -->
+        <div class="col-lg-5">
+          <div class="hero-interactive-card shadow-lg p-4 bg-white" id="triggerChatFromCard" title="Klik untuk membuka chatbot interaktif">
+            <div class="card-top-header d-flex align-items-center justify-content-between pb-3 border-bottom mb-3">
+              <div class="d-flex align-items-center">
+                <div class="bot-avatar-mini me-2">
+                  🤖
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold text-dark">JAKEVO Assistant Preview</h6>
+                  <small class="text-success fw-bold"><i class="fa fa-circle fa-xs me-1"></i>RAG Engine Ready</small>
+                </div>
+              </div>
+              <span class="badge bg-light text-primary border rounded-pill px-3 py-1">Klik untuk Coba</span>
+            </div>
+
+            <!-- Chat Preview Bubble -->
+            <div class="chat-preview-body mb-3">
+              <div class="preview-bubble bot mb-2">
+                <small class="text-primary fw-bold d-block mb-1">✨ JAKEVO Assistant · DPMPTSP DKI</small>
+                <p class="mb-0 small">Halo! Mau tanya seputar syarat surat pengantar perkawinan, surat belum memiliki rumah, atau alur izin JAKEVO?</p>
+              </div>
+              <div class="preview-bubble user ms-auto mb-2">
+                <p class="mb-0 small">Apa syarat perkawinan di bawah umur?</p>
+              </div>
+              <div class="preview-bubble bot">
+                <small class="text-success fw-bold d-block mb-1">📚 RAG Verified (PM1_PERKAWINAN_BAWAH_UMUR-WEB-SYARAT)</small>
+                <p class="mb-0 small">Tersedia proyek TOD MRT/LRT, Pengolahan Sampah Menjadi Energi (ITF), Kawasan Kota Tua, dan Smart City...</p>
+              </div>
+            </div>
+
+            <!-- Quick Action Trigger Inside Card -->
+            <div class="preview-card-cta text-center p-2 rounded bg-light border">
+              <span class="small text-primary fw-bold"><i class="fa fa-external-link-alt me-1"></i> Buka Asisten Penuh Sekarang</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       4. TENTANG PROYEK (ABOUT THE PROJECT)
+       ========================================== -->
+  <section class="section-padding bg-light" id="tentang">
+    <div class="container">
+      <div class="section-header text-center max-w-700 mx-auto mb-5">
+        <span class="section-tag-pill">Latar Belakang &amp; Solusi</span>
+        <h2 class="section-title">Mengapa JAKEVO Assistant Dibangun?</h2>
+        <p class="section-desc">
+          Transformasi digital pelayanan publik di Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP) DKI Jakarta untuk menghadirkan konsultasi akurat, cepat, dan transparan.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Kartu 1: Masalah / Tantangan -->
+        <div class="col-md-4">
+          <div class="portfolio-card h-100 p-4">
+            <div class="card-icon-round mb-3 bg-danger-subtle text-danger">
+              <i class="fa fa-exclamation-triangle"></i>
+            </div>
+            <h5 class="card-heading">Tantangan Layanan Informasi</h5>
+            <p class="card-text text-muted">
+              Calon investor dan masyarakat sering menghadapi kendala dalam mencari SOP regulasi, persyaratan perizinan JAKEVO, dan katalog investasi yang tersebar di banyak dokumen tebal, serta keterbatasan jam layanan tatap muka.
+            </p>
+            <ul class="custom-list-check small text-muted">
+              <li>Pertanyaan berulang menyita waktu petugas</li>
+              <li>Dokumen regulasi panjang dan kompleks</li>
+              <li>Layanan tatap muka terbatas jam kerja kantor</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kartu 2: Pendekatan Inovasi RAG -->
+        <div class="col-md-4">
+          <div class="portfolio-card h-100 p-4 active-border">
+            <div class="card-icon-round mb-3 bg-primary-subtle text-primary">
+              <i class="fa fa-lightbulb"></i>
+            </div>
+            <h5 class="card-heading">Inovasi RAG Pipeline</h5>
+            <p class="card-text text-muted">
+              Mengintegrasikan <em>Retrieval-Augmented Generation</em> (RAG) sehingga asisten cerdas tidak mengarang bebas, melainkan mengambil referensi dari korpus dokumen SOP resmi DPMPTSP yang terverifikasi.
+            </p>
+            <ul class="custom-list-check small text-muted">
+              <li>Pencarian relevansi berbasis cosine similarity</li>
+              <li>Sintesis jawaban berbasis konteks aktual</li>
+              <li>Sitasi nomor dokumen SOP di setiap respons</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Kartu 3: Dampak & Manfaat -->
+        <div class="col-md-4">
+          <div class="portfolio-card h-100 p-4">
+            <div class="card-icon-round mb-3 bg-success-subtle text-success">
+              <i class="fa fa-chart-line"></i>
+            </div>
+            <h5 class="card-heading">Dampak &amp; Nilai Tambah</h5>
+            <p class="card-text text-muted">
+              Memudahkan pemohon izin dan calon investor memperoleh jawaban instan selama 24 jam penuh, sekaligus mempermudah tugas petugas front office dan call center 1500-164 melalui sistem eskalasi RBAC terstruktur.
+            </p>
+            <ul class="custom-list-check small text-muted">
+              <li>Efisiensi waktu konsultasi perizinan mandiri</li>
+              <li>Transparansi informasi peluang investasi DKI</li>
+              <li>Mendukung inisiatif Jakarta Smart City</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. FITUR UNGGULAN (KEY FEATURES)
+       ========================================== -->
+  <section class="section-padding" id="fitur">
+    <div class="container">
+      <div class="section-header text-center max-w-700 mx-auto mb-5">
+        <span class="section-tag-pill">Fitur &amp; Keunggulan</span>
+        <h2 class="section-title">Kapabilitas Sistem JAKEVO Assistant</h2>
+        <p class="section-desc">
+          Dirancang dengan mengedepankan akurasi data, perlindungan privasi, serta kenyamanan antarmuka pengguna.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-box p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-database text-primary"></i>
+            </div>
+            <h5 class="feature-title">Retrieval-Augmented Generation</h5>
+            <p class="feature-desc text-muted">
+              Pencarian semantik dan tokenisasi kata kunci pada 5 korpus dokumen resmi DPMPTSP sebelum respons digenerasikan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-box p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-shield-alt text-primary"></i>
+            </div>
+            <h5 class="feature-title">Zero-Hallucination Guardrails</h5>
+            <p class="feature-desc text-muted">
+              Bila pertanyaan pengguna di luar basis pengetahuan SOP (skor &lt; 15%), bot secara sopan menampilkan fallback navigasi 4 topik utama.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-box p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-book-reader text-primary"></i>
+            </div>
+            <h5 class="feature-title">Sitasi Sumber Dokumen Terbuka</h5>
+            <p class="feature-desc text-muted">
+              Setiap jawaban bot melampirkan ID dokumen (contoh: PM1_PERKAWINAN_PERTAMA-WEB-SYARAT) beserta status verifikasi resmi DPMPTSP DKI Jakarta.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-box p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-user-shield text-primary"></i>
+            </div>
+            <h5 class="feature-title">Role-Based Access Control (RBAC)</h5>
+            <p class="feature-desc text-muted">
+              Pemisahan peran hak akses pengguna publik, staf front office PTSP, dan administrator RAG sesuai kepatuhan regulasi UU PDP.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-box p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-palette text-primary"></i>
+            </div>
+            <h5 class="feature-title">Identitas Budaya Betawi Modern</h5>
+            <p class="feature-desc text-muted">
+              Mengintegrasikan avatar ikonik karakter adat Abang &amp; None Betawi dengan palet oranye hangat khas Jakarta yang elegan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-box p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-mobile-alt text-primary"></i>
+            </div>
+            <h5 class="feature-title">Responsif &amp; Aksesibel</h5>
+            <p class="feature-desc text-muted">
+              Dapat diakses secara mulus melalui perangkat smartphone, tablet, maupun desktop dengan dukungan slider pertanyaan cepat horizontal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. LIVE DEMO STUDIO (INTERACTIVE SHOWCASE)
+       ========================================== -->
+  <section class="section-padding bg-light" id="demo-live">
+    <div class="container">
+      <div class="section-header text-center max-w-700 mx-auto mb-5">
+        <span class="section-tag-pill">Uji Coba Langsung</span>
+        <h2 class="section-title">Live Demo JAKEVO Assistant</h2>
+        <p class="section-desc">
+          Pilih pertanyaan contoh di bawah ini atau buka jendela chatbot pop-up penuh untuk berinteraksi langsung dengan simulasi RAG pipeline.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="demo-studio-card bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+            
+            <div class="row g-4 align-items-center">
+              <div class="col-md-6">
+                <h4 class="fw-bold text-dark mb-2">Coba Pertanyaan Cepat:</h4>
+                <p class="text-muted small mb-4">Klik salah satu topik di bawah ini untuk memicu simulasi retrieval dokumen:</p>
+
+                <div class="d-flex flex-column gap-2 mb-4">
+                  <button type="button" class="btn btn-outline-primary text-start rounded-pill py-2 px-3 btn-ask-topic" data-ask="Di mana alamat kantor DPMPTSP?">
+                    <i class="fa fa-map-marker-alt me-2"></i> Di mana alamat kantor DPMPTSP?
+                  </button>
+                  <button type="button" class="btn btn-outline-primary text-start rounded-pill py-2 px-3 btn-ask-topic" data-ask="Bagaimana alur pengajuan izin di JAKEVO?">
+                    <i class="fa fa-file-signature me-2"></i> Bagaimana alur pengajuan izin di JAKEVO?
+                  </button>
+                  <button type="button" class="btn btn-outline-primary text-start rounded-pill py-2 px-3 btn-ask-topic" data-ask="Apa saja syarat Surat Keterangan Tidak Mampu (SKTM)?">
+                    <i class="fa fa-file-alt me-2"></i> Apa saja syarat Surat Keterangan Tidak Mampu (SKTM)?
+                  </button>
+                  <button type="button" class="btn btn-outline-primary text-start rounded-pill py-2 px-3 btn-ask-topic" data-ask="Apa saja syarat izin penggunaan tanah makam?">
+                    <i class="fa fa-monument me-2"></i> Apa saja syarat izin penggunaan tanah makam?
+                  </button>
+                  <button type="button" class="btn btn-outline-primary text-start rounded-pill py-2 px-3 btn-ask-topic" data-ask="Apa saja syarat surat izin praktik dokter?">
+                    <i class="fa fa-user-md me-2"></i> Apa saja syarat surat izin praktik dokter?
+                  </button>
+                </div>
+
+                <div class="p-3 bg-light rounded-3 border">
+                  <small class="text-muted d-block mb-1"><strong>Tips Uji Coba:</strong></small>
+                  <small class="text-muted d-block">Anda juga bisa mengetikkan kata kunci bebas seperti <em>"lokasi"</em>, <em>"MRT"</em>, <em>"PMDN"</em>, atau <em>"kontak"</em> langsung pada kolom chat.</small>
+                </div>
+              </div>
+
+              <!-- Visual Live Demo Trigger Area -->
+              <div class="col-md-6 text-center">
+                <div class="p-4 bg-gradient-orange-subtle rounded-4 border border-warning">
+                  <div class="avatar-large-showcase mb-3">
+                    <div class="rounded-circle d-inline-flex p-3 bg-white shadow-sm" style="width: 100px; height: 100px; align-items: center; justify-content: center; font-size: 3rem;">
+                      💬
+                    </div>
+                  </div>
+                  <h5 class="fw-bold text-dark mb-1">Buka Chatbot JAKEVO Assistant</h5>
+                  <p class="text-muted small mb-3">Dilengkapi inspektor pipeline RAG, sumber sitasi dokumen resmi, dan pengalih mode layar penuh.</p>
+                  
+                  <button type="button" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow-sm" id="openChatDemoStudioBtn">
+                    <i class="fa fa-comments me-2"></i>Buka Chatbot Sekarang
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. ARSITEKTUR SISTEM & ALUR RAG
+       ========================================== -->
+  <section class="section-padding" id="arsitektur">
+    <div class="container">
+      <div class="section-header text-center max-w-700 mx-auto mb-5">
+        <span class="section-tag-pill">Spesifikasi Teknis</span>
+        <h2 class="section-title">Arsitektur &amp; Alur Kerja RAG</h2>
+        <p class="section-desc">
+          Bagaimana sistem memproses input pengguna, mencocokkan dokumen, hingga menghasilkan jawaban yang dapat dipertanggungjawabkan.
+        </p>
+      </div>
+
+      <!-- Pipeline Steps Flowchart -->
+      <div class="row g-3 mb-5">
+        <div class="col-md">
+          <div class="pipeline-step-card text-center p-3 h-100">
+            <div class="step-badge">1</div>
+            <i class="fa fa-keyboard fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">User Query</h6>
+            <small class="text-muted">Input pertanyaan dari pemohon izin atau investor.</small>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="pipeline-step-card text-center p-3 h-100">
+            <div class="step-badge">2</div>
+            <i class="fa fa-filter fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">Preprocessing</h6>
+            <small class="text-muted">Normalisasi teks &amp; eliminasi <em>stopwords</em>.</small>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="pipeline-step-card text-center p-3 h-100">
+            <div class="step-badge">3</div>
+            <i class="fa fa-search fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">Retrieval</h6>
+            <small class="text-muted">Pencocokan token &amp; cosine similarity (Ambang &ge; 15%).</small>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="pipeline-step-card text-center p-3 h-100">
+            <div class="step-badge">4</div>
+            <i class="fa fa-layer-group fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">Augmentation</h6>
+            <small class="text-muted">Injeksi cuplikan konteks SOP resmi ke prompt model.</small>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="pipeline-step-card text-center p-3 h-100">
+            <div class="step-badge">5</div>
+            <i class="fa fa-robot fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">Generasi &amp; Sitasi</h6>
+            <small class="text-muted">Respons akurat lengkap dengan sumber ID dokumen SOP.</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Breakdown Grid -->
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="p-4 bg-light rounded-4 h-100 border">
+            <h5 class="fw-bold text-dark mb-3"><i class="fa fa-cogs me-2 text-primary"></i>Komponen Pipeline RAG</h5>
+            
+            <div class="d-flex mb-3">
+              <i class="fa fa-file-alt text-primary fa-lg me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark d-block">1. Chunking Dokumen (250 Token)</strong>
+                <small class="text-muted">Dokumen SOP dipecah menjadi unit segmen terkelola agar relevansi informasi tetap fokus.</small>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <i class="fa fa-calculator text-primary fa-lg me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark d-block">2. Scoring Relevansi &amp; Cosine</strong>
+                <small class="text-muted">Menghitung probabilitas kedekatan query terhadap kata kunci regulasi perizinan.</small>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <i class="fa fa-puzzle-piece text-primary fa-lg me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark d-block">3. Context Injection &amp; Guardrails</strong>
+                <small class="text-muted">Mencegah halusinasi fakta dan menjamin batasan hukum regulasi daerah DKI.</small>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <i class="fa fa-shield-alt text-primary fa-lg me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark d-block">4. Masking Data Pribadi (UU PDP)</strong>
+                <small class="text-muted">Menjamin privasi pemohon dengan filtering NIK, NPWP, dan nomor rekening.</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 bg-light rounded-4 h-100 border">
+            <h5 class="fw-bold text-dark mb-3"><i class="fa fa-user-lock me-2 text-primary"></i>Matriks Hak Akses (RBAC)</h5>
+            
+            <div class="p-3 bg-white rounded-3 mb-2 border shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <strong class="text-dark">Role 1: Pengguna Publik &amp; Investor</strong>
+                <span class="badge bg-secondary rounded-pill">Akses Anonim</span>
+              </div>
+              <small class="text-muted">Konsultasi mandiri 24/7, pencarian syarat izin, dan permohonan tiket eskalasi petugas.</small>
+            </div>
+
+            <div class="p-3 bg-white rounded-3 mb-2 border border-primary shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <strong class="text-primary">Role 2: Petugas Front Office PTSP</strong>
+                <span class="badge bg-primary rounded-pill">Petugas Loket</span>
+              </div>
+              <small class="text-muted">Menerima tiket eskalasi, verifikasi berkas izin JAKEVO, dan menangani kasus pemohon.</small>
+            </div>
+
+            <div class="p-3 bg-white rounded-3 border shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <strong class="text-dark">Role 3: Admin AI &amp; Tim Regulasi</strong>
+                <span class="badge bg-dark rounded-pill">Administrator</span>
+              </div>
+              <small class="text-muted">Manajemen basis pengetahuan dokumen, penyesuaian prompt AI, audit trail, dan log sistem.</small>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. MATRIKS KNOWLEDGE BASE (DOKUMEN SOP)
+       ========================================== -->
+  <section class="section-padding bg-light" id="knowledge-base">
+    <div class="container">
+      <div class="section-header text-center max-w-700 mx-auto mb-5">
+        <span class="section-tag-pill">Basis Pengetahuan</span>
+        <h2 class="section-title">Matriks Dokumen SOP Terindeks</h2>
+        <p class="section-desc">
+          Dokumen regulasi dan SOP resmi DPMPTSP Provinsi DKI Jakarta yang telah dikurasi dan dimasukkan ke dalam RAG knowledge base.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- DOC 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold">PM1_PERKAWINAN_PERTAMA-WEB-SYARAT</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Surat Pengantar Perkawinan Pertama (PM1)</h5>
+            <p class="text-muted small mb-3">Informasi alamat kantor Lantai 5 MPP Setiabudi, kontak telepon, jam operasional layanan, dan email resmi.</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Chunk: 250 Token</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa syarat surat pengantar perkawinan pertama?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOC 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold">PM1_PERKAWINAN_BAWAH_UMUR-WEB-SYARAT</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Katalog Proyek Siap Tawar 2024</h5>
+            <p class="text-muted small mb-3">Katalog sektor investasi: Kawasan TOD MRT/LRT, Pengolahan Sampah ITF, Smart City, dan Pariwisata Pulau Seribu.</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Chunk: 280 Token</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa syarat perkawinan di bawah umur?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOC 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold">PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH-WEB-SYARAT</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Surat Keterangan Belum Memiliki Rumah (PM1)</h5>
+            <p class="text-muted small mb-3">Peran JAKEVO DPMPTSP DKI Jakarta sebagai One-Stop Investment Hub, promosi investasi, dan pendampingan debottlenecking.</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Chunk: 240 Token</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa syarat surat keterangan belum memiliki rumah?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOC 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold">PANDUAN_JAKEVO_PEMOHON-PDF</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Laporan Realisasi Penanaman Modal</h5>
+            <p class="text-muted small mb-3">Capaian realisasi investasi Rp 165,3 T (PMDN Rp 89,2 T dan PMA USD 5,1 M) serta 3 sektor kontributor terbesar.</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Chunk: 260 Token</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Bagaimana alur pengajuan izin di JAKEVO?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOC 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold">DOC-PTSP-005</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Panduan JAKEVO &amp; Matriks RBAC</h5>
+            <p class="text-muted small mb-3">Alur perizinan berusaha digital di platform JAKEVO serta tata cara eskalasi konsultasi ke petugas front office PTSP.</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Chunk: 270 Token</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Bagaimana alur izin JAKEVO dan eskalasi ke petugas?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slot Dokumen Tambahan -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 bg-white rounded-4 h-100 border border-2 border-dashed d-flex flex-column justify-content-center text-center">
+            <i class="fa fa-plus-circle fa-2x text-primary mb-2"></i>
+            <h6 class="fw-bold text-dark mb-1">Ekspansi Knowledge Base</h6>
+            <p class="text-muted small mb-0">Arsitektur RAG mendukung penambahan dokumen PDF/SOP baru kapan saja secara dinamis.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. TIM PENGEMBANG (DEVELOPER PROFILES)
+       ========================================== -->
+  <section class="section-padding" id="tim-pengembang">
+    <div class="container">
+      <div class="section-header text-center max-w-700 mx-auto mb-5">
+        <span class="section-tag-pill">Profil Tim Peneliti</span>
+        <h2 class="section-title">Mahasiswa Pelaksana Proyek PKL</h2>
+        <p class="section-desc">
+          Profil tim mahasiswa yang merancang dan mengembangkan purwarupa sistem Chatbot RAG JAKEVO Assistant di DPMPTSP Provinsi DKI Jakarta.
+        </p>
+      </div>
+
+      <!-- 2 Mahasiswa Cards -->
+      <div class="row g-4 mb-5">
+        <!-- Mahasiswa 1 -->
+        <div class="col-md-6">
+          <div class="profile-portfolio-card p-4 rounded-4 bg-white border shadow-sm h-100">
+            <div class="d-flex align-items-center justify-content-between pb-3 border-bottom mb-3">
+              <span class="badge bg-primary rounded-pill px-3 py-1">Mahasiswa 1 (Ketua Tim)</span>
+              <span class="text-muted small"><i class="fa fa-check-circle text-success me-1"></i>Praktikan 1</span>
+            </div>
+
+            <div class="row align-items-center g-4">
+              <!-- Pasfoto Mahasiswa 1 -->
+              <div class="col-sm-4 text-center">
+                <div class="student-photo-frame position-relative mx-auto">
+                  <img src="img/foto-mahasiswa.svg" id="studentPhotoImg1" alt="Pasfoto Mahasiswa 1" class="img-fluid rounded-3">
+                  <label for="studentPhotoInput1" class="photo-upload-btn" title="Ganti Foto Mahasiswa 1">
+                    <i class="fa fa-camera fa-xs"></i>
+                  </label>
+                  <input type="file" id="studentPhotoInput1" accept="image/*" class="d-none">
+                </div>
+                <small class="text-muted d-block mt-2" style="font-size: 0.72rem;">[Pasfoto Mahasiswa 1]</small>
+              </div>
+
+              <!-- Info Mahasiswa 1 -->
+              <div class="col-sm-8">
+                <h5 class="fw-bold text-dark mb-1" id="displayStudentName1">[Nama Mahasiswa 1]</h5>
+                <span class="badge bg-light text-primary border mb-2">NIM: [Nomor Induk Mahasiswa 1]</span>
+                <p class="text-muted small mb-2">
+                  <i class="fa fa-university me-1 text-primary"></i> <strong>[Nama Universitas / Kampus]</strong><br>
+                  Program Studi Teknik Informatika / Sistem Informasi
+                </p>
+                <div class="role-badge-box p-2 bg-light rounded-3 border">
+                  <small class="text-muted d-block" style="font-size: 0.7rem; font-weight: 700;">PERAN &amp; FOKUS TUGAS:</small>
+                  <strong class="text-dark small">Arsitektur AI, Pipeline RAG, &amp; Kurasi Knowledge Base</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mahasiswa 2 -->
+        <div class="col-md-6">
+          <div class="profile-portfolio-card p-4 rounded-4 bg-white border shadow-sm h-100">
+            <div class="d-flex align-items-center justify-content-between pb-3 border-bottom mb-3">
+              <span class="badge bg-primary rounded-pill px-3 py-1">Mahasiswa 2 (Anggota Tim)</span>
+              <span class="text-muted small"><i class="fa fa-check-circle text-success me-1"></i>Praktikan 2</span>
+            </div>
+
+            <div class="row align-items-center g-4">
+              <!-- Pasfoto Mahasiswa 2 -->
+              <div class="col-sm-4 text-center">
+                <div class="student-photo-frame position-relative mx-auto">
+                  <img src="img/foto-mahasiswa.svg" id="studentPhotoImg2" alt="Pasfoto Mahasiswa 2" class="img-fluid rounded-3">
+                  <label for="studentPhotoInput2" class="photo-upload-btn" title="Ganti Foto Mahasiswa 2">
+                    <i class="fa fa-camera fa-xs"></i>
+                  </label>
+                  <input type="file" id="studentPhotoInput2" accept="image/*" class="d-none">
+                </div>
+                <small class="text-muted d-block mt-2" style="font-size: 0.72rem;">[Pasfoto Mahasiswa 2]</small>
+              </div>
+
+              <!-- Info Mahasiswa 2 -->
+              <div class="col-sm-8">
+                <h5 class="fw-bold text-dark mb-1" id="displayStudentName2">[Nama Mahasiswa 2]</h5>
+                <span class="badge bg-light text-primary border mb-2">NIM: [Nomor Induk Mahasiswa 2]</span>
+                <p class="text-muted small mb-2">
+                  <i class="fa fa-university me-1 text-primary"></i> <strong>[Nama Universitas / Kampus]</strong><br>
+                  Program Studi Teknik Informatika / Sistem Informasi
+                </p>
+                <div class="role-badge-box p-2 bg-light rounded-3 border">
+                  <small class="text-muted d-block" style="font-size: 0.7rem; font-weight: 700;">PERAN &amp; FOKUS TUGAS:</small>
+                  <strong class="text-dark small">Pengembangan Web Portofolio, UI/UX &amp; Widget Chatbot</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supervisor & Instansi Card -->
+      <div class="p-4 bg-light rounded-4 border">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-4">
+            <h6 class="fw-bold text-dark mb-1"><i class="fa fa-building me-2 text-primary"></i>Instansi Penempatan PKL</h6>
+            <p class="text-muted small mb-1"><strong>DPMPTSP Provinsi DKI Jakarta</strong></p>
+            <p class="text-muted small mb-0">Unit: Sistem Perizinan Terpadu JAKEVO, Mal Pelayanan Publik Lt. 5, Jl. H.R. Rasuna Said, Jakarta Selatan.</p>
+          </div>
+          <div class="col-lg-4 border-start-lg">
+            <h6 class="fw-bold text-dark mb-1"><i class="fa fa-user-tie me-2 text-primary"></i>Pembimbing Proyek</h6>
+            <p class="text-muted small mb-1">Pembimbing Lapangan: <strong>[Nama Pembimbing Instansi]</strong></p>
+            <p class="text-muted small mb-0">Dosen Pembimbing Kampus: <strong>[Nama Dosen Pembimbing]</strong></p>
+          </div>
+          <div class="col-lg-4 border-start-lg">
+            <h6 class="fw-bold text-dark mb-1"><i class="fa fa-calendar-check me-2 text-primary"></i>Periode Pelaksanaan</h6>
+            <p class="text-muted small mb-1">Periode: <strong>Februari – Mei 2026</strong></p>
+            <span class="badge bg-success rounded-pill px-3 py-1"><i class="fa fa-check-circle me-1"></i>PKL Selesai &amp; Terverifikasi</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       10. MILESTONE & PENCAPAIAN PROYEK
+       ========================================== -->
+  <section class="section-padding bg-light" id="milestone">
+    <div class="container">
+      <div class="section-header text-center max-w-700 mx-auto mb-5">
+        <span class="section-tag-pill">Jejak Langkah</span>
+        <h2 class="section-title">Milestone Proyek Praktik Kerja Lapangan</h2>
+        <p class="section-desc">
+          Tahapan realisasi perancangan purwarupa chatbot dari riset kebutuhan instansi hingga peluncuran versi terpadu.
+        </p>
+      </div>
+
+      <div class="row g-3 justify-content-center">
+        <div class="col-lg-10">
+          <div class="timeline-portfolio">
+            
+            <div class="timeline-item">
+              <div class="timeline-dot bg-success"></div>
+              <div class="timeline-content p-3 bg-white rounded-3 border shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <strong class="text-dark">Tahap 1: Analisis Kebutuhan &amp; Observasi Pelayanan</strong>
+                  <span class="badge bg-success-subtle text-success">Selesai</span>
+                </div>
+                <p class="text-muted small mb-0">Wawancara dengan petugas pelayanan PTSP dan pemetaan pertanyaan yang paling sering diajukan oleh calon investor dan warga seputar perizinan JAKEVO.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot bg-success"></div>
+              <div class="timeline-content p-3 bg-white rounded-3 border shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <strong class="text-dark">Tahap 2: Kurasi Knowledge Base &amp; Pembuatan Dokumen Chunking</strong>
+                  <span class="badge bg-success-subtle text-success">Selesai</span>
+                </div>
+                <p class="text-muted small mb-0">Penyusunan 5 matriks dokumen SOP terverifikasi, segmentasi token chunking 250 token, serta pembuatan indeks kata kunci perizinan.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot bg-success"></div>
+              <div class="timeline-content p-3 bg-white rounded-3 border shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <strong class="text-dark">Tahap 3: Implementasi Simulasi Pipeline RAG &amp; Scoring Cosine</strong>
+                  <span class="badge bg-success-subtle text-success">Selesai</span>
+                </div>
+                <p class="text-muted small mb-0">Perancangan engine retrieval dengan normalisasi query, filter stopwords, scoring relevansi, augmentasi konteks, dan guardrails anti-halusinasi.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot bg-success"></div>
+              <div class="timeline-content p-3 bg-white rounded-3 border shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <strong class="text-dark">Tahap 4: Desain Portofolio &amp; Widget Chatbot Interaktif</strong>
+                  <span class="badge bg-success-subtle text-success">Selesai</span>
+                </div>
+                <p class="text-muted small mb-0">Peluncuran antarmuka web portofolio modern yang bersih, maskot budaya Betawi, widget pop-up responsif, dan pengalih mode layar penuh.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       11. FOOTER & CALL-TO-ACTION
+       ========================================== -->
+  <footer class="portfolio-footer bg-dark text-white pt-5 pb-4" id="kontak">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom border-secondary">
+        <div class="col-lg-5">
+          <div class="d-flex align-items-center mb-3">
+            <div class="brand-icon-box me-2" style="background:#F7941D; color:#fff;">
+              <i class="fa fa-robot"></i>
+            </div>
+            <h5 class="mb-0 text-white fw-bold">JAKEVO Assistant · Portfolio</h5>
+          </div>
+          <p class="text-muted small mb-3">
+            Purwarupa asisten cerdas berbasis Retrieval-Augmented Generation (RAG) untuk pelayanan informasi investasi dan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP) Provinsi DKI Jakarta.
+          </p>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-primary btn-sm rounded-pill px-3" id="footerChatBtn">
+              <i class="fa fa-comments me-1"></i>Buka Chatbot
+            </button>
+            <a href="#beranda" class="btn btn-outline-light btn-sm rounded-pill px-3">
+              <i class="fa fa-arrow-up me-1"></i>Kembali ke Atas
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <h6 class="text-white fw-bold mb-3">Navigasi Portofolio</h6>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><a href="#beranda" class="text-muted text-decoration-none hover-light">Beranda</a></li>
+            <li class="mb-2"><a href="#tentang" class="text-muted text-decoration-none hover-light">Tentang Proyek</a></li>
+            <li class="mb-2"><a href="#fitur" class="text-muted text-decoration-none hover-light">Fitur Unggulan</a></li>
+            <li class="mb-2"><a href="#arsitektur" class="text-muted text-decoration-none hover-light">Arsitektur RAG</a></li>
+            <li class="mb-2"><a href="#knowledge-base" class="text-muted text-decoration-none hover-light">Matriks SOP</a></li>
+            <li class="mb-2"><a href="#tim-pengembang" class="text-muted text-decoration-none hover-light">Tim Pengembang</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+          <h6 class="text-white fw-bold mb-3">Kontak Instansi PKL</h6>
+          <p class="small text-muted mb-2">
+            <i class="fa fa-map-marker-alt text-primary me-2"></i>Gedung Mal Pelayanan Publik (MPP) Lantai 5, Jl. H.R. Rasuna Said Kav. C-22, Jakarta Selatan 12920.
+          </p>
+          <p class="small text-muted mb-2">
+            <i class="fa fa-phone-alt text-primary me-2"></i>Call Center PTSP: 1500-164 / (021) 5200300
+          </p>
+          <p class="small text-muted mb-0">
+            <i class="fa fa-globe text-primary me-2"></i>jakevo.jakarta.go.id &amp; dpmptsp.jakarta.go.id
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-3 small text-muted">
+        <div>
+          &copy; 2026 <strong>Laporan Portofolio PKL DPMPTSP DKI Jakarta</strong> · Hak Cipta Dilindungi.
+        </div>
+        <div>
+          Dirancang dengan Bootstrap 5 &amp; RAG Architecture.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       12. POP-UP WIDGET CHATBOT "JAKEVO ASSISTANT" (RAG DEMO)
+       ========================================== -->
+  <aside class="modern-chatbot-card jic-chatbot-popup-modal" id="jicChatbotCard" role="dialog" aria-label="JAKEVO Assistant Chatbot" aria-hidden="true">
+    
+    <!-- A. HEADER (ORANYE #F7941D) RINGKAS: "Tanya Solusi" + Status Online -->
+    <div class="modern-header batik-header-left">
+      <div class="header-main-content">
+
+        <!-- KIRI: Judul & Status Online -->
+        <div class="header-info-col">
+          <div class="header-title-row">
+            <h3 class="main-title">Tanya Solusi</h3>
+          </div>
+          <div class="header-online-status">
+            <span class="online-pulse-dot"></span>
+            <span class="online-label-text">Online</span>
+          </div>
+        </div>
+
+        <!-- KANAN: Tombol Aksi (Penuh, Reset, Tutup) -->
+        <div class="header-action-col">
+          <div class="header-badge-wrapper">
+            <!-- Tombol Layar Penuh -->
+            <button type="button" class="btn-chat-action" id="toggleFullScreenBtn" title="Beralih Mode Layar Penuh">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+              <span class="btn-fs-label">Penuh</span>
+            </button>
+            <!-- Tombol Reset Percakapan -->
+            <button type="button" class="btn-chat-action" id="resetChatBtn" title="Reset Percakapan">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                <path d="M3 3v5h5"/>
+              </svg>
+            </button>
+            <!-- Tombol Tutup / Minimize Chatbot -->
+            <button type="button" class="btn-chat-action btn-close-chat" id="minimizeChatBtn" title="Tutup Chatbot">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- B. BAR "PERTANYAAN CEPAT" DENGAN SLIDER HORIZONTAL -->
+    <div class="quick-bar batik-bar-right">
+      <div class="quick-bar-inner">
+        <div class="quick-bar-header">
+          <div class="quick-bar-label">
+            <span class="quick-label-icon">⚡</span>
+            <span class="quick-label-title">Pertanyaan cepat</span>
+            <span class="quick-label-subtitle">Geser →</span>
+          </div>
+          <!-- Tombol Navigasi Slider Horizontal -->
+          <div class="quick-scroll-nav">
+            <button type="button" class="btn-scroll-chips" id="scrollChipsLeft" aria-label="Geser pertanyaan ke kiri" title="Geser pertanyaan ke kiri">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="btn-scroll-chips" id="scrollChipsRight" aria-label="Geser pertanyaan ke kanan" title="Geser pertanyaan ke kanan">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Slider Chips Satu Baris -->
+        <div class="quick-chips-scroll-container" id="quickChipsSlider">
+          <div class="quick-chips-group">
+            <button type="button" class="modern-chip chip-btn" data-query="Di mana alamat kantor DPMPTSP?">
+              <span class="chip-icon">📍</span>
+              <span>Di mana alamat kantor DPMPTSP?</span>
+            </button>
+            <button type="button" class="modern-chip chip-btn" data-query="Bagaimana alur pengajuan izin di JAKEVO?">
+              <span class="chip-icon">📋</span>
+              <span>Alur izin JAKEVO</span>
+            </button>
+            <button type="button" class="modern-chip chip-btn" data-query="Apa saja syarat Surat Keterangan Tidak Mampu (SKTM)?">
+              <span class="chip-icon">📄</span>
+              <span>Syarat SKTM Kelurahan</span>
+            </button>
+            <button type="button" class="modern-chip chip-btn" data-query="Apa saja syarat izin penggunaan tanah makam?">
+              <span class="chip-icon">🪦</span>
+              <span>Izin Tanah Makam</span>
+            </button>
+            <button type="button" class="modern-chip chip-btn" data-query="Apa saja syarat surat izin praktik dokter?">
+              <span class="chip-icon">🩺</span>
+              <span>Surat Izin Praktik Dokter</span>
+            </button>
+            <button type="button" class="modern-chip chip-btn" data-query="Apa syarat surat keterangan belum memiliki rumah?">
+              <span class="chip-icon">🏠</span>
+              <span>Keterangan Belum Rumah</span>
+            </button>
+            <button type="button" class="modern-chip chip-btn" data-query="Apa syarat surat pengantar perkawinan pertama?">
+              <span class="chip-icon">💍</span>
+              <span>Pengantar Perkawinan</span>
+            </button>
+            <button type="button" class="modern-chip chip-btn" data-query="Bagaimana alur izin JAKEVO dan eskalasi ke petugas?">
+              <span class="chip-icon">⚡</span>
+              <span>Eskalasi ke Petugas</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C. AREA CHAT MODERN (Scroll Vertikal) -->
+    <div class="modern-chat-area" id="chatArea">
+      <div class="chat-messages-container" id="chatMessages">
+        
+        <!-- Pesan Awal Bot -->
+        <div class="chat-message bot-message">
+          <!-- Avatar Pasangan Adat Betawi -->
+          <div class="bot-avatar-wrapper modern-avatar-wrapper" title="Avatar JAKEVO Assistant - Karakter Adat Betawi">
+            <svg class="betawi-avatar-svg" viewBox="0 0 100 100" width="75" height="75" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar Pasangan Betawi JAKEVO">
+              <defs>
+                <linearGradient id="avatarOrangeGradInit" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFA229"/>
+                  <stop offset="100%" stop-color="#E26D00"/>
+                </linearGradient>
+              </defs>
+              <rect width="100" height="100" rx="18" fill="url(#avatarOrangeGradInit)"/>
+              <circle cx="50" cy="20" r="3.5" fill="#FFF275" opacity="0.9"/>
+              <path d="M50 13 L51.5 19.5 L58 20 L51.5 20.5 L50 27 L48.5 20.5 L42 20 L48.5 19.5 Z" fill="#FFF9C4" opacity="0.75"/>
+              <!-- Abang Betawi -->
+              <path d="M12 94 C12 77 22 71 35 71 C43 71 48 75 50 81 C44 86 36 94 36 94 Z" fill="#FFFFFF"/>
+              <path d="M26 67 C32 67 38 71 40 77 C36 83 32 94 32 94 L24 94 C24 87 22 77 26 67 Z" fill="#DC2626"/>
+              <path d="M27 74 L37 76 M26 81 L35 83 M25 88 L33 90" stroke="#FEF08A" stroke-width="1.3" stroke-linecap="round"/>
+              <rect x="29" y="59" width="10" height="11" rx="4" fill="#F8C798"/>
+              <ellipse cx="34" cy="49" rx="13" ry="14" fill="#FCD3AD"/>
+              <path d="M20 43 C20 31 26 29 34 29 C42 29 48 31 48 43 Z" fill="#1E293B"/>
+              <path d="M20 41 L48 41" stroke="#FBBF24" stroke-width="0.8" opacity="0.8"/>
+              <path d="M25 45 Q29 43 32 45" stroke="#334155" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+              <path d="M37 45 Q40 43 43 45" stroke="#334155" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+              <circle cx="28" cy="48" r="1.6" fill="#0F172A"/>
+              <circle cx="39" cy="48" r="1.6" fill="#0F172A"/>
+              <path d="M34 49 L33 52 L35 52" stroke="#D97706" stroke-width="1" fill="none" stroke-linecap="round"/>
+              <path d="M30 54 Q34 58 38 54" stroke="#B45309" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+              <circle cx="25" cy="51" r="2.5" fill="#FCA5A5" opacity="0.65"/>
+              <circle cx="42" cy="51" r="2.5" fill="#FCA5A5" opacity="0.65"/>
+              <!-- None Betawi -->
+              <path d="M50 81 C52 75 57 71 65 71 C78 71 88 77 88 94 L64 94 C64 94 56 86 50 81 Z" fill="#0284C7"/>
+              <path d="M60 71 L66 83 L72 71" fill="#38BDF8"/>
+              <circle cx="66" cy="77" r="1.8" fill="#FBBF24"/>
+              <circle cx="66" cy="82" r="1.5" fill="#FBBF24"/>
+              <path d="M72 73 C76 79 82 85 85 94 L77 94 C74 88 70 82 68 75 Z" fill="#F59E0B"/>
+              <rect x="61" y="59" width="10" height="11" rx="4" fill="#F8C798"/>
+              <ellipse cx="66" cy="49" rx="13" ry="14" fill="#FCD3AD"/>
+              <ellipse cx="66" cy="37" rx="14" ry="10" fill="#1E293B"/>
+              <circle cx="56" cy="34" r="2.2" fill="#FEF08A"/>
+              <circle cx="66" cy="31" r="2.7" fill="#FBBF24"/>
+              <circle cx="76" cy="34" r="2.2" fill="#FEF08A"/>
+              <circle cx="54" cy="39" r="1.6" fill="#FFFFFF"/>
+              <circle cx="53" cy="43" r="1.6" fill="#FFFFFF"/>
+              <circle cx="53" cy="47" r="1.6" fill="#FFFFFF"/>
+              <path d="M57 45 Q60 43 63 45" stroke="#334155" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+              <path d="M69 45 Q72 43 75 45" stroke="#334155" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+              <circle cx="60" cy="48" r="1.6" fill="#0F172A"/>
+              <circle cx="72" cy="48" r="1.6" fill="#0F172A"/>
+              <path d="M62 46 L63 45 M74 46 L75 45" stroke="#0F172A" stroke-width="0.9"/>
+              <circle cx="66" cy="51" r="0.8" fill="#D97706"/>
+              <path d="M62 54 Q66 58 70 54" stroke="#E11D48" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <circle cx="57" cy="52" r="2.5" fill="#FDA4AF" opacity="0.75"/>
+              <circle cx="75" cy="52" r="2.5" fill="#FDA4AF" opacity="0.75"/>
+            </svg>
+          </div>
+
+          <div class="message-content-wrapper">
+            <div class="bot-bubble modern-bot-bubble">
+              <div class="bubble-header">
+                <div class="bot-label-group">
+                  <span class="bot-label">✨ Chatbot JAKEVO</span>
+                  <span class="ai-verified-badge">Resmi DPMPTSP</span>
+                </div>
+              </div>
+              <div class="bubble-body">
+                <p>Halo! Saya <strong>JAKEVO Assistant</strong>. Silakan pilih salah satu pertanyaan cepat di atas atau ketik pertanyaan Anda seputar investasi, perizinan JAKEVO, dan layanan PTSP di DKI Jakarta.</p>
+              </div>
+
+              <!-- Sumber Basis Pengetahuan RAG (Wajib Muncul di Bawah Jawaban) -->
+              <div class="rag-source-citation">
+                <div class="source-header-row">
+                  <span class="source-icon">📚</span>
+                  <span class="source-label-text">Sumber Dokumen RAG:</span>
+                </div>
+                <div class="source-content-box">
+                  <span class="source-doc-id">DOC-INIT-000</span>
+                  <span class="source-doc-name">SOP Layanan Informasi Investasi &amp; Panduan PTSP DKI Jakarta</span>
+                  <span class="source-verified-tag">✓ Terverifikasi DPMPTSP</span>
+                </div>
+              </div>
+
+              <div class="bubble-footer">
+                <span class="message-time" id="initialTime">12.51</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- D. AREA INPUT (Floating Pill Input) -->
+    <div class="modern-input-section">
+      <div class="input-container">
+        <form class="chat-form" id="chatForm" autocomplete="off">
+          <div class="modern-input-wrapper">
+            <div class="input-icon-left">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <input 
+              type="text" 
+              class="modern-input-field" 
+              id="userInput" 
+              placeholder="Tulis pertanyaan Anda seputar layanan JAKEVO..." 
+              required
+              aria-label="Tulis pertanyaan Anda seputar JAKEVO"
+            >
+            <button type="submit" class="modern-send-btn" id="sendBtn">
+              <span>Kirim</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="modern-bottom-row">
+          <label class="modern-switch-label" title="Tampilkan rincian retrieval dokumen & skor kecocokan RAG">
+            <input type="checkbox" id="ragToggleCheckbox" checked>
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">Tampilkan proses RAG</span>
+          </label>
+          <span class="enter-hint">
+            <kbd class="kbd-badge">Enter</kbd> untuk mengirim
+          </span>
+        </div>
+
+        <div class="modern-footer-notice">
+          <span>Prototype frontend · Simulasi RAG menggunakan korpus dokumen resmi DPMPTSP DKI Jakarta.</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ==========================================
+       13. FLOATING CHAT BUBBLE WIDGET
+       ========================================== -->
+  <button type="button" class="floating-chat-bubble-widget" id="floatingChatBtn" aria-label="Buka atau Tutup Chatbot JAKEVO Assistant" title="Buka atau Tutup Chatbot JAKEVO Assistant">
+    <div class="floating-bubble-avatar">
+      <svg class="bubble-avatar-svg" viewBox="0 0 100 100" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bubbleAvatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFA229"/>
+            <stop offset="100%" stop-color="#E26D00"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="50" fill="url(#bubbleAvatarGrad)"/>
+        <!-- Abang Betawi -->
+        <path d="M18 90 C18 75 26 70 38 70 C44 70 48 73 50 78 C45 83 38 90 38 90 Z" fill="#FFFFFF"/>
+        <path d="M30 67 C35 67 40 70 42 75 C38 80 35 90 35 90 L28 90 Z" fill="#DC2626"/>
+        <ellipse cx="36" cy="50" rx="11" ry="12" fill="#FCD3AD"/>
+        <path d="M24 45 C24 35 29 33 36 33 C43 33 48 35 48 45 Z" fill="#1E293B"/>
+        <circle cx="31" cy="49" r="1.5" fill="#0F172A"/>
+        <circle cx="41" cy="49" r="1.5" fill="#0F172A"/>
+        <path d="M33 54 Q36 57 39 54" stroke="#B45309" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <!-- None Betawi -->
+        <path d="M50 78 C52 73 56 70 62 70 C74 70 82 75 82 90 L62 90 Z" fill="#0284C7"/>
+        <ellipse cx="64" cy="50" rx="11" ry="12" fill="#FCD3AD"/>
+        <ellipse cx="64" cy="39" rx="12" ry="9" fill="#1E293B"/>
+        <circle cx="56" cy="37" r="1.8" fill="#FEF08A"/>
+        <circle cx="64" cy="34" r="2.2" fill="#FBBF24"/>
+        <circle cx="72" cy="37" r="1.8" fill="#FEF08A"/>
+        <circle cx="59" cy="49" r="1.5" fill="#0F172A"/>
+        <circle cx="69" cy="49" r="1.5" fill="#0F172A"/>
+        <path d="M61 54 Q64 57 67 54" stroke="#E11D48" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="bubble-online-dot"></span>
+      <span class="bubble-toggle-cross" aria-hidden="true">✕</span>
+    </div>
+    <div class="floating-bubble-text-pill">
+      <span class="bubble-name" id="floatingBtnLabel">Buka Chatbot</span>
+      <span class="bubble-sub" id="floatingBtnSub">JAKEVO Assistant Online</span>
+    </div>
+  </button>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="btn btn-primary rounded-circle back-to-top shadow" id="backToTopBtn" aria-label="Kembali ke atas">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script Logika JAKEVO Assistant & Portfolio Controls -->
+  <script src="script.js"></script>
+</body>
+</html>

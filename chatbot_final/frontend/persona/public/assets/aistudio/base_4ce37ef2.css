@@ -1,0 +1,53 @@
+/* ==========================================================================
+   2. RESET & TIPOGRAFI DASAR & PRELOADER
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-main);
+  background-color: var(--white);
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .text-dark {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--dark) !important;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: var(--trans-smooth);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Preloader Spinner */
+#spinner {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.35s ease-out, visibility 0s linear 0s;
+  z-index: 999999;
+}
+#spinner.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease-out, visibility 0s linear 0.35s;
+  pointer-events: none;
+}

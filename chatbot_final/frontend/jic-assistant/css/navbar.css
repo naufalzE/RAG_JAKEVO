@@ -1,0 +1,79 @@
+/* ==========================================================================
+   3. NAVBAR PORTOFOLIO (Glassmorphic & Navigation)
+   ========================================================================== */
+.portfolio-navbar {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 0.9rem 0;
+  transition: var(--trans-smooth);
+  z-index: 1040;
+}
+
+.portfolio-navbar.navbar-scrolled {
+  padding: 0.65rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.brand-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary) 0%, #EA580C 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px var(--primary-shadow);
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--dark);
+  line-height: 1.1;
+}
+
+.brand-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.portfolio-navbar .nav-link {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  padding: 0.5rem 0.9rem !important;
+  border-radius: var(--radius-full);
+  transition: var(--trans-smooth);
+}
+
+.portfolio-navbar .nav-link:hover,
+.portfolio-navbar .nav-link.active {
+  color: var(--primary) !important;
+  background: var(--primary-light);
+}
+
+.btn-nav-cta {
+  font-weight: 700;
+  font-size: 0.88rem;
+  background: var(--primary);
+  border-color: var(--primary);
+  transition: var(--trans-smooth);
+}
+
+.btn-nav-cta:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-1px);
+}

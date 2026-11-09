@@ -1,0 +1,308 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   JAKEVO — PERSONA 5 ROYAL INSPIRED MASTER STYLESHEET (SINGLE FILE EDITION)
+   Palette: Phantom Crimson (#E60012), Velvet Obsidian (#111111), Pure White (#FFFFFF)
+   Typography: Barlow Condensed (Display), Plus Jakarta Sans (Body), JetBrains Mono
+   ========================================================================== */
+
+:root {
+  --p5-red: #E60012;
+  --p5-red-dark: #B0000D;
+  --p5-black: #111111;
+  --p5-charcoal: #1A1A1A;
+  --p5-white: #FFFFFF;
+  --p5-offwhite: #F5F5F5;
+  --p5-gray: #A1A1AA;
+  --p5-gold: #FFD000;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  font-family: var(--font-body);
+  background-color: var(--p5-black);
+  color: var(--p5-white);
+}
+
+body {
+  background-color: var(--p5-black);
+  color: var(--p5-white);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbar - Persona 5 Style */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+  border-left: 2px solid #262626;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E60012;
+  border: 2px solid #111111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFFFFF;
+}
+
+/* Typography Utilities */
+.font-p5-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.font-p5-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Manga & Comic Book Halftone / Stripe Backgrounds */
+.p5-halftone-bg {
+  background-image: radial-gradient(rgba(230, 0, 18, 0.22) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.p5-halftone-white {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+.p5-diagonal-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(230, 0, 18, 0.12),
+    rgba(230, 0, 18, 0.12) 14px,
+    transparent 14px,
+    transparent 28px
+  );
+}
+
+.p5-red-stripes {
+  background-image: repeating-linear-gradient(
+    -35deg,
+    #E60012,
+    #E60012 18px,
+    #C4000F 18px,
+    #C4000F 36px
+  );
+}
+
+/* Persona 5 Jagged & Asymmetric Clip Paths */
+.p5-clip-card {
+  clip-path: polygon(0 0, 100% 2%, 98% 100%, 1% 98%);
+}
+
+.p5-clip-card-alt {
+  clip-path: polygon(1% 2%, 99% 0, 100% 97%, 0 100%);
+}
+
+.p5-clip-button {
+  clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
+}
+
+.p5-clip-tag {
+  clip-path: polygon(8% 0%, 100% 4%, 92% 100%, 0% 96%);
+}
+
+.p5-clip-banner {
+  clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
+}
+
+.p5-clip-chat-bot {
+  clip-path: polygon(0% 3%, 99% 0%, 100% 96%, 2% 100%);
+}
+
+.p5-clip-chat-user {
+  clip-path: polygon(2% 0%, 100% 4%, 98% 100%, 0% 95%);
+}
+
+/* Persona 5 Hard Comic Drop Shadows */
+.p5-shadow-red {
+  box-shadow: 6px 6px 0px #E60012;
+}
+
+.p5-shadow-white {
+  box-shadow: 6px 6px 0px #FFFFFF;
+}
+
+.p5-shadow-black {
+  box-shadow: 6px 6px 0px #111111;
+}
+
+.p5-shadow-lg-red {
+  box-shadow: 10px 10px 0px #E60012;
+}
+
+.p5-shadow-lg-white {
+  box-shadow: 10px 10px 0px #FFFFFF;
+}
+
+/* Interactive Card & Button Hover Transforms */
+.p5-card-interactive {
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s ease;
+}
+
+.p5-card-interactive:hover {
+  transform: translate(-3px, -3px) rotate(-0.4deg);
+  box-shadow: 9px 9px 0px #E60012;
+}
+
+.p5-btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #E60012;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 2px solid #FFFFFF;
+  box-shadow: 5px 5px 0px #FFFFFF;
+  transform: skewX(-8deg);
+  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+  cursor: pointer;
+}
+
+.p5-btn-primary:hover {
+  background-color: #FFFFFF;
+  color: #111111;
+  border-color: #E60012;
+  box-shadow: 7px 7px 0px #E60012;
+  transform: skewX(-8deg) translate(-2px, -2px);
+}
+
+.p5-btn-primary:active {
+  transform: skewX(-8deg) translate(1px, 1px);
+  box-shadow: 2px 2px 0px #E60012;
+}
+
+.p5-btn-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #111111;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 2px solid #FFFFFF;
+  box-shadow: 4px 4px 0px #E60012;
+  transform: skewX(-8deg);
+  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+  cursor: pointer;
+}
+
+.p5-btn-secondary:hover {
+  background-color: #E60012;
+  color: #FFFFFF;
+  box-shadow: 6px 6px 0px #FFFFFF;
+  transform: skewX(-8deg) translate(-2px, -2px);
+}
+
+.p5-unskew {
+  transform: skewX(8deg);
+}
+
+/* Section Diagonal Divider */
+.p5-section-slash {
+  position: relative;
+}
+
+.p5-section-slash::before {
+  content: '';
+  position: absolute;
+  top: -28px;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #E60012;
+  transform: skewY(-1.5deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Chatbot Link Styling (Compatible with FastAPI Backend HTML Output) */
+.jakevo-link-pill,
+.jakevo-link-btn,
+.p5-chat-prose a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #FFFFFF !important;
+  background-color: #E60012 !important;
+  border: 1.5px solid #FFFFFF !important;
+  padding: 3px 10px !important;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  text-decoration: none !important;
+  margin: 4px 2px !important;
+  box-shadow: 3px 3px 0px #111111;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease !important;
+}
+
+.jakevo-link-pill:hover,
+.jakevo-link-btn:hover,
+.p5-chat-prose a:hover {
+  background-color: #FFFFFF !important;
+  color: #111111 !important;
+  border-color: #E60012 !important;
+  transform: translate(-1px, -1px);
+}
+
+.p5-chat-prose p {
+  margin-bottom: 0.5rem;
+}
+
+.p5-chat-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.p5-chat-prose ul,
+.p5-chat-prose ol {
+  padding-left: 1.25rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.p5-chat-prose li {
+  margin-bottom: 0.25rem;
+}
+
+.p5-chat-prose strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

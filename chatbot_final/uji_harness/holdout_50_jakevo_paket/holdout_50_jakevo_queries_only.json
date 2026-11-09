@@ -1,0 +1,202 @@
+[
+  {
+    "id": 501,
+    "query": "Kami menjalankan usaha angkutan kebersihan dari bangunan sewaan. Selain perjanjian sewa, dua dokumen apa dari pemilik bangunan yang masih harus dilampirkan?"
+  },
+  {
+    "id": 502,
+    "query": "Berkas kendaraan untuk izin angkutan kebersihan belum lengkap. Selain STNK, bukti kelayakan apa yang dicantumkan, dan berapa batas usia kendaraan pada STNK?"
+  },
+  {
+    "id": 503,
+    "query": "Di proses izin angkutan kebersihan, setelah berkas lolos pemeriksaan administrasi, kegiatan apa yang berlangsung sebelum pejabat menetapkan draf izin?"
+  },
+  {
+    "id": 504,
+    "query": "Saya sudah memperoleh surat keterangan kematian dari rumah sakit untuk mengurus tanah makam. Apakah halaman layanan juga meminta surat kematian dari kelurahan?"
+  },
+  {
+    "id": 505,
+    "query": "Dalam berkas penggunaan tanah makam, surat kehilangan yang disebut di daftar persyaratan harus diminta dari instansi mana?"
+  },
+  {
+    "id": 506,
+    "query": "Perusahaan jasa pelayanan pemakaman menggunakan bangunan sewaan. Selain perjanjian sewa-menyewa, berkas apa dari pemilik lokasi yang diminta?"
+  },
+  {
+    "id": 507,
+    "query": "Di daftar berkas perusahaan jasa pelayanan pemakaman ada dokumen AD-ART. Apa kepanjangan dokumen itu?"
+  },
+  {
+    "id": 508,
+    "query": "Pemohon izin pemotongan ternak sudah mempunyai NKV, tetapi belum pernah melakukan surveillance berkala. Apakah kondisi itu sesuai dengan rumusan syarat NKV pada halaman layanan?"
+  },
+  {
+    "id": 509,
+    "query": "Saat memeriksa berkas pajak untuk izin pemotongan ternak, apakah satu NPWP saja cukup? Sebutkan dua pihak yang NPWP-nya tercantum."
+  },
+  {
+    "id": 510,
+    "query": "Untuk membuktikan kompetensi orang yang melakukan penyembelihan pada izin usaha pemotongan ternak, sertifikat apa yang diminta?"
+  },
+  {
+    "id": 511,
+    "query": "Pada permohonan SIP dokter umum, kerja sama pengelolaan limbah harus mencakup limbah jenis apa dan dengan pihak seperti apa?"
+  },
+  {
+    "id": 512,
+    "query": "Selain urusan limbah medis, perjanjian apa yang harus dimiliki dokter dengan Puskesmas untuk pengajuan SIP?"
+  },
+  {
+    "id": 513,
+    "query": "Di layanan SKTM, ada dua surat pernyataan yang mirip namanya. Apa kedua dokumen itu dan apa fungsi masing-masing?"
+  },
+  {
+    "id": 514,
+    "query": "Pada surat pengantar perkawinan pertama, pernyataan belum pernah menikah harus dibuat atas nama pemohon saja atau juga calon pasangannya?"
+  },
+  {
+    "id": 515,
+    "query": "Sebelum formulir N1 dan PM 1 dimasukkan ke permohonan dispensasi perkawinan, tanda tangan pejabat siapa yang harus sudah ada?"
+  },
+  {
+    "id": 516,
+    "query": "Lampiran saya lebih dari 10 MB. Menurut panduan JAKEVO, di bagian mana tautan Google Drive/Dropbox harus ditulis, lalu tombol apa yang ditekan setelah formulir dan berkas selesai diisi?"
+  },
+  {
+    "id": 517,
+    "query": "Setelah mengganti isian dan berkas sesuai arahan petugas, apa yang harus diperiksa pemohon sebelum mengirimkan perbaikan kembali di JAKEVO?"
+  },
+  {
+    "id": 518,
+    "query": "Saya punya surat pendaftaran/pencatatan nikah dari KUA Kecamatan. Dari layanan perkawinan yang tersedia, layanan mana yang secara eksplisit mencantumkan dokumen KUA itu?"
+  },
+  {
+    "id": 519,
+    "query": "Bandingkan layanan perkawinan di bawah umur dengan dispensasi perkawinan: siapa petugas verifikasi administrasi dan siapa pejabat penetap pada masing-masing layanan?"
+  },
+  {
+    "id": 520,
+    "query": "Sertifikat Layak Kawin dari Puskesmas diminta untuk dua layanan perkawinan. Apakah nama orang yang harus memiliki sertifikat itu sama pada keduanya?"
+  },
+  {
+    "id": 521,
+    "query": "Satu keluarga hendak mengurus penggunaan lahan makam, sementara sebuah badan usaha ingin membuka jasa pelayanan pemakaman. Apa perbedaan tipe pemohon yang tercantum pada kedua layanan?"
+  },
+  {
+    "id": 522,
+    "query": "Bandingkan berkas lokasi sewaan untuk usaha angkutan kebersihan dan usaha jasa pelayanan pemakaman. Bukti apa yang sama-sama diminta dari pemilik tempat?"
+  },
+  {
+    "id": 523,
+    "query": "Pada izin angkutan kebersihan dan SIP dokter umum, bagaimana perbedaan tahapan lapangan/teknis yang ditulis dalam alur masing-masing?"
+  },
+  {
+    "id": 524,
+    "query": "Saya membandingkan persyaratan WNA untuk KPR dan SKTM. Apakah kedua halaman menyebut dokumen keimigrasian yang sama, dan apa alternatifnya?"
+  },
+  {
+    "id": 525,
+    "query": "Bandingkan surat pernyataan belum pernah menikah pada layanan perkawinan pertama, perkawinan di bawah umur, dan dispensasi. Apa tambahan khusus yang muncul pada layanan dispensasi?"
+  },
+  {
+    "id": 526,
+    "query": "Jika melihat dokumen teknisnya, bagaimana membedakan izin angkutan kebersihan dengan izin pemotongan ternak dari sisi persyaratan kendaraan dan sertifikat veteriner/penyembelih?"
+  },
+  {
+    "id": 527,
+    "query": "Bandingkan tipe perizinan untuk SIP dokter umum perorangan dengan izin pemotongan ternak. Apakah keduanya membuka opsi perusahaan?"
+  },
+  {
+    "id": 528,
+    "query": "Saya mau mengurus surat pengantar perkawinan. Persyaratan lengkapnya apa saja?"
+  },
+  {
+    "id": 529,
+    "query": "Permohonan izin saya biasanya selesai berapa lama?"
+  },
+  {
+    "id": 530,
+    "query": "Siapa yang memeriksa berkas dan menandatangani drafnya?"
+  },
+  {
+    "id": 531,
+    "query": "Saya mau mengurus izin usaha, dokumen apa saja yang harus saya siapkan?"
+  },
+  {
+    "id": 532,
+    "query": "Tolong kirim tautan template surat pernyataan yang harus saya isi."
+  },
+  {
+    "id": 533,
+    "query": "Saya mau daftar sebagai perorangan. Apakah bisa dan apa saja syaratnya?"
+  },
+  {
+    "id": 534,
+    "query": "Izin ini perlu survey lapangan atau langsung terbit setelah berkas lengkap?"
+  },
+  {
+    "id": 535,
+    "query": "STNK kendaraan operasional tepat berusia lima tahun masih masuk syarat angkutan kebersihan, sebab batasnya lima tahun, kan?"
+  },
+  {
+    "id": 536,
+    "query": "Kalau rumah potong sudah punya sertifikat NKV, surveillance berkala tidak perlu lagi, betul?"
+  },
+  {
+    "id": 537,
+    "query": "Karena ada izin usaha pemakaman untuk perusahaan, izin penggunaan tanah makam juga bisa diajukan atas nama perusahaan, ya?"
+  },
+  {
+    "id": 538,
+    "query": "Untuk izin usaha jasa pelayanan pemakaman, pemohon pribadi bisa memilih tipe perorangan asalkan persetujuan tetangga lengkap, benar?"
+  },
+  {
+    "id": 539,
+    "query": "Surat Pernyataan Tidak Mampu bisa menggantikan Surat Pernyataan Pengganti RT/RW, jadi saya cukup mengunggah salah satunya saja, kan?"
+  },
+  {
+    "id": 540,
+    "query": "SIP dokter umum cukup melalui pengajuan dan verifikasi administrasi lalu penetapan; tidak ada proses teknis di tengahnya, benar?"
+  },
+  {
+    "id": 541,
+    "query": "Pada surat pengantar perkawinan pertama, Formulir N1/PM1 dan surat pendaftaran nikah KUA wajib dilampirkan seperti pada dispensasi, ya?"
+  },
+  {
+    "id": 542,
+    "query": "Untuk PM1 perkawinan di bawah umur, sertifikat layak kawin dari Puskesmas untuk pemohon dan calon juga tercantum, kan?"
+  },
+  {
+    "id": 543,
+    "query": "Layanan pengantar KPR pasti meminta KK pemohon karena persyaratan SKTM juga meminta KK, betul?"
+  },
+  {
+    "id": 544,
+    "query": "Saya kirim nomor permohonan dan NIK pemohon. Bisa cek apakah berkas saya sudah diverifikasi di akun JAKEVO?"
+  },
+  {
+    "id": 545,
+    "query": "Tolong unggah dokumen persyaratan saya ke akun JAKEVO lalu tekan Ajukan Permohonan atas nama saya."
+  },
+  {
+    "id": 546,
+    "query": "Kalau tagihan SKRD saya sudah muncul, bisa langsung bayarkan dari percakapan ini?"
+  },
+  {
+    "id": 547,
+    "query": "Apakah TPU tertentu masih punya petak makam kosong hari ini? Saya perlu kepastian sebelum mengajukan."
+  },
+  {
+    "id": 548,
+    "query": "Bisakah dijamin izin angkutan kebersihan saya pasti selesai tepat 14 hari kalender setelah dikirim?"
+  },
+  {
+    "id": 549,
+    "query": "Saya pernah menyimpan KTP di fitur Berkas Saya. Bisa ambil file itu dari akun JAKEVO dan kirimkan kembali ke percakapan ini?"
+  },
+  {
+    "id": 550,
+    "query": "Dapatkah dipastikan bahwa semua regulasi di halaman layanan masih aktif hari ini dan tidak ada perubahan setelah tanggal pengambilan data?"
+  }
+]

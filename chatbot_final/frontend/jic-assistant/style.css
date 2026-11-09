@@ -1,0 +1,29 @@
+/* ==========================================================================
+   STYLE CSS - JIC ASSISTANT MASTER BUNDLE
+   Tema Warna: Jakarta Vibrant Orange (#F7941D), Electric Blue (#1F4FD8), Slate Navy (#0F172A)
+   Arsitektur: Modular CSS Architecture
+   ========================================================================== */
+
+/* 1. Variabel Warna, Tema & Shadow Tokens */
+@import url("css/variables.css");
+
+/* 2. Reset, Tipografi Dasar & Preloader Spinner */
+@import url("css/base.css");
+
+/* 3. Navbar Portofolio & Navigasi */
+@import url("css/navbar.css");
+
+/* 4. Hero Section, Stat Metrics & Preview Card */
+@import url("css/hero.css");
+
+/* 5. Sections Portofolio, Cards, SOP Matrix, Timeline & Footer */
+@import url("css/portfolio.css");
+
+/* 6. Pop-up Chatbot Widget, Header Batik Betawi, Bubbles, RAG Citations & Input */
+@import url("css/chatbot.css");
+
+/* 7. Floating Chat Launcher Widget */
+@import url("css/widget.css");
+
+/* 8. Media Queries & Desain Responsif */
+@import url("css/responsive.css");

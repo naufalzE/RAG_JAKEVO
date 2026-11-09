@@ -1,0 +1,590 @@
+[
+  {
+    "id": 501,
+    "query": "Kami menjalankan usaha angkutan kebersihan dari bangunan sewaan. Selain perjanjian sewa, dua dokumen apa dari pemilik bangunan yang masih harus dilampirkan?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Untuk lokasi yang disewa, halaman layanan meminta surat pernyataan bermaterai dari pemilik tanah/bangunan yang menyatakan tidak keberatan tempat tersebut digunakan, serta KTP pemilik tanah/bangunan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 502,
+    "query": "Berkas kendaraan untuk izin angkutan kebersihan belum lengkap. Selain STNK, bukti kelayakan apa yang dicantumkan, dan berapa batas usia kendaraan pada STNK?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Selain scan asli STNK kendaraan, pemohon diminta scan asli hasil uji kelayakan kendaraan (KIR). Usia kendaraan yang digunakan harus kurang dari 5 tahun.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 503,
+    "query": "Di proses izin angkutan kebersihan, setelah berkas lolos pemeriksaan administrasi, kegiatan apa yang berlangsung sebelum pejabat menetapkan draf izin?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Tahap berikutnya adalah Survey Lapangan bersama. Pelaksananya Petugas Lapangan yang melakukan verifikasi dan peninjauan lapangan. Tahap ini berlangsung sebelum Penetapan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 504,
+    "query": "Saya sudah memperoleh surat keterangan kematian dari rumah sakit untuk mengurus tanah makam. Apakah halaman layanan juga meminta surat kematian dari kelurahan?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt"
+    ],
+    "ground_truth": "Ya. Selain Surat Keterangan Kematian dari Puskesmas/Rumah Sakit, daftar persyaratan juga mencantumkan Surat Keterangan Laporan Kematian dari Kelurahan setempat. Keduanya merupakan butir persyaratan yang terpisah.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 505,
+    "query": "Dalam berkas penggunaan tanah makam, surat kehilangan yang disebut di daftar persyaratan harus diminta dari instansi mana?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt"
+    ],
+    "ground_truth": "Surat Keterangan Kehilangan dari Kepolisian.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 506,
+    "query": "Perusahaan jasa pelayanan pemakaman menggunakan bangunan sewaan. Selain perjanjian sewa-menyewa, berkas apa dari pemilik lokasi yang diminta?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Halaman layanan meminta surat pernyataan bermaterai Rp10.000 dari pemilik tanah/bangunan yang menyatakan tidak keberatan tempat itu digunakan, serta KTP pemilik tanah/bangunan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 507,
+    "query": "Di daftar berkas perusahaan jasa pelayanan pemakaman ada dokumen AD-ART. Apa kepanjangan dokumen itu?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Anggaran Dasar atau Anggaran Rumah Tangga (AD-ART).",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 508,
+    "query": "Pemohon izin pemotongan ternak sudah mempunyai NKV, tetapi belum pernah melakukan surveillance berkala. Apakah kondisi itu sesuai dengan rumusan syarat NKV pada halaman layanan?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Belum sesuai. Persyaratan menyebut Sertifikat Nomor Kontrol Veteriner (NKV) yang sudah di-surveillance berkala sesuai dengan level sertifikasi.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 509,
+    "query": "Saat memeriksa berkas pajak untuk izin pemotongan ternak, apakah satu NPWP saja cukup? Sebutkan dua pihak yang NPWP-nya tercantum.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Halaman mencantumkan NPWP Perusahaan dan NPWP Penanggungjawab sebagai dua persyaratan yang berbeda.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 510,
+    "query": "Untuk membuktikan kompetensi orang yang melakukan penyembelihan pada izin usaha pemotongan ternak, sertifikat apa yang diminta?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Sertifikat Kompetensi Juru Sembelih Halal.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 511,
+    "query": "Pada permohonan SIP dokter umum, kerja sama pengelolaan limbah harus mencakup limbah jenis apa dan dengan pihak seperti apa?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "ground_truth": "Diperlukan perjanjian kerja sama pengelolaan limbah medis padat dan cair dengan pihak lain yang telah memiliki Izin Pengelolaan Limbah sesuai peraturan, atau dengan Tempat Penampungan Lain yang ditetapkan/disetujui Dinas Kesehatan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 512,
+    "query": "Selain urusan limbah medis, perjanjian apa yang harus dimiliki dokter dengan Puskesmas untuk pengajuan SIP?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "ground_truth": "Perjanjian kerja sama dukungan fasilitas pelayanan kesehatan terhadap program kesehatan nasional dan daerah dengan Puskesmas.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 513,
+    "query": "Di layanan SKTM, ada dua surat pernyataan yang mirip namanya. Apa kedua dokumen itu dan apa fungsi masing-masing?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ],
+    "ground_truth": "Dokumen mencantumkan Surat Pernyataan Pengganti RT/RW dan Surat Pernyataan Tidak Mampu di atas kertas bermaterai Rp10.000. Keduanya merupakan dua persyaratan terpisah; surat kedua menyatakan kondisi tidak mampu, sedangkan surat pertama menggantikan pengantar RT/RW.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 514,
+    "query": "Pada surat pengantar perkawinan pertama, pernyataan belum pernah menikah harus dibuat atas nama pemohon saja atau juga calon pasangannya?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ],
+    "ground_truth": "Daftar persyaratan menyebut Surat Pernyataan Belum Pernah Menikah dari Pemohon, yang ditandatangani/disaksikan dua orang saksi yang tidak ada hubungan keluarga dan bermaterai Rp10.000. Tidak disebutkan surat pernyataan serupa dari calon pasangan pada layanan ini.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 515,
+    "query": "Sebelum formulir N1 dan PM 1 dimasukkan ke permohonan dispensasi perkawinan, tanda tangan pejabat siapa yang harus sudah ada?",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ],
+    "ground_truth": "Formulir N1 dan PM 1 untuk pernikahan harus sudah ditandatangani Lurah sebelum dipindai dan dilampirkan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 516,
+    "query": "Lampiran saya lebih dari 10 MB. Menurut panduan JAKEVO, di bagian mana tautan Google Drive/Dropbox harus ditulis, lalu tombol apa yang ditekan setelah formulir dan berkas selesai diisi?",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ],
+    "ground_truth": "Tautan Google Drive atau Dropbox dilampirkan pada box pesan di bawah kolom persyaratan. Setelah mengisi formulir dan mengunggah berkas, pemohon menekan tombol “Ajukan Permohonan”.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 517,
+    "query": "Setelah mengganti isian dan berkas sesuai arahan petugas, apa yang harus diperiksa pemohon sebelum mengirimkan perbaikan kembali di JAKEVO?",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ],
+    "ground_truth": "Pemohon diharapkan memeriksa kembali permohonan setelah memperbaiki isian dan berkas. Setelah itu pemohon dapat menekan tombol “Ajukan” atau “Ajukan Perbaikan Berkas”.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 518,
+    "query": "Saya punya surat pendaftaran/pencatatan nikah dari KUA Kecamatan. Dari layanan perkawinan yang tersedia, layanan mana yang secara eksplisit mencantumkan dokumen KUA itu?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+      "PM1_PERKAWINAN_PERTAMA.txt",
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ],
+    "ground_truth": "Dokumen Surat Pendaftaran/Pencatatan Nikah dari KUA Kecamatan tercantum pada layanan PM1 Surat Dispensasi Perkawinan. Dokumen tersebut tidak tercantum sebagai persyaratan pada halaman perkawinan pertama umum atau perkawinan di bawah umur.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 519,
+    "query": "Bandingkan layanan perkawinan di bawah umur dengan dispensasi perkawinan: siapa petugas verifikasi administrasi dan siapa pejabat penetap pada masing-masing layanan?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ],
+    "ground_truth": "Perkawinan di bawah umur: verifikasi oleh Kasie Kelurahan dan penetapan oleh Lurah. Dispensasi perkawinan: verifikasi oleh Kasie Kecamatan dan penetapan oleh Camat.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 520,
+    "query": "Sertifikat Layak Kawin dari Puskesmas diminta untuk dua layanan perkawinan. Apakah nama orang yang harus memiliki sertifikat itu sama pada keduanya?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt",
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ],
+    "ground_truth": "Tidak sama. Surat Pengantar Perkawinan Pertama meminta scan asli Sertifikat Layak Kawin Pemohon. Surat Dispensasi Perkawinan meminta Sertifikat Layak Kawin Pemohon dan Calon dari Puskesmas.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 521,
+    "query": "Satu keluarga hendak mengurus penggunaan lahan makam, sementara sebuah badan usaha ingin membuka jasa pelayanan pemakaman. Apa perbedaan tipe pemohon yang tercantum pada kedua layanan?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Izin Penggunaan Tanah Makam mencantumkan tipe perizinan perorangan. Izin Usaha Jasa Pelayanan Pemakaman mencantumkan tipe perizinan perusahaan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 522,
+    "query": "Bandingkan berkas lokasi sewaan untuk usaha angkutan kebersihan dan usaha jasa pelayanan pemakaman. Bukti apa yang sama-sama diminta dari pemilik tempat?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Kedua layanan meminta perjanjian sewa-menyewa, surat pernyataan dari pemilik yang menyatakan tidak keberatan tempat digunakan, dan KTP pemilik. Pada layanan jasa pelayanan pemakaman, surat pernyataan tersebut secara eksplisit bermaterai Rp10.000; pada layanan angkutan kebersihan tertulis bermaterai sesuai peraturan yang berlaku.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 523,
+    "query": "Pada izin angkutan kebersihan dan SIP dokter umum, bagaimana perbedaan tahapan lapangan/teknis yang ditulis dalam alur masing-masing?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "ground_truth": "Izin angkutan kebersihan memiliki tahap tersendiri bernama “Survey Lapangan bersama” oleh Petugas Lapangan. SIP dokter umum memiliki “Evaluasi Teknis” dan “Rekomendasi Teknis” oleh OPD teknis; peninjauan lapangan dilakukan jika diperlukan sebagai bagian dasar rekomendasi, bukan tahap bernama Survey Lapangan bersama.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 524,
+    "query": "Saya membandingkan persyaratan WNA untuk KPR dan SKTM. Apakah kedua halaman menyebut dokumen keimigrasian yang sama, dan apa alternatifnya?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ],
+    "ground_truth": "Ya. Kedua halaman mencantumkan Kartu Izin Tinggal Terbatas (KITAS) atau VISA/Paspor untuk Warga Negara Asing.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 525,
+    "query": "Bandingkan surat pernyataan belum pernah menikah pada layanan perkawinan pertama, perkawinan di bawah umur, dan dispensasi. Apa tambahan khusus yang muncul pada layanan dispensasi?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt",
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ],
+    "ground_truth": "Pada layanan perkawinan pertama dan di bawah umur, persyaratan menyebut surat pernyataan belum pernah menikah dari Pemohon yang disaksikan dua orang saksi yang tidak ada hubungan keluarga. Pada layanan dispensasi, selain pernyataan dari Pemohon yang disaksikan dua saksi, juga dicantumkan Surat Pernyataan Belum Pernah Menikah dari Calon pengantin.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 526,
+    "query": "Jika melihat dokumen teknisnya, bagaimana membedakan izin angkutan kebersihan dengan izin pemotongan ternak dari sisi persyaratan kendaraan dan sertifikat veteriner/penyembelih?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Izin angkutan kebersihan meminta STNK kendaraan yang usianya kurang dari 5 tahun dan hasil uji kelayakan kendaraan (KIR), serta bukti pembayaran retribusi tiga bulan terakhir. Izin pemotongan ternak meminta NKV yang sudah di-surveillance berkala sesuai level sertifikasi dan Sertifikat Kompetensi Juru Sembelih Halal; bukan dokumen STNK/KIR.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 527,
+    "query": "Bandingkan tipe perizinan untuk SIP dokter umum perorangan dengan izin pemotongan ternak. Apakah keduanya membuka opsi perusahaan?",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Tidak. SIP Dokter (Dokter Umum Perorangan) mencantumkan tipe perizinan perorangan. Izin Usaha Pemotongan Ternak mencantumkan tipe perizinan perorangan dan perusahaan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 528,
+    "query": "Saya mau mengurus surat pengantar perkawinan. Persyaratan lengkapnya apa saja?",
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya meminta klarifikasi jenis layanan: Surat Pengantar Perkawinan Pertama (Umum), Surat Pengantar Perkawinan di Bawah Umur, atau Surat Dispensasi Perkawinan. Ketiganya memiliki daftar persyaratan yang berbeda; jangan memilih salah satu tanpa konfirmasi.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 529,
+    "query": "Permohonan izin saya biasanya selesai berapa lama?",
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya menanyakan nama layanan/izin yang dimaksud karena estimasi pada sumber berbeda-beda, misalnya 1, 7, atau 14 hari kerja.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 530,
+    "query": "Siapa yang memeriksa berkas dan menandatangani drafnya?",
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya meminta nama layanan dan tahap yang dimaksud. Pelaksana verifikasi serta pejabat penetap berbeda antar layanan; jangan menebak satu pejabat.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 531,
+    "query": "Saya mau mengurus izin usaha, dokumen apa saja yang harus saya siapkan?",
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya menanyakan jenis izin usaha yang dimaksud, misalnya angkutan di bidang kebersihan, jasa pelayanan pemakaman, atau pemotongan ternak, karena persyaratannya berbeda.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 532,
+    "query": "Tolong kirim tautan template surat pernyataan yang harus saya isi.",
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya meminta nama layanan atau jenis surat pernyataan yang dimaksud. Beberapa layanan mempunyai template berbeda, dan tidak semua surat pernyataan memiliki tautan unduh.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 533,
+    "query": "Saya mau daftar sebagai perorangan. Apakah bisa dan apa saja syaratnya?",
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya menanyakan layanan yang ingin diajukan terlebih dahulu. Tipe perizinan berbeda antar layanan; tidak boleh menyimpulkan kelayakan hanya dari pilihan perorangan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 534,
+    "query": "Izin ini perlu survey lapangan atau langsung terbit setelah berkas lengkap?",
+    "category": "Ambigu (perlu klarifikasi)",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot seharusnya menanyakan nama layanan. Alur layanan berbeda; sebagian mencantumkan survey lapangan atau tahapan teknis, sementara layanan lain tidak mencantumkannya.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 535,
+    "query": "STNK kendaraan operasional tepat berusia lima tahun masih masuk syarat angkutan kebersihan, sebab batasnya lima tahun, kan?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Tidak. Persyaratan menyebut usia kendaraan kurang dari 5 tahun. Kendaraan yang tepat berusia 5 tahun tidak memenuhi rumusan “kurang dari 5 tahun”.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 536,
+    "query": "Kalau rumah potong sudah punya sertifikat NKV, surveillance berkala tidak perlu lagi, betul?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ],
+    "ground_truth": "Tidak. Persyaratan secara eksplisit meminta NKV yang sudah di-surveillance berkala sesuai dengan level sertifikasi.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 537,
+    "query": "Karena ada izin usaha pemakaman untuk perusahaan, izin penggunaan tanah makam juga bisa diajukan atas nama perusahaan, ya?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Tidak. Izin Penggunaan Tanah Makam mencantumkan tipe perizinan perorangan, sedangkan Izin Usaha Jasa Pelayanan Pemakaman mencantumkan tipe perusahaan. Keduanya adalah layanan berbeda.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 538,
+    "query": "Untuk izin usaha jasa pelayanan pemakaman, pemohon pribadi bisa memilih tipe perorangan asalkan persetujuan tetangga lengkap, benar?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ],
+    "ground_truth": "Tidak. Tipe perizinan yang tercantum pada halaman Izin Usaha Jasa Pelayanan Pemakaman hanya perusahaan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 539,
+    "query": "Surat Pernyataan Tidak Mampu bisa menggantikan Surat Pernyataan Pengganti RT/RW, jadi saya cukup mengunggah salah satunya saja, kan?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ],
+    "ground_truth": "Tidak. Daftar persyaratan SKTM mencantumkan keduanya sebagai butir terpisah: Surat Pernyataan Pengganti RT/RW dan Surat Pernyataan Tidak Mampu bermaterai Rp10.000.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 540,
+    "query": "SIP dokter umum cukup melalui pengajuan dan verifikasi administrasi lalu penetapan; tidak ada proses teknis di tengahnya, benar?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ],
+    "ground_truth": "Tidak. Alur SIP mencakup Evaluasi Teknis oleh OPD teknis dan Rekomendasi Teknis oleh OPD teknis sebelum Penetapan dan Izin Terbit.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 541,
+    "query": "Pada surat pengantar perkawinan pertama, Formulir N1/PM1 dan surat pendaftaran nikah KUA wajib dilampirkan seperti pada dispensasi, ya?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ],
+    "ground_truth": "Tidak. Pada daftar persyaratan Surat Pengantar Perkawinan Pertama (Umum), Formulir N1/PM1 dan surat pendaftaran/pencatatan nikah dari KUA tidak tercantum. Dokumen tersebut tercantum pada layanan Surat Dispensasi Perkawinan.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 542,
+    "query": "Untuk PM1 perkawinan di bawah umur, sertifikat layak kawin dari Puskesmas untuk pemohon dan calon juga tercantum, kan?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ],
+    "ground_truth": "Sertifikat Layak Kawin tidak tercantum pada daftar persyaratan halaman PM1 Perkawinan di Bawah Umur. Jangan memindahkan persyaratan dari layanan perkawinan pertama atau dispensasi ke layanan ini.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 543,
+    "query": "Layanan pengantar KPR pasti meminta KK pemohon karena persyaratan SKTM juga meminta KK, betul?",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "Semua 10 file .txt",
+    "source_scope": "service_corpus",
+    "expected_sources": [
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ],
+    "ground_truth": "Tidak boleh menyamakan kedua daftar. Halaman KPR (Surat Pengantar Keterangan Belum Memiliki Rumah) tidak mencantumkan KK pemohon, sedangkan halaman SKTM mencantumkan Kartu Keluarga (KK) Pemohon.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 544,
+    "query": "Saya kirim nomor permohonan dan NIK pemohon. Bisa cek apakah berkas saya sudah diverifikasi di akun JAKEVO?",
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot tidak dapat memeriksa status transaksi atau permohonan individual secara real-time dan tidak boleh meminta atau menggunakan NIK untuk mengakses akun. Arahkan pengguna memeriksa melalui akun/portal resmi JAKEVO atau kanal resmi petugas.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 545,
+    "query": "Tolong unggah dokumen persyaratan saya ke akun JAKEVO lalu tekan Ajukan Permohonan atas nama saya.",
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Di luar cakupan kemampuan chatbot. Chatbot informasi tidak dapat mengakses akun, mengunggah dokumen, mengubah data, atau mengajukan permohonan atas nama pengguna.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 546,
+    "query": "Kalau tagihan SKRD saya sudah muncul, bisa langsung bayarkan dari percakapan ini?",
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Tidak. Chatbot tidak dapat melakukan pembayaran atau mengakses akun/transaksi pengguna. Pengguna perlu mengikuti proses pembayaran pada kanal resmi JAKEVO.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 547,
+    "query": "Apakah TPU tertentu masih punya petak makam kosong hari ini? Saya perlu kepastian sebelum mengajukan.",
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Informasi ketersediaan petak makam secara real-time tidak tersedia pada dokumen layanan yang diberikan. Chatbot harus menyatakan tidak dapat memastikan ketersediaan dan mengarahkan pengguna ke pengelola TPU/kanal resmi.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 548,
+    "query": "Bisakah dijamin izin angkutan kebersihan saya pasti selesai tepat 14 hari kalender setelah dikirim?",
+    "category": "Di luar cakupan",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ],
+    "ground_truth": "Tidak boleh menjamin tanggal terbit. Halaman hanya mencantumkan estimasi waktu pelayanan 14 hari kerja, bukan jaminan selesai dalam 14 hari kalender. Waktu aktual dapat bergantung pada proses dan kelengkapan berkas; sumber tidak memberi jaminan individual.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 549,
+    "query": "Saya pernah menyimpan KTP di fitur Berkas Saya. Bisa ambil file itu dari akun JAKEVO dan kirimkan kembali ke percakapan ini?",
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Chatbot tidak dapat membuka akun atau mengambil kembali file pribadi dari fitur Berkas Saya. Pengguna perlu mengunduhnya sendiri melalui akun JAKEVO; chatbot tidak boleh mengklaim memiliki akses ke file akun.",
+    "split": "holdout_2026_11_03"
+  },
+  {
+    "id": 550,
+    "query": "Dapatkah dipastikan bahwa semua regulasi di halaman layanan masih aktif hari ini dan tidak ada perubahan setelah tanggal pengambilan data?",
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "source_scope": "none",
+    "expected_sources": [],
+    "ground_truth": "Tidak dapat dipastikan hanya dari snapshot dokumen. Chatbot boleh menyebut status dan tanggal berlaku sebagaimana tercatat pada sumber, tetapi harus menjelaskan bahwa perubahan setelah tanggal pengambilan data perlu diverifikasi pada kanal/regulasi resmi terbaru.",
+    "split": "holdout_2026_11_03"
+  }
+]

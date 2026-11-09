@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 1,
+    "query": "Berapa estimasi waktu dan biaya untuk surat pengantar perkawinan di bawah umur (di bawah 19 tahun)?",
+    "ground_truth": "Estimasi 1 hari kerja, tanpa retribusi.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ]
+  },
+  {
+    "id": 2,
+    "query": "Dokumen apa dari pengadilan yang dibutuhkan untuk surat pengantar perkawinan di bawah umur?",
+    "ground_truth": "Surat Izin Menikah/Dispensasi dari Pengadilan Agama (untuk yang beragama Islam) atau Pengadilan Negeri (non Islam).",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ]
+  },
+  {
+    "id": 3,
+    "query": "Siapa yang memverifikasi dan siapa yang menetapkan surat pengantar perkawinan di bawah umur?",
+    "ground_truth": "Verifikasi administrasi oleh Kasie Kelurahan; penetapan (tanda tangan elektronik) oleh Lurah.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ]
+  },
+  {
+    "id": 4,
+    "query": "Dokumen orang tua apa yang diperlukan untuk perkawinan di bawah umur?",
+    "ground_truth": "Scan asli KTP dan KK orang tua pemohon (jika masih hidup); atau akta kematian/surat keterangan kematian (jika sudah meninggal); atau akte cerai (jika telah bercerai).",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ]
+  },
+  {
+    "id": 5,
+    "query": "Apa saja dasar hukum layanan surat pengantar perkawinan di bawah umur?",
+    "ground_truth": "3 regulasi: Instruksi Sekda DKI Nomor e-0024 Tahun 2023 (Pedoman Pelayanan Administrasi Kelurahan); UU No. 24 Tahun 2013 (perubahan UU 23/2006 Administrasi Kependudukan); UU No. 25 Tahun 2009 tentang Pelayanan Publik.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ]
+  },
+  {
+    "id": 6,
+    "query": "Dokumen kesehatan apa yang diperlukan untuk surat pengantar perkawinan pertama?",
+    "ground_truth": "Scan asli Sertifikat Layak Kawin Pemohon dari Puskesmas Kecamatan setempat.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_PERTAMA.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ]
+  },
+  {
+    "id": 7,
+    "query": "Apakah surat pengantar perkawinan pertama memerlukan akta kelahiran?",
+    "ground_truth": "Ya, diperlukan scan asli Akta Kelahiran Pemohon.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_PERTAMA.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ]
+  },
+  {
+    "id": 8,
+    "query": "Di mana link template surat pernyataan belum pernah menikah?",
+    "ground_truth": "https://jakevo.jakarta.go.id/documents/Surat_Pernyataan_Belum_Pernah_Kawin.docx",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_PERTAMA.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ]
+  },
+  {
+    "id": 9,
+    "query": "Di mana link template surat kuasa untuk surat pengantar perkawinan?",
+    "ground_truth": "https://jakevo.jakarta.go.id/documents/Surat_Kuasa.docx (surat kuasa bermaterai Rp10.000 beserta scan asli KTP penerima kuasa, bila dikuasakan).",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_PERTAMA.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ]
+  },
+  {
+    "id": 10,
+    "query": "Berapa saksi yang dibutuhkan untuk surat pernyataan belum pernah menikah dan apa syaratnya?",
+    "ground_truth": "2 orang saksi yang tidak memiliki hubungan keluarga, surat bermaterai Rp10.000; juga perlu scan asli KTP 2 orang saksi.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_PERTAMA.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ]
+  },
+  {
+    "id": 11,
+    "query": "Bagaimana alur proses surat pengantar perkawinan pertama?",
+    "ground_truth": "4 langkah: (1) Pengajuan oleh pemohon (isi formulir, unggah dokumen); (2) Verifikasi administrasi oleh Kasie Kelurahan (berkas dikembalikan bila tidak lengkap); (3) Penetapan oleh Lurah (tanda tangan elektronik); (4) Izin terbit oleh sistem, dapat diunduh di JAKEVO.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_PERTAMA.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ]
+  },
+  {
+    "id": 12,
+    "query": "Siapa yang memverifikasi dan menetapkan surat dispensasi perkawinan?",
+    "ground_truth": "Verifikasi oleh Kasie Kecamatan; penetapan oleh Camat.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ]
+  },
+  {
+    "id": 13,
+    "query": "Apakah surat dispensasi perkawinan memerlukan formulir N1 dan PM1?",
+    "ground_truth": "Ya, scan asli Formulir N1 dan PM 1 untuk pernikahan yang sudah ditandatangani Lurah.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ]
+  },
+  {
+    "id": 14,
+    "query": "Dokumen apa yang dibutuhkan jika dispensasi perkawinan untuk perkawinan kedua?",
+    "ground_truth": "Akta cerai dari Pengadilan Agama/Pengadilan Negeri, atau akta kematian/surat keterangan kematian, atau izin poligami dari Pengadilan Agama.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ]
+  },
+  {
+    "id": 15,
+    "query": "Apa syarat khusus jika kasusnya poligami pada surat dispensasi perkawinan?",
+    "ground_truth": "Surat pernyataan kesediaan dipoligami dari istri dan scan asli surat nikah.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ]
+  },
+  {
+    "id": 16,
+    "query": "Apakah ada template yang bisa diunduh untuk surat dispensasi perkawinan?",
+    "ground_truth": "Tidak. Halaman layanan ini tidak mencantumkan tautan template.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ]
+  },
+  {
+    "id": 17,
+    "query": "Siapa yang memverifikasi dan menetapkan surat keterangan tidak mampu?",
+    "ground_truth": "Verifikasi oleh Petugas PMPTSP; penetapan oleh Pejabat PMPTSP.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ]
+  },
+  {
+    "id": 18,
+    "query": "Apa saja persyaratan surat keterangan tidak mampu?",
+    "ground_truth": "6 butir: Surat Pernyataan Pengganti RT/RW; Surat Pernyataan Tidak Mampu di atas kertas bermaterai Rp10.000; identitas pemohon; Kartu Keluarga pemohon; KITAS atau Visa/Paspor (untuk WNA); surat kuasa bermaterai Rp10.000 dan KTP penerima kuasa.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ]
+  },
+  {
+    "id": 19,
+    "query": "Di mana link template surat pernyataan pengganti RT/RW?",
+    "ground_truth": "https://jcdn.jakarta.go.id/nas-upload/general-uploads/jakevo-202407/dokumen-referesi-syarat/69a1f66948b104f72919422/surat_pengganti_pengantar_RT_RW_3.docx",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ]
+  },
+  {
+    "id": 20,
+    "query": "Di mana link template surat pernyataan tidak mampu?",
+    "ground_truth": "https://jcdn.jakarta.go.id/nas-upload/dokumen-syarat/Rev_Surat_Pernyataan_Tidak_Mampu.docx",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ]
+  },
+  {
+    "id": 21,
+    "query": "Dokumen apa yang dibutuhkan warga negara asing untuk surat keterangan tidak mampu?",
+    "ground_truth": "Kartu Izin Tinggal Terbatas (KITAS) atau Visa/Paspor.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ]
+  },
+  {
+    "id": 22,
+    "query": "Apa isi surat pernyataan yang disyaratkan untuk keterangan belum memiliki rumah?",
+    "ground_truth": "Surat pernyataan di atas kertas bermaterai Rp10.000 dari pemohon yang menyatakan bahwa pemohon belum mempunyai rumah.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt"
+    ]
+  },
+  {
+    "id": 23,
+    "query": "Di mana link template surat pernyataan belum memiliki rumah?",
+    "ground_truth": "https://jcdn.jakarta.go.id/media-upload-v1/general-uploads/jakevo-202603/dokumen-referesi-syarat/967fe69ae2fa2b3bbc9dc7b/2026030969ae2fa2b3b1cce1e621c.docx",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt"
+    ]
+  },
+  {
+    "id": 24,
+    "query": "Apakah keterangan belum memiliki rumah memerlukan Kartu Keluarga?",
+    "ground_truth": "Tidak tercantum. Persyaratannya: identitas pemohon, surat pernyataan pengganti RT/RW, surat pernyataan belum punya rumah bermaterai Rp10.000, KITAS/Visa/Paspor (WNA), dan surat kuasa + KTP penerima kuasa (bila dikuasakan).",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt"
+    ]
+  },
+  {
+    "id": 25,
+    "query": "Apakah ada template surat kuasa untuk layanan keterangan belum memiliki rumah?",
+    "ground_truth": "Butir 5 mensyaratkan surat kuasa bermaterai Rp10.000 dan KTP penerima kuasa, tetapi halaman layanan ini tidak menyediakan template khusus surat kuasa.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt"
+    ]
+  },
+  {
+    "id": 26,
+    "query": "Berapa lama estimasi dan apakah ada biaya untuk Surat Izin Praktik Dokter (dokter umum perorangan)?",
+    "ground_truth": "Estimasi 14 hari kerja, tanpa retribusi.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ]
+  },
+  {
+    "id": 27,
+    "query": "Apa yang diperlukan jika mengajukan SIP kedua atau ketiga?",
+    "ground_truth": "SIP ke-2: scan asli SIP ke-1. SIP ke-3: scan asli SIP ke-1 dan SIP ke-2.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ]
+  },
+  {
+    "id": 28,
+    "query": "Perjanjian apa yang diperlukan terkait limbah medis pada SIP dokter?",
+    "ground_truth": "Perjanjian kerjasama pengelolaan limbah medis padat dan cair dengan pihak lain yang telah memiliki izin pengelolaan limbah sesuai peraturan, atau tempat penampungan lain yang ditetapkan/disetujui Dinas Kesehatan.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ]
+  },
+  {
+    "id": 29,
+    "query": "Bagaimana alur proses Surat Izin Praktik Dokter?",
+    "ground_truth": "6 langkah: pengajuan (pemohon); verifikasi administrasi (Petugas PMPTSP); evaluasi teknis (OPD teknis); rekomendasi teknis (OPD teknis); penetapan (Pejabat PMPTSP); izin terbit (sistem, unduh di JAKEVO).",
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ]
+  },
+  {
+    "id": 30,
+    "query": "Apa dasar hukum SIP dokter umum perorangan?",
+    "ground_truth": "5 regulasi: Permenkes 13 Tahun 2025 (Pengelolaan SDM Kesehatan); Pergub DKI 7 Tahun 2025; PP 28 Tahun 2024 (pelaksanaan UU 17/2023); UU 17 Tahun 2023 tentang Kesehatan; Perda DKI 12 Tahun 2013 (PTSP).",
+    "category": "Satu dokumen (web)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ]
+  },
+  {
+    "id": 31,
+    "query": "Apa saja tipe pengajuan izin penggunaan tanah makam?",
+    "ground_truth": "Baru, perpanjangan, pencabutan, dan tumpangan.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt"
+    ]
+  },
+  {
+    "id": 32,
+    "query": "Apa saja persyaratan izin penggunaan tanah makam?",
+    "ground_truth": "7 butir: identitas penanggung jawab; identitas dan KK jenazah; surat keterangan kematian dari Puskesmas/RS; surat keterangan laporan kematian dari kelurahan; surat pengantar dari TPU (asli); surat kuasa bermaterai Rp10.000 dan KTP penerima kuasa; surat keterangan kehilangan dari kepolisian.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_PENGGUNAAN_TANAH_MAKAM.txt"
+    ]
+  },
+  {
+    "id": 33,
+    "query": "Apa saja tipe perizinan dan tipe pengajuan izin usaha angkutan di bidang kebersihan?",
+    "ground_truth": "Tipe perizinan: perorangan dan perusahaan. Tipe pengajuan: baru, perubahan, perpanjangan, pencabutan.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ]
+  },
+  {
+    "id": 34,
+    "query": "Berapa batas usia kendaraan (STNK) untuk izin usaha angkutan kebersihan?",
+    "ground_truth": "Scan asli STNK kendaraan yang usianya kurang dari 5 tahun.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ]
+  },
+  {
+    "id": 35,
+    "query": "Siapa yang harus memberi persetujuan tetangga pada izin usaha angkutan kebersihan?",
+    "ground_truth": "Tetangga kiri, kanan, depan, dan belakang, disertai KTP.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ]
+  },
+  {
+    "id": 36,
+    "query": "Apa isi proposal teknis izin usaha angkutan kebersihan?",
+    "ground_truth": "Foto berwarna sarana kendaraan; foto kantor; daftar nama pengemudi beserta SIM; daftar peralatan yang dimiliki; foto berwarna direktur/penanggung jawab 3x4 cm latar merah.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ]
+  },
+  {
+    "id": 37,
+    "query": "Dokumen apa yang diperlukan jika tanah atau bangunan usaha angkutan kebersihan disewa?",
+    "ground_truth": "Perjanjian sewa-menyewa tanah/bangunan; surat pernyataan bermaterai dari pemilik yang menyatakan tidak keberatan tanah/bangunan digunakan; KTP pemilik tanah/bangunan.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ]
+  },
+  {
+    "id": 38,
+    "query": "Bagaimana alur proses izin usaha angkutan kebersihan?",
+    "ground_truth": "5 langkah: pengajuan; verifikasi administrasi (Petugas PMPTSP); survey lapangan bersama (Petugas Lapangan); penetapan (Pejabat PMPTSP); izin terbit (sistem).",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt"
+    ]
+  },
+  {
+    "id": 39,
+    "query": "Berapa estimasi waktu izin usaha jasa pelayanan pemakaman dan apa tipe pengajuannya?",
+    "ground_truth": "Estimasi 7 hari kerja, tanpa retribusi; tipe perizinan perusahaan; tipe pengajuan baru dan perpanjangan.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ]
+  },
+  {
+    "id": 40,
+    "query": "Dokumen badan hukum apa yang diperlukan untuk izin usaha jasa pelayanan pemakaman?",
+    "ground_truth": "Akta pendirian; SK akta pengesahan pendirian; akta perubahan; SK akta pengesahan perubahan; dan Anggaran Dasar/Anggaran Rumah Tangga (AD-ART).",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ]
+  },
+  {
+    "id": 41,
+    "query": "Di mana link template surat persetujuan tetangga untuk izin usaha jasa pelayanan pemakaman?",
+    "ground_truth": "https://jakevo.jakarta.go.id/documents/PERSETUJUAN TETANGGA.docx",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ]
+  },
+  {
+    "id": 42,
+    "query": "Apakah izin usaha jasa pelayanan pemakaman memerlukan survey lapangan?",
+    "ground_truth": "Tidak tercantum. Alurnya 4 langkah: pengajuan, verifikasi administrasi, penetapan, izin terbit; tidak ada tahap survey.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ]
+  },
+  {
+    "id": 43,
+    "query": "Berapa estimasi waktu dan biaya izin usaha pemotongan ternak?",
+    "ground_truth": "Estimasi 14 hari kerja, tanpa retribusi.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ]
+  },
+  {
+    "id": 44,
+    "query": "Sertifikat veteriner apa yang diperlukan untuk izin usaha pemotongan ternak?",
+    "ground_truth": "Sertifikat Nomor Kontrol Veteriner (NKV) yang sudah di-surveillance berkala sesuai level sertifikasi.",
+    "category": "Satu dokumen (web)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ]
+  },
+  {
+    "id": 45,
+    "query": "Layanan mana saja yang estimasi waktunya 14 hari kerja?",
+    "ground_truth": "Surat Izin Praktik Dokter, Izin Usaha Angkutan di Bidang Kebersihan, dan Izin Usaha Pemotongan Ternak.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 46,
+    "query": "Layanan mana yang estimasi waktunya 7 hari kerja?",
+    "ground_truth": "Hanya Izin Usaha Jasa Pelayanan Pemakaman.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 47,
+    "query": "Layanan mana yang hanya bisa diajukan oleh perusahaan, bukan perorangan?",
+    "ground_truth": "Izin Usaha Jasa Pelayanan Pemakaman (tipe perizinan: perusahaan).",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 48,
+    "query": "Apakah ada layanan yang dikenai biaya retribusi?",
+    "ground_truth": "Tidak. Seluruh 10 layanan tercantum Tanpa Retribusi.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 49,
+    "query": "Layanan mana yang diproses di tingkat kelurahan/kecamatan (Lurah/Camat)?",
+    "ground_truth": "Surat pengantar perkawinan di bawah umur dan perkawinan pertama (Lurah, verifikasi Kasie Kelurahan); surat dispensasi perkawinan (Camat, verifikasi Kasie Kecamatan).",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 50,
+    "query": "Layanan mana yang mensyaratkan persetujuan tetangga?",
+    "ground_truth": "Izin Usaha Angkutan Kebersihan, Izin Usaha Jasa Pelayanan Pemakaman, dan Izin Usaha Pemotongan Ternak.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 51,
+    "query": "Layanan mana yang mensyaratkan NPWP penanggung jawab?",
+    "ground_truth": "Izin Usaha Angkutan Kebersihan, Izin Usaha Jasa Pelayanan Pemakaman, dan Izin Usaha Pemotongan Ternak.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 52,
+    "query": "Layanan mana saja yang menyebut Pergub DKI 7 Tahun 2025 sebagai dasar hukum?",
+    "ground_truth": "7 layanan: Surat Keterangan Tidak Mampu, Keterangan Belum Memiliki Rumah, SIP Dokter, Izin Tanah Makam, Izin Angkutan Kebersihan, Izin Jasa Pemakaman, dan Izin Pemotongan Ternak (tidak untuk tiga layanan perkawinan).",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 53,
+    "query": "Layanan mana saja yang menyebut Perda DKI 12 Tahun 2013 tentang PTSP sebagai dasar hukum?",
+    "ground_truth": "8 layanan: perkawinan pertama, tidak mampu, belum memiliki rumah, SIP dokter, tanah makam, angkutan kebersihan, jasa pemakaman, dan pemotongan ternak (tidak untuk perkawinan di bawah umur dan dispensasi perkawinan).",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 54,
+    "query": "Layanan mana saja yang mensyaratkan surat kuasa bermaterai Rp10.000 bila dikuasakan?",
+    "ground_truth": "Perkawinan di bawah umur, perkawinan pertama, dispensasi perkawinan, keterangan tidak mampu, keterangan belum memiliki rumah, izin tanah makam, dan izin pemotongan ternak.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 55,
+    "query": "Layanan mana saja yang memiliki tipe pengajuan pencabutan?",
+    "ground_truth": "Keterangan Belum Memiliki Rumah, SIP Dokter, Izin Penggunaan Tanah Makam, dan Izin Usaha Angkutan Kebersihan.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 56,
+    "query": "Apa perbedaan persyaratan perkawinan pertama dengan perkawinan di bawah umur?",
+    "ground_truth": "Perkawinan di bawah umur butuh surat izin menikah/dispensasi dari Pengadilan Agama/Negeri. Perkawinan pertama butuh akta kelahiran pemohon dan sertifikat layak kawin dari Puskesmas, yang tidak tercantum pada layanan di bawah umur.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 57,
+    "query": "Layanan mana yang menggunakan KITAS/Visa/Paspor sebagai persyaratan untuk WNA?",
+    "ground_truth": "Surat Keterangan Tidak Mampu dan Keterangan Belum Memiliki Rumah.",
+    "category": "Lintas dokumen",
+    "source_reference": "Semua 10 file .txt",
+    "context_reference": {
+      "type": "service_corpus",
+      "files": [
+        "IZIN_PENGGUNAAN_TANAH_MAKAM.txt",
+        "IZIN_USAHA_ANGKUTAN_KEBERSIHAN.txt",
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+        "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt",
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+        "PM1_PERKAWINAN_PERTAMA.txt",
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ],
+      "note": "Pertanyaan lintas layanan; sumber yang benar-benar relevan dinilai dari konteks retrieval dan LLM judge."
+    },
+    "source_scope": "service_corpus",
+    "expected_sources": []
+  },
+  {
+    "id": 58,
+    "query": "Apa perbedaan status Butuh Perbaikan dan Butuh Perbaikan Berkas di JAKEVO?",
+    "ground_truth": "Butuh Perbaikan: berkas dikembalikan sebelum survey lokasi. Butuh Perbaikan Berkas: dikembalikan setelah survey lokasi, sehingga lokasi tidak perlu disurvey lagi bila pemohon sudah mengajukan perbaikan (khusus izin yang memerlukan survey lapangan).",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 59,
+    "query": "Bagaimana cara login ke JAKEVO?",
+    "ground_truth": "Memasukkan email dan password yang sudah didaftarkan, atau menekan tombol Masuk dengan Google bila punya email Google.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 60,
+    "query": "Data apa yang harus diisi di profil setelah register JAKEVO?",
+    "ground_truth": "Data KTP (NIK) dan No. KK asli. Jika KTP/KK DKI Jakarta, nama dan alamat muncul otomatis dari Dukcapil; jika bukan DKI, profil diisi manual.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 61,
+    "query": "Bagaimana cara mengubah password akun JAKEVO?",
+    "ground_truth": "Klik nama pengguna di kanan atas, pilih menu Ubah Password, isi password lama dan baru, lalu klik OK.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 62,
+    "query": "Apa fungsi fitur Berkas Saya di JAKEVO?",
+    "ground_truth": "Menyimpan berkas persyaratan agar tidak perlu diunggah ulang; berfungsi seperti file explorer; bisa menambah, menamai ulang, memilih jenis berkas, dan menghapus berkas. Jika jenis berkas dipilih, persyaratan ter-set otomatis di formulir.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 63,
+    "query": "Berapa ukuran maksimal berkas yang bisa diunggah di JAKEVO dan apa solusi bila melebihinya?",
+    "ground_truth": "Maksimal 10 MB. Jika lebih, unggah ke Google Drive atau Dropbox lalu lampirkan link-nya di kotak pesan di bawah kolom persyaratan.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 64,
+    "query": "Apa tiga tahap pengajuan permohonan di JAKEVO?",
+    "ground_truth": "Tahap 1 Pencarian Izin, Tahap 2 Pengisian Formulir, Tahap 3 Konfirmasi.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 65,
+    "query": "Apa fungsi Expert System (ES) di JAKEVO?",
+    "ground_truth": "Memberi beberapa pertanyaan terkait izin yang dipilih lalu otomatis memilihkan jenis izin yang sesuai dengan jawaban pemohon.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 66,
+    "query": "Apa saja tipe pengajuan dan tipe permohonan yang bisa dipilih di JAKEVO?",
+    "ground_truth": "Tipe pengajuan: permohonan baru, perubahan, perpanjangan. Tipe permohonan: perusahaan atau perorangan.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 67,
+    "query": "Format file apa yang harus dipakai untuk unggah Gambar Perencanaan Arsitektur (GPA)?",
+    "ground_truth": "Format dwg, atau dwg yang sudah dijadikan rar atau zip. Format lain tidak diperkenankan.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 68,
+    "query": "Berapa lama pemohon diberi waktu menyetujui NPR dan apa akibatnya jika terlambat?",
+    "ground_truth": "7 hari. Jika belum disetujui, proses izin dibatalkan secara otomatis.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 69,
+    "query": "Apa kepanjangan NPR, SKRD, dan SSRD?",
+    "ground_truth": "NPR: Nota Persetujuan Retribusi. SKRD: Surat Ketetapan Retribusi Daerah. SSRD: Surat Setor Retribusi Daerah.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 70,
+    "query": "Kapan pengingat email pembayaran SKRD dan SSRD dikirim dan apa akibat tidak membayar?",
+    "ground_truth": "Pengingat dikirim pada hari ke-10, ke-20, dan ke-25 sejak tagihan dikirim. Jika tidak dibayar dalam 30 hari, pemohon dikenakan denda sesuai peraturan yang berlaku.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 71,
+    "query": "Apa format bukti pembayaran SKRD dan data apa yang diisi saat mengunggahnya?",
+    "ground_truth": "Format jpeg atau pdf. Isi Metode Pembayaran, Tanggal Pembayaran, dan Jumlah yang dibayarkan, lalu klik Kirim Bukti Bayar.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 72,
+    "query": "Apa yang harus dilakukan pemohon sebelum bisa melihat output izin yang sudah selesai?",
+    "ground_truth": "Mengisi rating untuk aplikasi JAKEVO terlebih dahulu, lalu klik tombol yang tersedia.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 73,
+    "query": "Apa yang dilakukan jika preview output izin tidak muncul?",
+    "ground_truth": "Tekan Ctrl+F5 untuk refresh browser; jika masih tidak muncul, nonaktifkan integrasi IDM (Internet Download Manager) dengan browser, lalu Ctrl+F5 lagi.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 74,
+    "query": "Bagaimana cara mengajukan revisi atas izin yang sudah selesai?",
+    "ground_truth": "Menu Izin Saya, tab Izin Selesai, buka izin, di tab Output/SK Izin klik tombol Revisi, tulis hal yang direvisi dengan jelas, klik Revisi, lalu pantau di Izin Saya.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 75,
+    "query": "Apa yang bisa dilakukan jika revisi ditolak (status Revisi Ditolak)?",
+    "ground_truth": "Buka izin di tab Izin Selesai dan klik Batalkan Revisi; izin kembali berstatus Selesai. Pemohon bisa mengajukan revisi lagi bila yakin ada kekeliruan.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 76,
+    "query": "Bagaimana cara mengetahui alasan permohonan ditolak dan mengajukan kembali?",
+    "ground_truth": "Buka tab Ditolak di Izin Saya, klik tombol mata, cek tab Surat Penolakan, lalu klik Batalkan Permohonan untuk mengajukan kembali izin yang sama.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 77,
+    "query": "Berapa nomor call center JAKEVO/PTSP untuk menanyakan perbaikan berkas?",
+    "ground_truth": "(021) 1500 164.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 78,
+    "query": "Apa arti status Draft di JAKEVO?",
+    "ground_truth": "Permohonan belum dikirimkan; pemohon masih dapat mengubah isi dan persyaratan permohonan.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 79,
+    "query": "Apa yang bisa dilakukan pemohon pada status Menunggu Persetujuan NPR?",
+    "ground_truth": "Pemohon diharapkan menyetujui NPR; pemohon juga dapat membatalkan permohonan apabila nilai NPR tidak disetujui.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 80,
+    "query": "Apa saja empat kategori alur proses izin menurut panduan JAKEVO?",
+    "ground_truth": "Tanpa survey dan tanpa retribusi; dengan survey dan tanpa retribusi; tanpa survey dan dengan retribusi; dengan survey dan dengan retribusi.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 81,
+    "query": "Izin SIUP, TDP, dan IMB termasuk kategori alur yang mana?",
+    "ground_truth": "SIUP dan TDP termasuk kategori 1 (tanpa survey dan tanpa retribusi); IMB termasuk kategori 4 (dengan survey dan dengan retribusi).",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 82,
+    "query": "Apa yang dimaksud NPR Denda?",
+    "ground_truth": "Jumlah yang dikenakan apabila ada kesalahan yang bersifat teknis.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 83,
+    "query": "Apa arti status Nonaktif pada izin di JAKEVO?",
+    "ground_truth": "Izin dinonaktifkan karena sudah keluar izin perubahan/perpanjangan yang menggantikan izin sebelumnya.",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 84,
+    "query": "Dalam kondisi apa pemohon dapat mengajukan revisi dan kapan revisi bisa dilakukan?",
+    "ground_truth": "Bila ada kesalahan ketik pada output atau ketidaksesuaian isian antara berkas persyaratan dan output. Hanya dapat dilakukan setelah ada output (SK Izin).",
+    "category": "Panduan PDF",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 85,
+    "query": "Bagaimana langkah rinci membuat akun JAKEVO?",
+    "ground_truth": "Dokumen hanya menyebut pengguna harus register dan mengisi profil; langkah rinci pendaftaran tidak dijelaskan. Tidak ada di dokumen. Chatbot seharusnya menjawab tidak menemukan informasi dan tidak mengarang.",
+    "category": "Di luar cakupan",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 86,
+    "query": "Apa syarat izin praktik dokter gigi?",
+    "ground_truth": "Tidak ada. Yang tersedia hanya SIP Dokter Umum Perorangan. Tidak ada di dokumen. Chatbot seharusnya menjawab tidak menemukan informasi dan tidak mengarang.",
+    "category": "Di luar cakupan",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ]
+  },
+  {
+    "id": 87,
+    "query": "Apa syarat membuat SIM baru?",
+    "ground_truth": "Di luar cakupan dokumen. Tidak ada di dokumen. Chatbot seharusnya menjawab tidak menemukan informasi dan tidak mengarang.",
+    "category": "Di luar cakupan",
+    "source_reference": "-",
+    "context_reference": {
+      "type": "out_of_scope",
+      "files": []
+    },
+    "source_scope": "none",
+    "expected_sources": []
+  },
+  {
+    "id": 88,
+    "query": "Berapa biaya pengurusan IMB di Jakarta?",
+    "ground_truth": "Tidak ada nominal biaya IMB di dokumen. Panduan hanya menjelaskan IMB butuh persetujuan NPR dan pembayaran retribusi (angka di gambar hanya contoh ilustrasi). Tidak ada di dokumen. Chatbot seharusnya menjawab tidak menemukan informasi dan tidak mengarang.",
+    "category": "Di luar cakupan",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 89,
+    "query": "Di mana link template surat izin dispensasi dari pengadilan?",
+    "ground_truth": "Tidak ada template untuk surat dispensasi pengadilan di dokumen (Surat Izin Menikah/Dispensasi diurus dari Pengadilan Agama/Negeri). Chatbot tidak boleh membuat URL karangan.",
+    "category": "Di luar cakupan",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ]
+  },
+  {
+    "id": 90,
+    "query": "Berapa tarif retribusi yang harus dibayar untuk Surat Izin Praktik Dokter?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. SIP dokter umum perorangan tanpa retribusi.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ]
+  },
+  {
+    "id": 91,
+    "query": "Kenapa surat pengantar perkawinan pertama harus pakai surat dispensasi dari pengadilan?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Perkawinan pertama tidak mensyaratkan dispensasi pengadilan; itu untuk perkawinan di bawah umur (di bawah 19 tahun). Perkawinan pertama butuh akta kelahiran dan sertifikat layak kawin dari Puskesmas.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_PERKAWINAN_PERTAMA.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_PERTAMA.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_PERTAMA.txt"
+    ]
+  },
+  {
+    "id": 92,
+    "query": "Surat keterangan tidak mampu harus pakai surat pengantar RT/RW asli, apa saja syaratnya?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Tidak mencantumkan pengantar RT/RW asli; diganti Surat Pernyataan Pengganti RT/RW (ada template). Syarat lengkap: 6 butir.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ]
+  },
+  {
+    "id": 93,
+    "query": "Setelah survey lapangan SIP dokter, dokumen apa yang harus disiapkan?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Alur SIP tidak memiliki tahap survey lapangan tersendiri: pengajuan, verifikasi administrasi, evaluasi teknis, rekomendasi teknis (peninjauan lapangan hanya jika diperlukan), penetapan, izin terbit.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "SURAT_IZIN_PRAKTIK_DOKTER.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "SURAT_IZIN_PRAKTIK_DOKTER.txt"
+    ]
+  },
+  {
+    "id": 94,
+    "query": "Izin usaha jasa pelayanan pemakaman estimasinya 14 hari kerja, ya?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Bukan; estimasinya 7 hari kerja.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_JASA_PELAYANAN_PEMAKAMAN.txt"
+    ]
+  },
+  {
+    "id": 95,
+    "query": "Materai surat pernyataan tidak mampu yang Rp6.000 boleh dipakai, kan?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Dokumen mensyaratkan kertas bermaterai Rp10.000, bukan Rp6.000.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt"
+    ]
+  },
+  {
+    "id": 96,
+    "query": "Surat dispensasi perkawinan diverifikasi dan ditandatangani Lurah, benar?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Tidak. Verifikasi oleh Kasie Kecamatan dan penetapan oleh Camat. Lurah hanya menandatangani Formulir N1 dan PM1 yang menjadi persyaratan.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_SURAT_DISPENSASI_PERKAWINAN.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_SURAT_DISPENSASI_PERKAWINAN.txt"
+    ]
+  },
+  {
+    "id": 97,
+    "query": "Bagaimana cara mengubah isian permohonan setelah menekan tombol Ajukan di JAKEVO?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Tidak bisa. Setelah menekan Ajukan, pemohon tidak dapat mengubah isian dan persyaratan, jadi harus diperiksa dulu. Perbaikan hanya bila status Butuh Perbaikan.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 98,
+    "query": "Pembayaran SKRD di JAKEVO bisa tunai di kasir PTSP, kan?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Dokumen tidak menyebut pembayaran tunai atau kasir. Panduan hanya menjelaskan unggah bukti bayar (jpeg/pdf) dengan mengisi metode, tanggal, dan jumlah; contoh gambar memakai transfer bank. Chatbot seharusnya menyatakan tidak ada informasinya.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "data.pdf",
+    "context_reference": {
+      "type": "pdf",
+      "files": [
+        "data.pdf"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "data.pdf"
+    ]
+  },
+  {
+    "id": 99,
+    "query": "Izin usaha pemotongan ternak boleh dikuasakan tanpa surat kuasa bermaterai, bukan?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Tidak. Jika dikuasakan perlu surat kuasa bermaterai Rp10.000 dan KTP penerima kuasa.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "IZIN_USAHA_PEMOTONGAN_TERNAK.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "IZIN_USAHA_PEMOTONGAN_TERNAK.txt"
+    ]
+  },
+  {
+    "id": 100,
+    "query": "Perkawinan di bawah umur itu maksudnya di bawah usia 21 tahun, kan?",
+    "ground_truth": "Premis pertanyaan keliru. Chatbot seharusnya mengoreksi premis, bukan ikut membenarkan. Dokumen menyebut di bawah usia 19 tahun.",
+    "category": "Menyesatkan (guardrail)",
+    "source_reference": "PM1_PERKAWINAN_BAWAH_UMUR.txt",
+    "context_reference": {
+      "type": "web",
+      "files": [
+        "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+      ]
+    },
+    "source_scope": "single_source",
+    "expected_sources": [
+      "PM1_PERKAWINAN_BAWAH_UMUR.txt"
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+DUGAAN: 
+
+PERTANYAAN: Apa saja syarat surat pengantar perkawinan di bawah umur?
+  dituju      : ['bawah_umur']
+  peringkat   : {'bawah_umur': 1, 'pertama': None, 'rumah': None}
+  jarak       : {'bawah_umur': 0.119, 'pertama': None, 'rumah': None}
+  salah masuk : []
+  hilang      : []
+  [UJI 1] OK
+
+PERTANYAAN: Kalau umur saya belum cukup untuk menikah, berkas apa yang harus disiapkan?
+  dituju      : ['bawah_umur']
+  peringkat   : {'bawah_umur': 1, 'pertama': None, 'rumah': None}
+  jarak       : {'bawah_umur': 0.136, 'pertama': None, 'rumah': None}
+  salah masuk : []
+  hilang      : []
+  [UJI 1] OK
+
+PERTANYAAN: Apa saja syarat surat pengantar perkawinan pertama?
+  dituju      : ['pertama']
+  peringkat   : {'bawah_umur': None, 'pertama': 1, 'rumah': None}
+  jarak       : {'bawah_umur': None, 'pertama': 0.126, 'rumah': None}
+  salah masuk : []
+  hilang      : []
+  [UJI 1] OK
+
+PERTANYAAN: Saya mau menikah pertama kali, dokumen apa saja yang harus saya siapkan?
+  dituju      : ['pertama']
+  peringkat   : {'bawah_umur': None, 'pertama': 1, 'rumah': None}
+  jarak       : {'bawah_umur': None, 'pertama': 0.15, 'rumah': None}
+  salah masuk : []
+  hilang      : []
+  [UJI 1] OK
+
+PERTANYAAN: Apa saja syarat surat keterangan belum memiliki rumah?
+  dituju      : ['rumah']
+  peringkat   : {'bawah_umur': None, 'pertama': None, 'rumah': 1}
+  jarak       : {'bawah_umur': None, 'pertama': None, 'rumah': 0.133}
+  salah masuk : []
+  hilang      : []
+  [UJI 1] OK
+
+PERTANYAAN: Saya belum punya rumah dan butuh surat keterangannya, syaratnya apa?
+  dituju      : ['rumah']
+  peringkat   : {'bawah_umur': None, 'pertama': None, 'rumah': 1}
+  jarak       : {'bawah_umur': None, 'pertama': None, 'rumah': 0.131}
+  salah masuk : []
+  hilang      : []
+  [UJI 1] OK
+
+PERTANYAAN: Apa saja syarat surat pengantar perkawinan?
+  dituju      : ['bawah_umur', 'pertama']
+  peringkat   : {'bawah_umur': 2, 'pertama': 1, 'rumah': None}
+  jarak       : {'bawah_umur': 0.128, 'pertama': 0.126, 'rumah': None}
+  salah masuk : []
+  hilang      : []
+  [UJI 1] OK
+=== RINGKASAN ===
+UJI 1 (retrieval): 0 dari 7 soal bermasalah

@@ -1,0 +1,68 @@
+{
+  "total_soal": 50,
+  "durasi_total_seconds": 178.42,
+  "retrieval": {
+    "soal_dengan_satu_sumber_acuan": 25,
+    "source_hit_at_k": 25,
+    "source_hit_rate": 1.0,
+    "source_hit_in_context": 25,
+    "source_hit_in_context_rate": 1.0,
+    "mean_reciprocal_rank": 1.0
+  },
+  "rag_triad_and_correctness": {
+    "context_relevance": 0.8246,
+    "faithfulness": 0.8782,
+    "answer_relevance": 0.9742,
+    "answer_correctness": 0.9102
+  },
+  "per_kategori": {
+    "Ambigu (perlu klarifikasi)": {
+      "jumlah_soal": 7,
+      "context_relevance": 0.5543,
+      "faithfulness": 0.9243,
+      "answer_relevance": 0.9043,
+      "answer_correctness": 0.6014
+    },
+    "Di luar cakupan": {
+      "jumlah_soal": 7,
+      "context_relevance": 0.9,
+      "faithfulness": 0.8286,
+      "answer_relevance": 1.0,
+      "answer_correctness": 0.8286
+    },
+    "Lintas dokumen": {
+      "jumlah_soal": 10,
+      "context_relevance": 0.64,
+      "faithfulness": 0.734,
+      "answer_relevance": 1.0,
+      "answer_correctness": 0.972
+    },
+    "Menyesatkan (guardrail)": {
+      "jumlah_soal": 9,
+      "context_relevance": 0.85,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "answer_correctness": 0.9956
+    },
+    "Panduan PDF": {
+      "jumlah_soal": 2,
+      "context_relevance": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "answer_correctness": 1.0
+    },
+    "Satu dokumen (web)": {
+      "jumlah_soal": 15,
+      "context_relevance": 1.0,
+      "faithfulness": 0.8867,
+      "answer_relevance": 0.9587,
+      "answer_correctness": 0.988
+    }
+  },
+  "issues": {
+    "missing_important_points_count": 9,
+    "unsupported_claims_count": 4
+  },
+  "generator": "MiMo v2.6 Flash",
+  "judge": "Antigravity AI Judge (v3.0 - Ketat & Tanpa Modifikasi)"
+}
