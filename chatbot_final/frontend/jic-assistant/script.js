@@ -23,269 +23,184 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
 
   const KNOWLEDGE_BASE = [
-
     {
-
-      id: "DOC-JAKEVO-001",
-
-      topic: "Alamat Kantor DPMPTSP",
-
+      id: "DOC-ALAMAT-DPMPTSP",
+      topic: "Alamat & Kontak Kantor DPMPTSP",
       question: "Di mana alamat kantor DPMPTSP?",
-
       keywords: [
-
         "alamat", "kantor", "lokasi", "gedung", "dimana", "di mana", "mpp", 
-
         "kuningan", "rasuna said", "setiabudi", "dki", "jakarta", "kontak", 
-
         "telepon", "email", "lantai", "kunjungi", "jam buka", "operasional", "datang",
-
         "dpmptsp", "ptsp"
-
       ],
-
-      sourceDoc: "Profil, Alamat Kantor, dan Layanan Informasi DPMPTSP Provinsi DKI Jakarta",
-
-      contextSnippet: "Gedung Mal Pelayanan Publik (MPP) Provinsi DKI Jakarta Lantai 5, Jl. H.R. Rasuna Said Kav. C-22, Karet Kuningan, Setiabudi, Jakarta Selatan 12920. Jam operasional: Senin-Jumat 07.30-16.00 WIB.",
-
+      sourceDoc: "ALAMAT_DAN_PROFIL_DPMPTSP.pdf (DPMPTSP Provinsi DKI Jakarta)",
+      contextSnippet: "Gedung Mal Pelayanan Publik (MPP) Provinsi DKI Jakarta Lantai 5, Jl. H.R. Rasuna Said Kav. C-22, Karet Kuningan, Setiabudi, Jakarta Selatan 12920. Jam operasional: Senin-Kamis 07.30-16.00 WIB, Jumat 07.30-16.30 WIB.",
       answer: `
-
         <p>Kantor <strong>Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP) Provinsi DKI Jakarta</strong> berlokasi di:</p>
-
         <p>📍 <strong>Gedung Mal Pelayanan Publik (MPP) Provinsi DKI Jakarta, Lantai 5</strong><br>
-
         Jl. H.R. Rasuna Said Kav. C-22, RT.02 / RW.05, Karet Kuningan, Setiabudi, Jakarta Selatan 12920.</p>
-
-        
-
-        <p>⏰ <strong>Jam Operasional Pelayanan:</strong><br>
-
+        <p>⏰ <strong>Jam Operasional Layanan:</strong><br>
         • Senin – Kamis: 07.30 – 16.00 WIB<br>
-
         • Jumat: 07.30 – 16.30 WIB (Istirahat 11.30 – 13.00 WIB)<br>
-
-        • Layanan portal daring JAKEVO (jakevo.jakarta.go.id) aktif 24 jam setiap hari.</p>
-
-        
-
-        <p>📞 <strong>Kontak & Saluran Layanan Resmi:</strong><br>
-
+        • Portal JAKEVO (<em>jakevo.jakarta.go.id</em>) dapat diakses mandiri 24 jam setiap hari.</p>
+        <p>📞 <strong>Kontak Resmi:</strong><br>
         • <strong>Call Center PTSP:</strong> 1500-164 atau (021) 1500164<br>
-
-        • <strong>Telepon Kantor:</strong> (021) 5200300<br>
-
-        • <strong>Email:</strong> dpmptsp@jakarta.go.id / pengaduandpmptsp@jakarta.go.id<br>
-
-        • <strong>Portal Resmi:</strong> <a href="https://pelayanan.jakarta.go.id" target="_blank" rel="noopener noreferrer" style="color:#1F4FD8; text-decoration: underline; font-weight: 600;">pelayanan.jakarta.go.id</a> dan <a href="https://jakevo.jakarta.go.id" target="_blank" rel="noopener noreferrer" style="color:#1F4FD8; text-decoration: underline; font-weight: 600;">jakevo.jakarta.go.id</a></p>
-
+        • <strong>Telepon:</strong> (021) 5200300<br>
+        • <strong>Email:</strong> dpmptsp@jakarta.go.id / pengaduandpmptsp@jakarta.go.id</p>
       `
-
     },
-
     {
-
-      id: "DOC-JAKEVO-002",
-
-      topic: "Sektor Proyek Investasi",
-
-      question: "Sektor proyek apa saja yang tersedia?",
-
+      id: "DOC-ALUR-JAKEVO",
+      topic: "Alur Permohonan Izin JAKEVO",
+      question: "Bagaimana alur pengajuan izin di JAKEVO?",
       keywords: [
-
-        "sektor", "proyek", "tersedia", "investasi", "bidang", "transportasi", 
-
-        "infrastruktur", "hijau", "properti", "kesehatan", "pariwisata", 
-
-        "teknologi", "energi", "terbarukan", "transit", "tod", "mrt", "lrt", 
-
-        "itf", "sampah", "katalog", "peluang", "unggulan"
-
+        "alur", "proses", "pengajuan", "izin", "tahapan", "cara", "daftar", "langkah",
+        "jakevo", "permohonan", "buat izin", "unggah", "upload", "status", "revisi", "perbaikan"
       ],
-
-      sourceDoc: "Katalog Proyek Investasi Siap Tawar (Investment Ready Projects) JAKEVO 2024",
-
-      contextSnippet: "Katalog sektor prioritas investasi: Transportasi Berkelanjutan (TOD MRT/LRT), Pengolahan Sampah Menjadi Energi (ITF), Revitalisasi Urban Kota Tua, Digital & Smart City, dan Wisata Kepulauan Seribu.",
-
+      sourceDoc: "data.pdf (Petunjuk Penggunaan Aplikasi JAKEVO untuk Pemohon)",
+      contextSnippet: "Alur pengajuan perizinan JAKEVO: 1. Registrasi Akun dan Login di jakevo.jakarta.go.id; 2. Pilih menu Buat Permohonan Baru; 3. Isi formulir perizinan dan unggah dokumen persyaratan; 4. Verifikasi administrasi oleh Petugas PTSP; 5. Penetapan izin dengan tanda tangan elektronik; 6. Izin Terbit siap diunduh.",
       answer: `
-
-        <p>Jakarta Investment Centre (JAKEVO) menawarkan berbagai sektor proyek investasi strategis yang siap ditawarkan (<em>Investment Ready Projects</em>):</p>
-
-        
-
+        <p>Berikut tahapan resmi <strong>Alur Pengajuan Izin di Aplikasi JAKEVO</strong> (<em>jakevo.jakarta.go.id</em>):</p>
         <ol>
-
-          <li>🚆 <strong>Infrastruktur & Transportasi Berkelanjutan:</strong> Pengembangan kawasan berorientasi transit (<em>TOD</em>) MRT & LRT Jakarta serta simpul interkoneksi antarmoda.</li>
-
-          <li>🌱 <strong>Ekonomi Hijau & Pengelolaan Lingkungan:</strong> Fasilitas Pengolahan Sampah Menjadi Energi (ITF), panel surya (PLTS), dan efisiensi air bersih.</li>
-
-          <li>🏙️ <strong>Properti, Urban Regeneration & Kawasan Khusus:</strong> Revitalisasi cagar budaya Kota Tua Jakarta dan kawasan komersial ramah lingkungan.</li>
-
-          <li>💻 <strong>Digital Infrastructure & Smart City:</strong> Sarana Jaringan Utilitas Terpadu (SJUT) dan ekosistem data center ramah lingkungan.</li>
-
-          <li>🏥 <strong>Kesehatan & Pariwisata Bahari:</strong> Fasilitas kesehatan rujukan berstandar global dan ekowisata Kepulauan Seribu.</li>
-
+          <li><strong>Pendaftaran &amp; Login Akun:</strong> Masuk ke portal JAKEVO, lengkapi profil pemohon (perorangan atau badan usaha).</li>
+          <li><strong>Buat Permohonan Baru:</strong> Pilih menu perizinan yang diinginkan (misal: PM1 Kelurahan, SIP Dokter, IPTM Makam, dsb.).</li>
+          <li><strong>Unggah Dokumen Persyaratan:</strong> Unggah scan berkas dokumen asli (PDF/JPG) sesuai persyaratan izin yang dipilih.</li>
+          <li><strong>Verifikasi Administrasi Petugas PTSP:</strong> Petugas memvalidasi berkas. Jika ada kekurangan, status berubah menjadi <em>Butuh Perbaikan</em> dan pemohon dapat mengunggah revisi.</li>
+          <li><strong>Penetapan &amp; Tanda Tangan Elektronik:</strong> Penandatanganan draf izin secara digital oleh Kepala Kantor atau Pejabat berwenang.</li>
+          <li><strong>Izin Terbit:</strong> Dokumen resmi diterbitkan dengan barcode QR-code verifikasi dan dapat langsung diunduh secara mandiri.</li>
         </ol>
-
-        <p style="font-size: 0.8rem; color: #64748B; font-style: italic; margin-top: 6px;">(Data contoh/dummy simulasi frontend RAG)</p>
-
       `
-
     },
-
     {
-
-      id: "DOC-JAKEVO-003",
-
-      topic: "Profil JAKEVO",
-
+      id: "DOC-PROFIL-JAKEVO",
+      topic: "Definisi & Peran JAKEVO",
       question: "Apa itu JAKEVO?",
-
       keywords: [
-
         "apa", "itu", "jakevo", "jakarta", "evolution", "perizinan", "profil", "tentang", 
-
-        "tugas", "fungsi", "peran", "dpmptsp", "investor", "perizinan", "fasilitasi", 
-
-        "pengertian", "definisi", "bantuan", "tujuan"
-
+        "fungsi", "peran", "dpmptsp", "pengertian", "definisi", "portal", "website"
       ],
-
-      sourceDoc: "Buku Panduan Layanan Terpadu Satu Pintu & JAKEVO DPMPTSP DKI Jakarta",
-
-      contextSnippet: "Jakarta Investment Centre (JAKEVO) adalah unit inisiatif strategis di bawah DPMPTSP Provinsi DKI Jakarta yang berfungsi sebagai one-stop investment hub untuk memfasilitasi dan mendampingi investor.",
-
+      sourceDoc: "data.pdf & ALAMAT_DAN_PROFIL_DPMPTSP.pdf",
+      contextSnippet: "JAKEVO (Jakarta Evolution) adalah sistem aplikasi pelayanan perizinan dan non-perizinan digital terpadu satu pintu milik Pemerintah Provinsi DKI Jakarta di bawah pengelolaan DPMPTSP Provinsi DKI Jakarta.",
       answer: `
-
-        <p><strong>Jakarta Investment Centre (JAKEVO)</strong> adalah inisiatif strategis Pemerintah Provinsi DKI Jakarta di bawah naungan <strong>Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP)</strong>.</p>
-
-        
-
-        <p>JAKEVO berfungsi sebagai <em>One-Stop Investment Hub</em> dengan peran utama:</p>
-
+        <p><strong>JAKEVO (Jakarta Evolution)</strong> adalah sistem pelayanan perizinan dan non-perizinan daring resmi milik <strong>Pemerintah Provinsi DKI Jakarta</strong> yang dikelola oleh <strong>DPMPTSP DKI Jakarta</strong>.</p>
+        <p>Melalui portal <a href="https://jakevo.jakarta.go.id" target="_blank" rel="noopener noreferrer" style="color:#60a5fa; text-decoration: underline;">jakevo.jakarta.go.id</a>, warga dan pelaku usaha dapat:</p>
         <ul>
-
-          <li><strong>Promosi Peluang Investasi:</strong> Menyajikan informasi komprehensif potensi proyek DKI Jakarta bagi investor domestik (PMDN) & asing (PMA).</li>
-
-          <li><strong>Pendampingan End-to-End:</strong> Mendampingi pelaku usaha dari tahap pra-investasi, perizinan JAKEVO, hingga operasional bisnis.</li>
-
-          <li><strong>Fasilitasi & Debottlenecking:</strong> Mengurai hambatan birokrasi, regulasi, dan perizinan bisnis lintas dinas.</li>
-
-          <li><strong>Forum Investasi:</strong> Menyelenggarakan forum tahunan berskala global <em>Jakarta Investment Forum (JIF)</em>.</li>
-
+          <li>Mengajukan perizinan perorangan (Pelayanan Administrasi Kelurahan PM1, SKTM, Belum Rumah, dsb.).</li>
+          <li>Mengajukan perizinan tenaga medis (Surat Izin Praktik Dokter / SIP Dokter).</li>
+          <li>Mengajukan perizinan sektor lingkungan &amp; pemakaman (Izin Tanah Makam / IPTM, Angkutan Kebersihan).</li>
+          <li>Memantau status berkas secara <em>real-time</em> tanpa perlu datang langsung ke loket kantor fisik.</li>
         </ul>
-
-        <p style="font-size: 0.8rem; color: #64748B; font-style: italic; margin-top: 6px;">(Data contoh/dummy simulasi frontend RAG)</p>
-
       `
-
     },
-
     {
-
-      id: "DOC-JAKEVO-004",
-
-      topic: "Data Realisasi Investasi",
-
-      question: "Data realisasi investasi",
-
+      id: "DOC-PM1-RUMAH",
+      topic: "Surat Keterangan Belum Memiliki Rumah (KPR)",
+      question: "Apa syarat surat keterangan belum memiliki rumah?",
       keywords: [
-
-        "data", "realisasi", "investasi", "angka", "statistik", "capaian", 
-
-        "pma", "pmdn", "triliun", "kuartal", "target", "tahun", "pertumbuhan", 
-
-        "peringkat", "kinerja", "rekap", "laporan", "nilai"
-
+        "rumah", "belum", "memiliki", "kpr", "pm1", "kelurahan", "syarat", "persyaratan",
+        "perumahan", "surat belum punya rumah", "keterangan belum rumah"
       ],
-
-      sourceDoc: "Laporan Realisasi Penanaman Modal (PMA & PMDN) DPMPTSP DKI Jakarta",
-
-      contextSnippet: "Realisasi investasi DKI Jakarta mencapai Rp 165,3 Triliun (104,2% dari target tahunan). PMDN sebesar Rp 89,2 Triliun dan PMA sebesar Rp 76,1 Triliun (USD 5,1 Miliar).",
-
+      sourceDoc: "PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt (Layanan Administrasi PTSP Kelurahan)",
+      contextSnippet: "Persyaratan Surat Keterangan Belum Memiliki Rumah (PM1 - KPR): 1. Identitas Pemohon (KTP/KITAS); 2. Surat Pernyataan Pengganti RT/RW; 3. Surat Pernyataan di atas kertas bermaterai Rp 10.000 bahwa belum mempunyai rumah; 4. Surat kuasa bermaterai jika dikuasakan. Estimasi 1 hari kerja, tanpa retribusi (gratis).",
       answer: `
-
-        <p>Berikut ringkasan <strong>Data Realisasi Investasi DKI Jakarta</strong> (data simulasi resmi DPMPTSP):</p>
-
-        
-
-        <p>📊 <strong>Capaian Realisasi Investasi:</strong></p>
-
-        <ul>
-
-          <li><strong>Total Realisasi:</strong> <strong>Rp 165,3 Triliun</strong> (104,2% dari target tahunan Rp 158,6 Triliun)</li>
-
-          <li><strong>PMDN (Modal Dalam Negeri):</strong> Rp 89,2 Triliun (53,9%)</li>
-
-          <li><strong>PMA (Modal Asing):</strong> USD 5,1 Miliar / setara Rp 76,1 Triliun (46,1%)</li>
-
-        </ul>
-
-        
-
-        <p>🏆 <strong>3 Sektor Kontributor Terbesar:</strong></p>
-
+        <p>Berdasarkan dokumen resmi PTSP Kelurahan, persyaratan <strong>Surat Keterangan Belum Memiliki Rumah (PM1 - KPR)</strong> meliputi:</p>
         <ol>
-
-          <li>Transportasi, Pergudangan & Telekomunikasi (Rp 42,8 T)</li>
-
-          <li>Jasa Lainnya, Perhotelan & Restoran (Rp 31,5 T)</li>
-
-          <li>Perumahan, Kawasan Industri & Perkantoran (Rp 28,4 T)</li>
-
+          <li><strong>Identitas Pemohon:</strong> Scan KTP Pemohon asli (atau KITAS/Paspor untuk WNA).</li>
+          <li><strong>Surat Pengantar RT/RW:</strong> Surat pengantar keterangan dari RT dan RW setempat.</li>
+          <li><strong>Surat Pernyataan Belum Memiliki Rumah:</strong> Surat pernyataan di atas kertas bermaterai Rp 10.000 yang menyatakan pemohon belum memiliki rumah.</li>
+          <li><strong>Surat Kuasa (Bila Dikuasakan):</strong> Surat kuasa bermaterai Rp 10.000 beserta scan KTP pihak yang diberi kuasa.</li>
         </ol>
-
-        <p>DKI Jakarta secara konsisten menduduki peringkat #1 tujuan investasi nasional di Indonesia.</p>
-
-        <p style="font-size: 0.8rem; color: #64748B; font-style: italic; margin-top: 6px;">(Data contoh/dummy simulasi frontend RAG)</p>
-
+        <p>⏱️ <strong>Estimasi Waktu:</strong> 1 Hari Kerja<br>
+        💰 <strong>Biaya Retribusi:</strong> <strong>Rp 0 (Tanpa Retribusi / Gratis)</strong></p>
       `
-
     },
-
     {
-
-      id: "DOC-PTSP-005",
-
-      topic: "Perizinan JAKEVO & Eskalasi Petugas PTSP",
-
-      question: "Bagaimana alur izin JAKEVO dan eskalasi ke petugas?",
-
+      id: "DOC-PM1-SKTM",
+      topic: "Surat Keterangan Tidak Mampu (SKTM)",
+      question: "Apa saja syarat Surat Keterangan Tidak Mampu (SKTM)?",
       keywords: [
-
-        "jakevo", "izin", "perizinan", "eskalasi", "petugas", "ptsp", "role", 
-
-        "akses", "hak akses", "rbac", "syarat", "oss", "login", "konsultasi"
-
+        "sktm", "tidak mampu", "surat tidak mampu", "miskin", "bantuan", "sekolah", "kjp",
+        "kip", "beasiswa", "pengobatan", "kelurahan", "pm1", "syarat sktm"
       ],
-
-      sourceDoc: "Panduan Integrasi JAKEVO & Matriks Hak Akses RBAC DPMPTSP DKI Jakarta",
-
-      contextSnippet: "Pengguna Publik dapat bertanya syarat izin via Chatbot RAG. Jika butuh konsultasi lanjutan, chatbot dapat mengeskalasikan percakapan ke Petugas Layanan PTSP (Role 2) via Call Center 1500-164 atau Mal Pelayanan Publik.",
-
+      sourceDoc: "PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt (Layanan Administrasi PTSP Kelurahan)",
+      contextSnippet: "Persyaratan Surat Keterangan Tidak Mampu (SKTM - PM1): 1. Surat Pengantar RT/RW; 2. Surat Pernyataan Tidak Mampu bermaterai Rp 10.000; 3. Scan KTP dan Kartu Keluarga (KK) Pemohon. Estimasi 1 hari kerja, tanpa retribusi.",
       answer: `
-
-        <p>Perizinan investasi DKI Jakarta terintegrasi pada sistem digital <strong>JAKEVO</strong> (<em>jakevo.jakarta.go.id</em>) dan OSS Nasional.</p>
-
-        
-
-        <p>🛡️ <strong>Alur Layanan & Eskalasi (Role-Based Access):</strong></p>
-
-        <ul>
-
-          <li><strong>Pengguna Publik (Role 1):</strong> Konsultasi mandiri anonim terkait syarat, estimasi waktu, dan dasar hukum izin.</li>
-
-          <li><strong>Petugas Layanan PTSP (Role 2):</strong> Menerima tiket eskalasi kasus yang belum terjawab otomatis, memverifikasi berkas, dan memandu pemohon.</li>
-
-          <li><strong>Bantuan Langsung:</strong> Hubungi Call Center PTSP <strong>1500-164</strong> atau kunjungi loket konsultasi Lantai 5 Mal Pelayanan Publik.</li>
-
-        </ul>
-
-        <p style="font-size: 0.8rem; color: #64748B; font-style: italic; margin-top: 6px;">(Data contoh/dummy simulasi frontend RAG)</p>
-
+        <p>Persyaratan resmi permohonan <strong>Surat Keterangan Tidak Mampu (SKTM - PM1)</strong> di PTSP Kelurahan:</p>
+        <ol>
+          <li><strong>Surat Pengantar RT/RW:</strong> Pengantar dari pengurus RT dan RW tempat domisili.</li>
+          <li><strong>Surat Pernyataan Tidak Mampu:</strong> Surat pernyataan kondisi ekonomi keluarga di atas kertas bermaterai Rp 10.000.</li>
+          <li><strong>Identitas Kependudukan:</strong> Scan asli Kartu Tanda Penduduk (KTP) dan Kartu Keluarga (KK) pemohon DKI Jakarta.</li>
+        </ol>
+        <p>⏱️ <strong>Estimasi Waktu Pelayanan:</strong> 1 Hari Kerja<br>
+        💰 <strong>Biaya Retribusi:</strong> <strong>Gratis (Rp 0)</strong></p>
       `
-
+    },
+    {
+      id: "DOC-SIP-DOKTER",
+      topic: "Surat Izin Praktik Dokter (SIP Dokter)",
+      question: "Apa saja syarat surat izin praktik dokter?",
+      keywords: [
+        "sip", "dokter", "praktik", "izin praktik", "str", "kki", "idi", "klinik",
+        "rumah sakit", "faskes", "syarat sip", "medis"
+      ],
+      sourceDoc: "SURAT_IZIN_PRAKTIK_DOKTER.txt (Layanan Perizinan Kesehatan DPMPTSP DKI)",
+      contextSnippet: "Persyaratan Surat Izin Praktik Dokter: 1. Surat Tanda Registrasi (STR) dokter yang diterbitkan oleh KKI dan masih berlaku; 2. Surat Rekomendasi dari Organisasi Profesi (IDI) di wilayah tempat praktik; 3. Surat persetujuan/keterangan dari pimpinan fasilitas pelayanan kesehatan; 4. Pasfoto berwarna terbaru.",
+      answer: `
+        <p>Persyaratan permohonan <strong>Surat Izin Praktik Dokter (SIP Dokter)</strong> di Provinsi DKI Jakarta:</p>
+        <ol>
+          <li><strong>Surat Tanda Registrasi (STR):</strong> Scan asli STR dokter dari Konsil Kedokteran Indonesia (KKI) yang masih berlaku.</li>
+          <li><strong>Rekomendasi Organisasi Profesi:</strong> Surat rekomendasi dari Ikatan Dokter Indonesia (IDI) cabang setempat di wilayah DKI Jakarta.</li>
+          <li><strong>Surat Keterangan Fasilitas Praktik:</strong> Surat persetujuan/pernyataan dari pimpinan faskes (Klinik / RS / Puskesmas) tempat dokter berpraktik.</li>
+          <li><strong>Identitas &amp; Pasfoto:</strong> Scan KTP pemohon dan pasfoto formal terbaru berwarna.</li>
+        </ol>
+      `
+    },
+    {
+      id: "DOC-PM1-NIKAH",
+      topic: "Surat Pengantar Perkawinan (Pertama & Bawah Umur)",
+      question: "Apa syarat surat pengantar perkawinan?",
+      keywords: [
+        "nikah", "kawin", "perkawinan", "pertama", "bawah umur", "dispensasi", "layak kawin",
+        "kua", "puskesmas", "pengadilan", "syarat nikah", "pm1 perkawinan"
+      ],
+      sourceDoc: "PM1_PERKAWINAN_PERTAMA.txt & PM1_PERKAWINAN_BAWAH_UMUR.txt",
+      contextSnippet: "Surat Pengantar Perkawinan Pertama memerlukan Sertifikat Layak Kawin dari Puskesmas. Perkawinan di Bawah Umur (< 19 tahun) memerlukan Surat Izin/Dispensasi dari Pengadilan Agama atau Pengadilan Negeri dan KTP/KK orang tua.",
+      answer: `
+        <p>Persyaratan <strong>Surat Pengantar Perkawinan (PM1 Kelurahan)</strong> terbagi atas dua kategori:</p>
+        <p>💍 <strong>1. Perkawinan Pertama:</strong></p>
+        <ul>
+          <li>Scan asli <strong>Sertifikat Layak Kawin</strong> pemohon dari Puskesmas Kecamatan setempat.</li>
+          <li>Surat Pengantar RT/RW, scan KTP, KK, dan akta kelahiran pemohon.</li>
+        </ul>
+        <p>📜 <strong>2. Perkawinan di Bawah Umur (&lt; 19 Tahun):</strong></p>
+        <ul>
+          <li><strong>Surat Izin Menikah / Dispensasi:</strong> Dari Pengadilan Agama (Islam) atau Pengadilan Negeri (non-Islam).</li>
+          <li>Scan asli KTP dan Kartu Keluarga (KK) orang tua kandung pemohon.</li>
+          <li>Surat Pengantar RT/RW dan identitas pemohon.</li>
+        </ul>
+        <p>Layanan diselesaikan dalam 1 hari kerja tanpa retribusi (gratis).</p>
+      `
+    },
+    {
+      id: "DOC-IPTM-MAKAM",
+      topic: "Izin Penggunaan Tanah Makam (IPTM)",
+      question: "Apa saja syarat izin penggunaan tanah makam?",
+      keywords: [
+        "makam", "tanah makam", "iptm", "pemakaman", "tpu", "tumpangan", "jenazah",
+        "kematian", "syarat makam"
+      ],
+      sourceDoc: "IZIN_PENGGUNAAN_TANAH_MAKAM.txt (Layanan Pemakaman DPMPTSP DKI)",
+      contextSnippet: "Persyaratan Izin Penggunaan Tanah Makam (IPTM): Surat Keterangan Pemeriksaan Jenazah / Kematian dari RS/Puskesmas/Kelurahan, KTP/KK pemohon atau ahli waris, KTP/KK jenazah, dan surat persetujuan tumpangan jika makam tumpangan.",
+      answer: `
+        <p>Persyaratan permohonan <strong>Izin Penggunaan Tanah Makam (IPTM)</strong> di TPU DKI Jakarta:</p>
+        <ol>
+          <li><strong>Surat Keterangan Kematian:</strong> Scan asli surat pemeriksaan jenazah / kematian dari RS, Puskesmas, atau Kelurahan setempat.</li>
+          <li><strong>Identitas Pemohon / Ahli Waris:</strong> Scan KTP dan Kartu Keluarga (KK) ahli waris yang bertanggung jawab.</li>
+          <li><strong>Identitas Jenazah:</strong> Scan KTP dan KK almarhum/almarhumah yang dimakamkan.</li>
+          <li><strong>Untuk Makam Tumpangan:</strong> Surat persetujuan bermaterai dari keluarga/ahli waris pemilik makam terdahulu.</li>
+        </ol>
+      `
     }
-
   ];
 
 

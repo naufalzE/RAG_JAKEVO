@@ -145,26 +145,26 @@
           <div class="row g-3 hero-metrics-row pt-2">
             <div class="col-6 col-sm-3">
               <div class="hero-metric-box">
-                <span class="metric-num">5</span>
-                <span class="metric-label">Dokumen SOP Resmi</span>
+                <span class="metric-num">12</span>
+                <span class="metric-label">Dokumen SOP Terindeks</span>
               </div>
             </div>
             <div class="col-6 col-sm-3">
               <div class="hero-metric-box">
-                <span class="metric-num">&ge; 15%</span>
-                <span class="metric-label">Ambang Cosine Relevansi</span>
+                <span class="metric-num">ChromaDB</span>
+                <span class="metric-label">Vector Database &amp; e5</span>
               </div>
             </div>
             <div class="col-6 col-sm-3">
               <div class="hero-metric-box">
-                <span class="metric-num">100%</span>
-                <span class="metric-label">Sitasi Bersumber Dokumen</span>
+                <span class="metric-num">3 Lapis</span>
+                <span class="metric-label">Guardrail &amp; Sensor PII</span>
               </div>
             </div>
             <div class="col-6 col-sm-3">
               <div class="hero-metric-box">
-                <span class="metric-num">24/7</span>
-                <span class="metric-label">Layanan Siaga Mandiri</span>
+                <span class="metric-num">Gemini / LLM</span>
+                <span class="metric-label">Multi-Provider LLM</span>
               </div>
             </div>
           </div>
@@ -196,8 +196,8 @@
                 <p class="mb-0 small">Apa syarat perkawinan di bawah umur?</p>
               </div>
               <div class="preview-bubble bot">
-                <small class="text-success fw-bold d-block mb-1">📚 RAG Verified (PM1_PERKAWINAN_BAWAH_UMUR-WEB-SYARAT)</small>
-                <p class="mb-0 small">Tersedia proyek TOD MRT/LRT, Pengolahan Sampah Menjadi Energi (ITF), Kawasan Kota Tua, dan Smart City...</p>
+                <small class="text-success fw-bold d-block mb-1">📚 RAG Verified (PM1_PERKAWINAN_BAWAH_UMUR.txt)</small>
+                <p class="mb-0 small">Syarat meliputi: Surat izin menikah/dispensasi dari Pengadilan Agama atau Pengadilan Negeri, scan KTP &amp; KK orang tua, pengantar RT/RW, dan identitas pemohon. Layanan selesai 1 hari kerja (tanpa retribusi).</p>
               </div>
             </div>
 
@@ -250,14 +250,14 @@
             <div class="card-icon-round mb-3 bg-primary-subtle text-primary">
               <i class="fa fa-lightbulb"></i>
             </div>
-            <h5 class="card-heading">Inovasi RAG Pipeline</h5>
+            <h5 class="card-heading">Inovasi RAG &amp; ChromaDB</h5>
             <p class="card-text text-muted">
-              Mengintegrasikan <em>Retrieval-Augmented Generation</em> (RAG) sehingga asisten cerdas tidak mengarang bebas, melainkan mengambil referensi dari korpus dokumen SOP resmi DPMPTSP yang terverifikasi.
+              Mengintegrasikan embedding <em>intfloat/multilingual-e5-small</em> dan basis data vektor ChromaDB dengan teknik <em>Neighbor Chunk Expansion</em> agar asisten cerdas menyajikan jawaban presisi langsung dari dokumen SOP resmi DPMPTSP.
             </p>
             <ul class="custom-list-check small text-muted">
-              <li>Pencarian relevansi berbasis cosine similarity</li>
-              <li>Sintesis jawaban berbasis konteks aktual</li>
-              <li>Sitasi nomor dokumen SOP di setiap respons</li>
+              <li>Vektorisasi semantik dan pencocokan kamus entitas</li>
+              <li>Ekspansi tetangga untuk keutuhan konteks alur</li>
+              <li>Sitasi nama berkas dan nomor chunk di tiap respons</li>
             </ul>
           </div>
         </div>
@@ -268,14 +268,14 @@
             <div class="card-icon-round mb-3 bg-success-subtle text-success">
               <i class="fa fa-chart-line"></i>
             </div>
-            <h5 class="card-heading">Dampak &amp; Nilai Tambah</h5>
+            <h5 class="card-heading">Dampak &amp; Keamanan Data</h5>
             <p class="card-text text-muted">
-              Memudahkan pemohon izin dan calon investor memperoleh jawaban instan selama 24 jam penuh, sekaligus mempermudah tugas petugas front office dan call center 1500-164 melalui sistem eskalasi RBAC terstruktur.
+              Memudahkan masyarakat dan pemohon izin mendapatkan informasi persyaratan (SKTM, SIP Dokter, KPR Belum Rumah, IPTM) dan panduan teknis JAKEVO secara instan 24 jam penuh, dilengkapi sensor privasi data pribadi pemohon.
             </p>
             <ul class="custom-list-check small text-muted">
-              <li>Efisiensi waktu konsultasi perizinan mandiri</li>
-              <li>Transparansi informasi peluang investasi DKI</li>
-              <li>Mendukung inisiatif Jakarta Smart City</li>
+              <li>Efisiensi waktu konsultasi perizinan mandiri 24/7</li>
+              <li>Sensor otomatis NIK dan nomor kontak (UU PDP)</li>
+              <li>Mendukung transparansi pelayanan publik DKI Jakarta</li>
             </ul>
           </div>
         </div>
@@ -304,9 +304,9 @@
             <div class="feature-icon mb-3">
               <i class="fa fa-database text-primary"></i>
             </div>
-            <h5 class="feature-title">Retrieval-Augmented Generation</h5>
+            <h5 class="feature-title">Hybrid Retrieval &amp; ChromaDB</h5>
             <p class="feature-desc text-muted">
-              Pencarian semantik dan tokenisasi kata kunci pada 5 korpus dokumen resmi DPMPTSP sebelum respons digenerasikan.
+              Pencarian semantik dense berbasis model <em>multilingual-e5-small</em> pada ChromaDB dipadukan dengan kamus deteksi kata kunci target pada 12 dokumen perizinan resmi.
             </p>
           </div>
         </div>
@@ -315,11 +315,11 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-box p-4 h-100">
             <div class="feature-icon mb-3">
-              <i class="fa fa-shield-alt text-primary"></i>
+              <i class="fa fa-expand-arrows-alt text-primary"></i>
             </div>
-            <h5 class="feature-title">Zero-Hallucination Guardrails</h5>
+            <h5 class="feature-title">Neighbor Chunk Expansion</h5>
             <p class="feature-desc text-muted">
-              Bila pertanyaan pengguna di luar basis pengetahuan SOP (skor &lt; 15%), bot secara sopan menampilkan fallback navigasi 4 topik utama.
+              Menarik potongan teks sebelum dan sesudah chunk yang relevan secara dinamis agar alur SOP dan persyaratan perizinan tidak terpotong saat disintesis LLM.
             </p>
           </div>
         </div>
@@ -328,11 +328,11 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-box p-4 h-100">
             <div class="feature-icon mb-3">
-              <i class="fa fa-book-reader text-primary"></i>
+              <i class="fa fa-shield-virus text-primary"></i>
             </div>
-            <h5 class="feature-title">Sitasi Sumber Dokumen Terbuka</h5>
+            <h5 class="feature-title">Multi-Layer Guardrail Security</h5>
             <p class="feature-desc text-muted">
-              Setiap jawaban bot melampirkan ID dokumen (contoh: PM1_PERKAWINAN_PERTAMA-WEB-SYARAT) beserta status verifikasi resmi DPMPTSP DKI Jakarta.
+              Proteksi 3 lapis: Input Guardrail (anti-jailbreak &amp; toxic), Context Guardrail (anti-halusinasi), dan Output Guardrail (sensor otomatis NIK &amp; nomor telepon pemohon).
             </p>
           </div>
         </div>
@@ -341,11 +341,11 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-box p-4 h-100">
             <div class="feature-icon mb-3">
-              <i class="fa fa-user-shield text-primary"></i>
+              <i class="fa fa-book-reader text-primary"></i>
             </div>
-            <h5 class="feature-title">Role-Based Access Control (RBAC)</h5>
+            <h5 class="feature-title">Sitasi Sumber Dokumen Transparan</h5>
             <p class="feature-desc text-muted">
-              Pemisahan peran hak akses pengguna publik, staf front office PTSP, dan administrator RAG sesuai kepatuhan regulasi UU PDP.
+              Setiap jawaban bot melampirkan berkas sumber acuan (PDF / Web Layanan JAKEVO) dan nomor chunk konteks terverifikasi DPMPTSP DKI Jakarta.
             </p>
           </div>
         </div>
@@ -354,11 +354,11 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-box p-4 h-100">
             <div class="feature-icon mb-3">
-              <i class="fa fa-palette text-primary"></i>
+              <i class="fa fa-brain text-primary"></i>
             </div>
-            <h5 class="feature-title">Identitas Budaya Betawi Modern</h5>
+            <h5 class="feature-title">Multi-LLM Provider Support</h5>
             <p class="feature-desc text-muted">
-              Mengintegrasikan avatar ikonik karakter adat Abang &amp; None Betawi dengan palet oranye hangat khas Jakarta yang elegan.
+              Arsitektur modular mendukung peralihan penyedia model bahasa terkemuka secara fleksibel, mulai dari Google Gemini (<em>gemini-3.8-flash</em>), DeepSeek, hingga Xiaomi MiMO.
             </p>
           </div>
         </div>
@@ -367,11 +367,11 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-box p-4 h-100">
             <div class="feature-icon mb-3">
-              <i class="fa fa-mobile-alt text-primary"></i>
+              <i class="fa fa-palette text-primary"></i>
             </div>
-            <h5 class="feature-title">Responsif &amp; Aksesibel</h5>
+            <h5 class="feature-title">Karakter Betawi &amp; Glassmorphism</h5>
             <p class="feature-desc text-muted">
-              Dapat diakses secara mulus melalui perangkat smartphone, tablet, maupun desktop dengan dukungan slider pertanyaan cepat horizontal.
+              Desain interaktif modern bernuansa Betawi dengan avatar Abang &amp; None, tema gelap Flowstate, pop-up chatbot responsif, dan slider pertanyaan cepat.
             </p>
           </div>
         </div>
@@ -469,39 +469,39 @@
             <div class="step-badge">1</div>
             <i class="fa fa-keyboard fa-2x text-primary my-2"></i>
             <h6 class="fw-bold mb-1">User Query</h6>
-            <small class="text-muted">Input pertanyaan dari pemohon izin atau investor.</small>
+            <small class="text-muted">Pertanyaan syarat izin atau teknis JAKEVO.</small>
           </div>
         </div>
         <div class="col-md">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">2</div>
-            <i class="fa fa-filter fa-2x text-primary my-2"></i>
-            <h6 class="fw-bold mb-1">Preprocessing</h6>
-            <small class="text-muted">Normalisasi teks &amp; eliminasi <em>stopwords</em>.</small>
+            <i class="fa fa-shield-alt fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">Input Guardrail</h6>
+            <small class="text-muted">Cek panjang, anti-jailbreak, toxic, &amp; kamus entitas.</small>
           </div>
         </div>
         <div class="col-md">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">3</div>
-            <i class="fa fa-search fa-2x text-primary my-2"></i>
-            <h6 class="fw-bold mb-1">Retrieval</h6>
-            <small class="text-muted">Pencocokan token &amp; cosine similarity (Ambang &ge; 15%).</small>
+            <i class="fa fa-database fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">ChromaDB Search</h6>
+            <small class="text-muted">Dense search model <em>multilingual-e5-small</em> Top-K.</small>
           </div>
         </div>
         <div class="col-md">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">4</div>
-            <i class="fa fa-layer-group fa-2x text-primary my-2"></i>
-            <h6 class="fw-bold mb-1">Augmentation</h6>
-            <small class="text-muted">Injeksi cuplikan konteks SOP resmi ke prompt model.</small>
+            <i class="fa fa-expand-arrows-alt fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">Neighbor Expansion</h6>
+            <small class="text-muted">Penarikan chunk tetangga &amp; validasi konteks.</small>
           </div>
         </div>
         <div class="col-md">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">5</div>
             <i class="fa fa-robot fa-2x text-primary my-2"></i>
-            <h6 class="fw-bold mb-1">Generasi &amp; Sitasi</h6>
-            <small class="text-muted">Respons akurat lengkap dengan sumber ID dokumen SOP.</small>
+            <h6 class="fw-bold mb-1">LLM &amp; Output Guard</h6>
+            <small class="text-muted">Sintesis jawaban, sitasi berkas, &amp; sensor NIK/kontak.</small>
           </div>
         </div>
       </div>
@@ -510,37 +510,37 @@
       <div class="row g-4">
         <div class="col-lg-6">
           <div class="p-4 bg-light rounded-4 h-100 border">
-            <h5 class="fw-bold text-dark mb-3"><i class="fa fa-cogs me-2 text-primary"></i>Komponen Pipeline RAG</h5>
+            <h5 class="fw-bold text-dark mb-3"><i class="fa fa-cogs me-2 text-primary"></i>Komponen Inti Pipeline RAG</h5>
             
             <div class="d-flex mb-3">
               <i class="fa fa-file-alt text-primary fa-lg me-3 mt-1"></i>
               <div>
-                <strong class="text-dark d-block">1. Chunking Dokumen (250 Token)</strong>
-                <small class="text-muted">Dokumen SOP dipecah menjadi unit segmen terkelola agar relevansi informasi tetap fokus.</small>
+                <strong class="text-dark d-block">1. Chunking Karakter (Maks 500 Karakter)</strong>
+                <small class="text-muted">Dokumen PDF resmi dan halaman web dipecah proporsional dengan batasan 500 karakter serta format tabel rapi.</small>
               </div>
             </div>
 
             <div class="d-flex mb-3">
-              <i class="fa fa-calculator text-primary fa-lg me-3 mt-1"></i>
+              <i class="fa fa-vector-square text-primary fa-lg me-3 mt-1"></i>
               <div>
-                <strong class="text-dark d-block">2. Scoring Relevansi &amp; Cosine</strong>
-                <small class="text-muted">Menghitung probabilitas kedekatan query terhadap kata kunci regulasi perizinan.</small>
+                <strong class="text-dark d-block">2. Embedding &amp; ChromaDB Collection 'akevo'</strong>
+                <small class="text-muted">Vektorisasi semantik menggunakan <em>intfloat/multilingual-e5-small</em> disimpan dalam ChromaDB lokal persisten.</small>
               </div>
             </div>
 
             <div class="d-flex mb-3">
-              <i class="fa fa-puzzle-piece text-primary fa-lg me-3 mt-1"></i>
+              <i class="fa fa-expand-arrows-alt text-primary fa-lg me-3 mt-1"></i>
               <div>
-                <strong class="text-dark d-block">3. Context Injection &amp; Guardrails</strong>
-                <small class="text-muted">Mencegah halusinasi fakta dan menjamin batasan hukum regulasi daerah DKI.</small>
+                <strong class="text-dark d-block">3. Neighbor Expansion &amp; Reranking Hibrida</strong>
+                <small class="text-muted">Penggabungan chunk sebelum dan sesudah serta skoring kombinasi semantik dense dan leksikal kamus.</small>
               </div>
             </div>
 
             <div class="d-flex">
-              <i class="fa fa-shield-alt text-primary fa-lg me-3 mt-1"></i>
+              <i class="fa fa-robot text-primary fa-lg me-3 mt-1"></i>
               <div>
-                <strong class="text-dark d-block">4. Masking Data Pribadi (UU PDP)</strong>
-                <small class="text-muted">Menjamin privasi pemohon dengan filtering NIK, NPWP, dan nomor rekening.</small>
+                <strong class="text-dark d-block">4. Prompt Instruction &amp; Multi-LLM Adapter</strong>
+                <small class="text-muted">Sistem instruksi ketat anti-halusinasi dengan adapter multi-provider: Google Gemini, DeepSeek, dan MiMO.</small>
               </div>
             </div>
 
@@ -549,30 +549,30 @@
 
         <div class="col-lg-6">
           <div class="p-4 bg-light rounded-4 h-100 border">
-            <h5 class="fw-bold text-dark mb-3"><i class="fa fa-user-lock me-2 text-primary"></i>Matriks Hak Akses (RBAC)</h5>
+            <h5 class="fw-bold text-dark mb-3"><i class="fa fa-shield-alt me-2 text-primary"></i>Sistem Keamanan Multi-Layer Guardrails</h5>
             
             <div class="p-3 rounded-3 mb-2 border shadow-sm rbac-card">
               <div class="d-flex justify-content-between align-items-center mb-1">
-                <strong class="text-dark">Role 1: Pengguna Publik &amp; Investor</strong>
-                <span class="badge bg-secondary rounded-pill">Akses Anonim</span>
+                <strong class="text-dark">Layer 1: Input Guardrail</strong>
+                <span class="badge bg-primary rounded-pill">Anti-Injection</span>
               </div>
-              <small class="text-muted">Konsultasi mandiri 24/7, pencarian syarat izin, dan permohonan tiket eskalasi petugas.</small>
+              <small class="text-muted">Memvalidasi panjang teks (3-800 karakter), menangkal serangan <em>prompt injection / jailbreak</em>, serta memfilter kata kasar/SARA dan <em>out-of-scope</em>.</small>
             </div>
 
             <div class="p-3 rounded-3 mb-2 border border-primary shadow-sm rbac-card">
               <div class="d-flex justify-content-between align-items-center mb-1">
-                <strong class="text-primary">Role 2: Petugas Front Office PTSP</strong>
-                <span class="badge bg-primary rounded-pill">Petugas Loket</span>
+                <strong class="text-primary">Layer 2: Context Guardrail</strong>
+                <span class="badge bg-warning text-dark rounded-pill">Anti-Halusinasi</span>
               </div>
-              <small class="text-muted">Menerima tiket eskalasi, verifikasi berkas izin JAKEVO, dan menangani kasus pemohon.</small>
+              <small class="text-muted">Memeriksa ketersediaan dan relevansi potongan dokumen. Jika informasi tidak ditemukan dalam korpus, bot menolak menjawab secara sopan.</small>
             </div>
 
             <div class="p-3 rounded-3 border shadow-sm rbac-card">
               <div class="d-flex justify-content-between align-items-center mb-1">
-                <strong class="text-dark">Role 3: Admin AI &amp; Tim Regulasi</strong>
-                <span class="badge bg-dark rounded-pill">Administrator</span>
+                <strong class="text-dark">Layer 3: Output Guardrail &amp; Sensor PII</strong>
+                <span class="badge bg-success rounded-pill">Sensor UU PDP</span>
               </div>
-              <small class="text-muted">Manajemen basis pengetahuan dokumen, penyesuaian prompt AI, audit trail, dan log sistem.</small>
+              <small class="text-muted">Penyensoran otomatis (*masking*) data pribadi sensitif (NIK, NPWP, nomor ponsel, dan email) pada output sesuai kepatuhan regulasi UU PDP.</small>
             </div>
 
           </div>
@@ -596,71 +596,17 @@
       </div>
 
       <div class="row g-4">
-        <!-- DOC 1 -->
+        <!-- DOC 1: data.pdf -->
         <div class="col-md-6 col-lg-4">
           <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
             <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PM1_PERKAWINAN_PERTAMA-WEB-SYARAT</span>
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">data.pdf (PANDUAN_PEMOHON)</span>
               <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
             </div>
-            <h5 class="fw-bold text-dark mb-1">Surat Pengantar Perkawinan Pertama (PM1)</h5>
-            <p class="text-muted small mb-3">Informasi alamat kantor Lantai 5 MPP Setiabudi, kontak telepon, jam operasional layanan, dan email resmi.</p>
+            <h5 class="fw-bold text-dark mb-1">Petunjuk Penggunaan JAKEVO Pemohon</h5>
+            <p class="text-muted small mb-3">Buku panduan resmi alur pendaftaran akun, pembuatan permohonan baru, upload berkas, hingga pemantauan status izin di jakevo.jakarta.go.id.</p>
             <div class="d-flex justify-content-between align-items-center pt-2 border-top">
-              <small class="text-muted">Chunk: 250 Token</small>
-              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa syarat surat pengantar perkawinan pertama?">
-                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- DOC 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
-            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PM1_PERKAWINAN_BAWAH_UMUR-WEB-SYARAT</span>
-              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
-            </div>
-            <h5 class="fw-bold text-dark mb-1">Katalog Proyek Siap Tawar 2024</h5>
-            <p class="text-muted small mb-3">Katalog sektor investasi: Kawasan TOD MRT/LRT, Pengolahan Sampah ITF, Smart City, dan Pariwisata Pulau Seribu.</p>
-            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
-              <small class="text-muted">Chunk: 280 Token</small>
-              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa syarat perkawinan di bawah umur?">
-                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- DOC 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
-            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH-WEB-SYARAT</span>
-              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
-            </div>
-            <h5 class="fw-bold text-dark mb-1">Surat Keterangan Belum Memiliki Rumah (PM1)</h5>
-            <p class="text-muted small mb-3">Peran JAKEVO DPMPTSP DKI Jakarta sebagai One-Stop Investment Hub, promosi investasi, dan pendampingan debottlenecking.</p>
-            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
-              <small class="text-muted">Chunk: 240 Token</small>
-              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa syarat surat keterangan belum memiliki rumah?">
-                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- DOC 4 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
-            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PANDUAN_JAKEVO_PEMOHON-PDF</span>
-              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
-            </div>
-            <h5 class="fw-bold text-dark mb-1">Laporan Realisasi Penanaman Modal</h5>
-            <p class="text-muted small mb-3">Capaian realisasi investasi Rp 165,3 T (PMDN Rp 89,2 T dan PMA USD 5,1 M) serta 3 sektor kontributor terbesar.</p>
-            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
-              <small class="text-muted">Chunk: 260 Token</small>
+              <small class="text-muted">PDF Resmi · 500 Karakter/Chunk</small>
               <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Bagaimana alur pengajuan izin di JAKEVO?">
                 <i class="fa fa-comment-dots me-1"></i>Tanya Bot
               </button>
@@ -668,30 +614,93 @@
           </div>
         </div>
 
-        <!-- DOC 5 -->
+        <!-- DOC 2: ALAMAT_DAN_PROFIL_DPMPTSP.pdf -->
         <div class="col-md-6 col-lg-4">
           <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
             <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">DOC-PTSP-005</span>
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">ALAMAT_DAN_PROFIL_DPMPTSP.pdf</span>
               <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
             </div>
-            <h5 class="fw-bold text-dark mb-1">Panduan JAKEVO &amp; Matriks RBAC</h5>
-            <p class="text-muted small mb-3">Alur perizinan berusaha digital di platform JAKEVO serta tata cara eskalasi konsultasi ke petugas front office PTSP.</p>
+            <h5 class="fw-bold text-dark mb-1">Profil &amp; Alamat Kantor DPMPTSP DKI</h5>
+            <p class="text-muted small mb-3">Informasi lokasi Gedung Mal Pelayanan Publik (MPP) Lantai 5 Kuningan, jam kerja operasional, kontak Call Center 1500-164, visi, misi, dan motto layanan.</p>
             <div class="d-flex justify-content-between align-items-center pt-2 border-top">
-              <small class="text-muted">Chunk: 270 Token</small>
-              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Bagaimana alur izin JAKEVO dan eskalasi ke petugas?">
+              <small class="text-muted">PDF Resmi · 500 Karakter/Chunk</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Di mana alamat kantor DPMPTSP?">
                 <i class="fa fa-comment-dots me-1"></i>Tanya Bot
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Slot Dokumen Tambahan -->
+        <!-- DOC 3: PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH.txt -->
         <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 rounded-4 h-100 border border-2 border-dashed d-flex flex-column justify-content-center text-center">
-            <i class="fa fa-plus-circle fa-2x text-primary mb-2"></i>
-            <h6 class="fw-bold text-dark mb-1">Ekspansi Knowledge Base</h6>
-            <p class="text-muted small mb-0">Arsitektur RAG mendukung penambahan dokumen PDF/SOP baru kapan saja secara dinamis.</p>
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PM1_BELUM_MEMILIKI_RUMAH.txt</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Surat Belum Memiliki Rumah (KPR)</h5>
+            <p class="text-muted small mb-3">Layanan administrasi PTSP Kelurahan: Surat pernyataan belum memiliki rumah bermaterai Rp 10.000, pengantar RT/RW, dan identitas pemohon (1 hari kerja, gratis).</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Web Service · 500 Karakter/Chunk</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa syarat surat keterangan belum memiliki rumah?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOC 4: PM1_SURAT_KETERANGAN_TIDAK_MAMPU.txt -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PM1_TIDAK_MAMPU.txt</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Surat Keterangan Tidak Mampu (SKTM)</h5>
+            <p class="text-muted small mb-3">Persyaratan permohonan SKTM untuk keperluan bantuan pendidikan/kesehatan: pengantar RT/RW, surat pernyataan bermaterai, KK, dan KTP pemohon.</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Web Service · 500 Karakter/Chunk</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa saja syarat Surat Keterangan Tidak Mampu (SKTM)?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOC 5: SURAT_IZIN_PRAKTIK_DOKTER.txt -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">SURAT_IZIN_PRAKTIK_DOKTER.txt</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Surat Izin Praktik Dokter (SIP Dokter)</h5>
+            <p class="text-muted small mb-3">Izin operasional tenaga medis di DKI Jakarta: Surat Tanda Registrasi (STR) aktif dari KKI, surat rekomendasi organisasi profesi (IDI), dan keterangan tempat praktik.</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Web Service · 500 Karakter/Chunk</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa saja syarat surat izin praktik dokter?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOC 6: IZIN_PENGGUNAAN_TANAH_MAKAM.txt + 6 Layanan Lain -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">IZIN_TANAH_MAKAM &amp; LAINNYA</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>10 Web Service</span>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">Izin Pemakaman &amp; 9 Dokumen Web</h5>
+            <p class="text-muted small mb-3">Termasuk Izin Penggunaan Tanah Makam (IPTM), Angkutan Kebersihan, Pemotongan Ternak, Dispensasi Nikah, dan Nikah Bawah Umur dalam ChromaDB.</p>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <small class="text-muted">Total 12 Dokumen Resmi Terindeks</small>
+              <button type="button" class="btn btn-sm btn-outline-primary rounded-pill btn-ask-topic" data-ask="Apa saja syarat izin penggunaan tanah makam?">
+                <i class="fa fa-comment-dots me-1"></i>Tanya Bot
+              </button>
+            </div>
           </div>
         </div>
       </div>
