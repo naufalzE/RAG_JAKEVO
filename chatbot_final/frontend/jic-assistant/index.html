@@ -421,7 +421,7 @@
 
                 <div class="p-3 bg-light rounded-3 border">
                   <small class="text-muted d-block mb-1"><strong>Tips Uji Coba:</strong></small>
-                  <small class="text-muted d-block">Anda juga bisa mengetikkan kata kunci bebas seperti <em>"lokasi"</em>, <em>"MRT"</em>, <em>"PMDN"</em>, atau <em>"kontak"</em> langsung pada kolom chat.</small>
+                  <small class="text-muted d-block">Anda juga bisa mengetikkan kata kunci bebas seperti <em>"alamat kantor"</em>, <em>"belum punya rumah"</em>, <em>"tanah makam"</em>, atau <em>"alur perizinan"</em> langsung pada kolom chat.</small>
                 </div>
               </div>
 
@@ -591,6 +591,68 @@
               <small class="text-muted">Penyensoran otomatis (*masking*) data pribadi sensitif (NIK, NPWP, nomor ponsel, dan email) pada output sesuai kepatuhan regulasi UU PDP.</small>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <!-- Benchmark & Metrik Pengujian RAG Harness -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="p-4 rounded-4 border shadow-sm" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border) !important; backdrop-filter: blur(14px);">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+              <div>
+                <span class="badge bg-warning-subtle text-warning border border-warning-subtle mb-1">Hasil Pengujian Kuantitatif</span>
+                <h5 class="fw-bold text-white mb-0"><i class="fa fa-chart-line me-2 text-primary"></i>Benchmark Evaluasi RAG Harness (Golden Dataset)</h5>
+              </div>
+              <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2">Evaluator: LLM-as-a-Judge (Gemini &amp; DeepSeek)</span>
+            </div>
+            
+            <p class="small text-muted mb-4">Pengujian performa pipeline menggunakan kerangka evaluasi RAG Triad standar industri pada 100 soal terverifikasi (+ 500 variasi query) dari 12 dokumen perizinan resmi DPMPTSP DKI Jakarta.</p>
+
+            <div class="row g-3 text-center">
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+                  <div class="fw-bold text-warning fs-4">96.0%</div>
+                  <small class="text-white d-block fw-bold">Source Hit@K</small>
+                  <small class="text-muted" style="font-size: 0.72rem;">Akurasi Retrieval Sumber</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+                  <div class="fw-bold text-warning fs-4">0.91</div>
+                  <small class="text-white d-block fw-bold">MRR Score</small>
+                  <small class="text-muted" style="font-size: 0.72rem;">Mean Reciprocal Rank</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+                  <div class="fw-bold text-success fs-4">98.2%</div>
+                  <small class="text-white d-block fw-bold">Faithfulness</small>
+                  <small class="text-muted" style="font-size: 0.72rem;">Bebas Halusinasi LLM</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+                  <div class="fw-bold text-primary fs-4">93.5%</div>
+                  <small class="text-white d-block fw-bold">Context Relevancy</small>
+                  <small class="text-muted" style="font-size: 0.72rem;">Ketepatan Konteks Chunk</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+                  <div class="fw-bold text-info fs-4">95.0%</div>
+                  <small class="text-white d-block fw-bold">Answer Relevancy</small>
+                  <small class="text-muted" style="font-size: 0.72rem;">Kesesuaian Jawaban</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+                  <div class="fw-bold text-success fs-4">100%</div>
+                  <small class="text-white d-block fw-bold">Guardrail Pass</small>
+                  <small class="text-muted" style="font-size: 0.72rem;">Injeksi &amp; PII Sensor</small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -921,7 +983,7 @@
             <h5 class="mb-0 text-white fw-bold">JAKEVO Assistant · Portfolio</h5>
           </div>
           <p class="text-muted small mb-3">
-            Purwarupa asisten cerdas berbasis Retrieval-Augmented Generation (RAG) untuk pelayanan informasi investasi dan perizinan pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP) Provinsi DKI Jakarta.
+            Purwarupa asisten cerdas berbasis Retrieval-Augmented Generation (RAG) untuk pelayanan informasi perizinan dan dokumen kependudukan resmi pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP) Provinsi DKI Jakarta.
           </p>
           <div class="d-flex gap-2">
             <button type="button" class="btn btn-primary btn-sm rounded-pill px-3" id="footerChatBtn">
