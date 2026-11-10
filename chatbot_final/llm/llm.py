@@ -6,7 +6,10 @@
 import time
 
 from core.config import settings, PROVIDER_DIDUKUNG
+from core.logger import get_logger
 from llm.llm_kesalahan import KesalahanLLM, KesalahanPermanen
+
+logger = get_logger("llm")
 
 __all__ = [
     "KesalahanLLM",
@@ -56,9 +59,9 @@ def panggil_llm(prompt, maks_percobaan=3, jeda_detik=2):
     """
     try:
         penyedia = settings.penyedia
-        settings.model_aktif()
+        model = settings.model_aktif()
     except ValueError as error:
-        print(f"[LLM] {error}")
+        logger.error(f"[LLM] Konfigurasi provider error: {error}")
         return None
 
     if penyedia == "deepseek":
@@ -68,25 +71,32 @@ def panggil_llm(prompt, maks_percobaan=3, jeda_detik=2):
     elif penyedia == "mimo":
         fungsi = _panggil_mimo
     else:
-        print(
+        logger.error(
             f"[LLM] LLM_PROVIDER '{penyedia}' tidak dikenal. "
             f"Pilih: {', '.join(PROVIDER_DIDUKUNG)}."
         )
         return None
 
+    logger.debug(f"[LLM] Mengirim prompt ke {penyedia} ({model}) - panjang: {len(prompt)} karakter")
+
     for percobaan in range(1, maks_percobaan + 1):
         try:
-            return fungsi(prompt)
+            t0 = time.time()
+            hasil = fungsi(prompt)
+            durasi = time.time() - t0
+            logger.info(f"[LLM] Respons {penyedia} ({model}) diterima dalam {durasi:.2f} detik")
+            return hasil
 
         except KesalahanPermanen as error:
-            print(f"[LLM] {penyedia} gagal permanen: {error}")
+            logger.error(f"[LLM] {penyedia} gagal permanen: {error}")
             return None
 
         except KesalahanLLM as error:
-            print(f"[LLM] Percobaan {percobaan} gagal: {error}")
+            logger.warning(f"[LLM] Percobaan {percobaan}/{maks_percobaan} gagal: {error}")
             if percobaan < maks_percobaan:
                 time.sleep(jeda_detik * percobaan)
 
+    logger.error(f"[LLM] Semua {maks_percobaan} percobaan ke {penyedia} gagal.")
     return None
 
 

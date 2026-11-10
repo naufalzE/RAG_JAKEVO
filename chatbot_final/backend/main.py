@@ -4,13 +4,17 @@
 # ============================================================
 
 from pathlib import Path
+import time
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from backend.router import router as rag_router, chat_endpoint
 from backend.service import RAGService
+from core.logger import get_logger
+
+logger = get_logger("backend")
 
 # Lokasi folder frontend jic-assistant
 FOLDER_BACKEND = Path(__file__).resolve().parent
@@ -21,16 +25,16 @@ if not FOLDER_FRONTEND.exists():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("\n--- [BACKEND] Memulai Server FastAPI RAG JAKEVO ---")
+    logger.info("--- [BACKEND] Memulai Server FastAPI RAG JAKEVO ---")
     try:
         service = RAGService.get_instance()
         service.initialize()
     except Exception as e:
-        print(f"[BACKEND WARNING] Inisialisasi service ditunda: {e}")
+        logger.warning(f"[BACKEND WARNING] Inisialisasi service ditunda: {e}")
 
     yield
 
-    print("--- [BACKEND] Menghentikan Server FastAPI ---")
+    logger.info("--- [BACKEND] Menghentikan Server FastAPI ---")
 
 
 app = FastAPI(
@@ -39,6 +43,33 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+
+# Middleware untuk mencatat latensi dan status setiap HTTP request
+@app.middleware("http")
+async def log_requests_middleware(request: Request, call_next):
+    start_time = time.time()
+    client_ip = request.client.host if request.client else "unknown"
+    method = request.method
+    path = request.url.path
+
+    try:
+        response = await call_next(request)
+        process_time_ms = (time.time() - start_time) * 1000
+        # Catat request API ke dalam logger
+        if path.startswith(("/api", "/rag")):
+            logger.info(
+                f"[HTTP] {method} {path} | Status: {response.status_code} | "
+                f"Durasi: {process_time_ms:.1f}ms | IP: {client_ip}"
+            )
+        return response
+    except Exception as exc:
+        process_time_ms = (time.time() - start_time) * 1000
+        logger.error(
+            f"[HTTP ERROR] {method} {path} | Gagal setelah {process_time_ms:.1f}ms | "
+            f"IP: {client_ip} | Galat: {exc}",
+            exc_info=True,
+        )
+        raise exc
 
 # Setup CORS agar bisa diakses oleh frontend dari domain atau port mana pun
 app.add_middleware(

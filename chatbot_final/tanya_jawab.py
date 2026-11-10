@@ -130,8 +130,10 @@ def jawab(
 
 
 if __name__ == "__main__":
+    import time
     from storage.database import buka_collection
     from storage.embedding import muat_model
+    from core.logger import catat_audit_chat
 
     collection = buka_collection()
     model = muat_model()
@@ -149,6 +151,7 @@ if __name__ == "__main__":
         if pertanyaan.lower() in {"keluar", "exit", "quit"}:
             break
 
+        waktu_mulai = time.time()
         jawaban_llm, sumber = jawab(
             pertanyaan=pertanyaan,
             collection=collection,
@@ -158,6 +161,25 @@ if __name__ == "__main__":
             jumlah_chunk=3,
             jumlah_tetangga=1,
             debug=True,
+        )
+        durasi = time.time() - waktu_mulai
+
+        # Catat ke audit log jika lewat terminal (CLI)
+        chunks_info = [
+            {
+                "chunk_id": c.get("chunk_id"),
+                "file": (c.get("metadata") or {}).get("file"),
+                "distance": c.get("distance"),
+            }
+            for c in sumber
+        ]
+        catat_audit_chat(
+            pertanyaan=pertanyaan,
+            jawaban=jawaban_llm,
+            sumber=chunks_info,
+            durasi_detik=durasi,
+            endpoint="cli",
+            llm_info=info_llm(),
         )
 
         print("\nJawaban:")

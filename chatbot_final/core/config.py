@@ -98,6 +98,19 @@ class Settings(BaseSettings):
         default=str(BASE_DIR / "chroma_db"),
         validation_alias=AliasChoices("VECTOR_DB_PATH", "PATH_CHROMA"),
     )
+    # Konfigurasi Logging & Audit
+    LOG_DIR: str = Field(
+        default=str(BASE_DIR / "logs"),
+        validation_alias=AliasChoices("LOG_DIR", "FOLDER_LOGS"),
+    )
+    LOG_LEVEL: str = Field(
+        default="INFO",
+        validation_alias=AliasChoices("LOG_LEVEL"),
+    )
+    ENABLE_AUDIT_LOG: bool = Field(
+        default=True,
+        validation_alias=AliasChoices("ENABLE_AUDIT_LOG"),
+    )
     NAMA_COLLECTION: str = "akevo"
     MAKS_KARAKTER_CHUNK: int = 500
     AWALAN_CHUNK_TABEL: str = "Informasi status proses permohonan izin JAKEVO."
@@ -174,6 +187,9 @@ PREFIKS_TIDAK_ADA = settings.PREFIKS_TIDAK_ADA
 FOLDER_DOKUMEN = settings.FOLDER_DOKUMEN
 FOLDER_DOKUMEN_WEB = settings.FOLDER_DOKUMEN_WEB
 FOLDER_ARSIP_SCRAPING = settings.FOLDER_ARSIP_SCRAPING
+FOLDER_LOGS = settings.LOG_DIR
+LOG_LEVEL = settings.LOG_LEVEL
+ENABLE_AUDIT_LOG = settings.ENABLE_AUDIT_LOG
 
 
 def kode_dokumen(path) -> str:

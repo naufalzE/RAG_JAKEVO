@@ -29,6 +29,9 @@ from storage.database import (
 )
 from storage.embedding import buat_embedding, muat_model
 from core.utils import cek_keunikan_id
+from core.logger import get_logger
+
+logger = get_logger("ingestion")
 
 
 def main():
@@ -37,58 +40,54 @@ def main():
     daftar_web = daftar_file_web()
 
     if not daftar_pdf and not daftar_web:
-        print("Folder PDF:", FOLDER_DOKUMEN)
-        print("Folder web:", FOLDER_DOKUMEN_WEB)
-        print(
-            "Tidak ada file PDF maupun berkas web (.txt) yang "
-            "ditemukan. Letakkan dokumen di salah satu folder "
-            "tersebut lalu jalankan ulang."
+        logger.error(
+            f"Tidak ada PDF ({FOLDER_DOKUMEN}) maupun file web ({FOLDER_DOKUMEN_WEB}) yang ditemukan."
         )
         return
 
-    print("Folder PDF    :", FOLDER_DOKUMEN)
-    print("Jumlah PDF    :", len(daftar_pdf))
-    print("Folder web    :", FOLDER_DOKUMEN_WEB)
-    print("Jumlah web    :", len(daftar_web))
+    logger.info(
+        f"[Ingestion] Memulai proses ingesti. PDF: {len(daftar_pdf)} berkas, Web: {len(daftar_web)} berkas."
+    )
 
     # 2. Memuat model embedding
+    logger.info(f"[Ingestion] Memuat model embedding: {NAMA_MODEL_EMBEDDING}")
     model = muat_model(NAMA_MODEL_EMBEDDING)
 
     # 3. Membentuk seluruh chunk dari SEMUA PDF dan SEMUA berkas web
-    # menggunakan façade cerdas proses_dokumen
     chunks = []
 
     for path in daftar_pdf:
-        print(f"\n=== MEMPROSES PDF: {path.name} ===")
+        logger.info(f"=== MEMPROSES PDF: {path.name} ===")
         chunk_dokumen = proses_dokumen(path)
-        print(f"Chunk dari {path.name}:", len(chunk_dokumen))
+        logger.info(f"Chunk dari {path.name}: {len(chunk_dokumen)}")
         chunks.extend(chunk_dokumen)
 
     for path in daftar_web:
-        print(f"\n=== MEMPROSES WEB: {path.name} ===")
+        logger.info(f"=== MEMPROSES WEB: {path.name} ===")
         try:
             chunk_halaman = proses_dokumen(path)
         except BerkasWebTidakValid as galat:
-            print("[gagal]", galat)
-            print("Proses dibatalkan; ChromaDB tidak diubah.")
+            logger.error(f"[Ingestion Gagal] {galat}")
             raise SystemExit(1) from galat
 
-        print(f"Chunk dari {path.name}:", len(chunk_halaman))
+        logger.info(f"Chunk dari {path.name}: {len(chunk_halaman)}")
         chunks.extend(chunk_halaman)
 
-    print("\nTotal chunk seluruh dokumen:", len(chunks))
+    logger.info(f"Total chunk seluruh dokumen: {len(chunks)}")
 
     # 4. Memvalidasi keunikan ID chunk antar dokumen
     cek_keunikan_id(chunks)
 
     # 5. Mengubah teks chunk menjadi embedding
+    logger.info("Membuat vektor embedding...")
     vektor = buat_embedding(chunks, model)
-    print("Shape embedding:", vektor.shape)
+    logger.info(f"Shape embedding: {vektor.shape}")
 
     # 6. Membuka collection ChromaDB
     collection = buka_collection()
 
     # 7. Menyimpan chunk terbaru terlebih dahulu (upsert)
+    logger.info("Menyimpan chunk ke ChromaDB (upsert)...")
     simpan_ke_chroma(collection, chunks, vektor)
 
     # 8. Mencari ID basi yang tidak ada dalam chunk terbaru
@@ -96,11 +95,11 @@ def main():
 
     # 9. Menghapus ID basi
     jumlah_dihapus = hapus_id_basi(collection, id_basi)
-    print("ID basi dihapus:", jumlah_dihapus)
+    logger.info(f"ID basi dibersihkan: {jumlah_dihapus}")
 
     # 10. Memeriksa hasil akhir
-    print("Total chunk terbaru:", len(chunks))
-    print("Jumlah data tersimpan:", collection.count())
+    total_tersimpan = collection.count()
+    logger.info(f"[Ingestion Sukses] Total data tersimpan di ChromaDB: {total_tersimpan}")
 
 
 if __name__ == "__main__":

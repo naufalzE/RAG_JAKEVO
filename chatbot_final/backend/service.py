@@ -4,6 +4,7 @@
 # ============================================================
 
 import sys
+import time
 from pathlib import Path
 from typing import Optional, Tuple, List, Dict, Any
 
@@ -14,12 +15,15 @@ if str(BASE_DIR) not in sys.path:
 
 from core.config import NAMA_MODEL_EMBEDDING
 from core.guardrail import Guardrail, guardrail_default
+from core.logger import get_logger, catat_audit_chat
 from storage.database import buka_collection
 from storage.embedding import muat_model
 from retrieval.tetangga import urutkan_id_chunk_teks
 from retrieval.konteks import format_sumber
 from llm.llm import info_llm
 from tanya_jawab import jawab
+
+logger = get_logger("service")
 
 
 class RAGService:
@@ -48,17 +52,19 @@ class RAGService:
         if self._is_ready:
             return
 
-        print("[RAGService] Membuka collection ChromaDB...")
+        logger.info("[RAGService] Membuka collection ChromaDB...")
         self.collection = buka_collection()
 
-        print(f"[RAGService] Memuat model embedding ({NAMA_MODEL_EMBEDDING})...")
+        logger.info(f"[RAGService] Memuat model embedding ({NAMA_MODEL_EMBEDDING})...")
         self.model = muat_model(NAMA_MODEL_EMBEDDING)
 
-        print("[RAGService] Mengurutkan urutan chunk teks...")
+        logger.info("[RAGService] Mengurutkan urutan chunk teks...")
         self.urut = urutkan_id_chunk_teks(self.collection)
 
         self._is_ready = True
-        print(f"[RAGService] Siap! Total chunk terurut: {len(self.urut)}, LLM: {info_llm()}")
+        logger.info(
+            f"[RAGService] Inisialisasi selesai! Total chunk terurut: {len(self.urut)}, LLM: {info_llm()}"
+        )
 
     def pastikan_siap(self):
         """Lazy load jika belum diinisialisasi."""
@@ -72,18 +78,39 @@ class RAGService:
         jumlah_chunk: int = 3,
         jumlah_tetangga: int = 1,
         debug: bool = False,
+        endpoint: str = "api",
+        metadata: Optional[Dict[str, Any]] = None,
     ) -> Tuple[str, str, List[Dict[str, Any]], bool, Optional[str]]:
         """
-        Menjalankan proses tanya jawab dengan proteksi Guardrail multi-layer.
+        Menjalankan proses tanya jawab dengan proteksi Guardrail multi-layer
+        dan pencatatan audit trail percakapan otomatis.
 
         Returns:
             Tuple[jawaban, sumber_teks, daftar_chunk_sumber, guardrail_lolos, guardrail_alasan]
         """
+        waktu_mulai = time.time()
+
         # --- LAYER 1: INPUT GUARDRAIL ---
         cek_input = self.guardrail.periksa_input(pertanyaan)
         if not cek_input.lolos:
-            if debug:
-                print(f"[GUARDRAIL BLOCKED] Alasan: {cek_input.alasan}")
+            durasi = time.time() - waktu_mulai
+            logger.warning(
+                f"[GUARDRAIL BLOCKED] Alasan: '{cek_input.alasan}' | Query: '{pertanyaan[:80]}'"
+            )
+            catat_audit_chat(
+                pertanyaan=pertanyaan,
+                jawaban=cek_input.pesan_penolakan,
+                sumber=[],
+                durasi_detik=durasi,
+                guardrail_status={
+                    "lolos": False,
+                    "alasan": cek_input.alasan,
+                    "kategori": cek_input.kategori,
+                },
+                endpoint=endpoint,
+                llm_info=info_llm(),
+                metadata=metadata,
+            )
             return (
                 cek_input.pesan_penolakan,
                 "Guardrail Keamanan Sistem",
@@ -93,6 +120,8 @@ class RAGService:
             )
 
         self.pastikan_siap()
+
+        logger.info(f"[RAG Query] '{pertanyaan[:80]}' (topk={topk})")
 
         # Eksekusi RAG
         jawaban_llm, hasil_retrieval = jawab(
@@ -122,6 +151,23 @@ class RAGService:
                 "distance": c.get("distance"),
                 "teks": c.get("teks", "")[:200] + "..." if len(c.get("teks", "")) > 200 else c.get("teks", ""),
             })
+
+        durasi_total = time.time() - waktu_mulai
+        logger.info(
+            f"[RAG Selesai] Durasi: {durasi_total:.2f}s | Chunk: {len(chunks_info)} | Endpoint: {endpoint}"
+        )
+
+        # Simpan jejak audit percakapan
+        catat_audit_chat(
+            pertanyaan=pertanyaan,
+            jawaban=jawaban_bersih,
+            sumber=chunks_info,
+            durasi_detik=durasi_total,
+            guardrail_status={"lolos": True, "alasan": None},
+            endpoint=endpoint,
+            llm_info=info_llm(),
+            metadata=metadata,
+        )
 
         return jawaban_bersih, sumber_str, chunks_info, True, None
 

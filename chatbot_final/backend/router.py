@@ -15,6 +15,9 @@ from backend.schemas import (
     MatchedDoc,
 )
 from backend.service import RAGService
+from core.logger import get_logger
+
+logger = get_logger("router")
 
 router = APIRouter(prefix="/rag", tags=["Chatbot RAG JAKEVO"])
 
@@ -155,6 +158,7 @@ async def chat_endpoint(
             jumlah_chunk=payload.jumlah_chunk,
             jumlah_tetangga=payload.jumlah_tetangga,
             debug=payload.debug,
+            endpoint="/api/chat",
         )
 
         # Kasus Guardrail Mencegat Pertanyaan
@@ -222,6 +226,7 @@ async def chat_endpoint(
         )
 
     except Exception as e:
+        logger.exception(f"Terjadi kesalahan di /api/chat: {e}")
         raise HTTPException(status_code=500, detail=f"Terjadi kesalahan di server RAG: {str(e)}")
 
 
@@ -238,6 +243,7 @@ async def tanya_jawab_endpoint(
             jumlah_chunk=payload.jumlah_chunk,
             jumlah_tetangga=payload.jumlah_tetangga,
             debug=payload.debug,
+            endpoint="/rag/tanya",
         )
         return TanyaResponse(
             pertanyaan=payload.pertanyaan,
@@ -248,6 +254,7 @@ async def tanya_jawab_endpoint(
             guardrail_alasan=alasan,
         )
     except Exception as e:
+        logger.exception(f"Terjadi kesalahan di /rag/tanya: {e}")
         raise HTTPException(status_code=500, detail=f"Terjadi kesalahan saat memproses pertanyaan: {str(e)}")
 
 
