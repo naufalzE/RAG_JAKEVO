@@ -667,8 +667,18 @@ div.bg-light {
 }
 .student-photo-frame {
   background: rgba(255, 255, 255, 0.05) !important;
-  border-color: rgba(247, 148, 29, 0.4) !important;
-  border-radius: 12px !important;
+  border: 2px solid rgba(247, 148, 29, 0.5) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  width: 125px !important;
+  height: 165px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+.student-photo-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 .role-badge-box {
   background: rgba(255, 255, 255, 0.05) !important;

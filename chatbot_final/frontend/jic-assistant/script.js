@@ -363,47 +363,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ==========================================================================
 
-     4. PREVIEW UPLOAD FOTO MAHASISWA 1 & 2
+     4. PROFIL MAHASISWA (FIXED CODED ASSETS)
 
      ========================================================================== */
 
-  function setupPhotoUpload(inputId, imgId) {
-
-    const inputEl = document.getElementById(inputId);
-
-    const imgEl = document.getElementById(imgId);
-
-    if (inputEl && imgEl) {
-
-      inputEl.addEventListener('change', (e) => {
-
-        const file = e.target.files[0];
-
-        if (file) {
-
-          const reader = new FileReader();
-
-          reader.onload = (event) => {
-
-            imgEl.src = event.target.result;
-
-          };
-
-          reader.readAsDataURL(file);
-
-        }
-
-      });
-
-    }
-
-  }
-
-
-
-  setupPhotoUpload('studentPhotoInput1', 'studentPhotoImg1');
-
-  setupPhotoUpload('studentPhotoInput2', 'studentPhotoImg2');
+  // Foto dan data identitas mahasiswa PKL dikunci langsung pada kode HTML/CSS.
 
 
 
