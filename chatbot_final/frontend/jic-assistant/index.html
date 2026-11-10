@@ -54,8 +54,8 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top portfolio-navbar" id="mainNavbar">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#beranda">
-        <div class="brand-icon-box me-2">
-          <i class="fa fa-robot"></i>
+        <div class="brand-icon-box me-2 overflow-hidden p-0" style="border: 1.5px solid rgba(247, 148, 29, 0.5);">
+          <img src="img/logo-chatbot.jpg" alt="Logo JAKEVO" class="w-100 h-100" style="object-fit: cover;">
         </div>
         <div class="brand-text-group">
           <span class="brand-title">JAKEVO Assistant</span>
@@ -175,8 +175,8 @@
           <div class="hero-interactive-card shadow-lg p-4 bg-white" id="triggerChatFromCard" title="Klik untuk membuka chatbot interaktif">
             <div class="card-top-header d-flex align-items-center justify-content-between pb-3 border-bottom mb-3">
               <div class="d-flex align-items-center">
-                <div class="bot-avatar-mini me-2">
-                  🤖
+                <div class="bot-avatar-mini me-2 overflow-hidden p-0" style="border: 1.5px solid rgba(247, 148, 29, 0.5);">
+                  <img src="img/logo-chatbot.jpg" alt="Logo JAKEVO" class="w-100 h-100" style="object-fit: cover; border-radius: 8px;">
                 </div>
                 <div>
                   <h6 class="mb-0 fw-bold text-dark">JAKEVO Assistant Preview</h6>
@@ -429,8 +429,8 @@
               <div class="col-md-6 text-center">
                 <div class="p-4 bg-gradient-orange-subtle rounded-4 border border-warning">
                   <div class="avatar-large-showcase mb-3">
-                    <div class="rounded-circle d-inline-flex p-3 bg-white shadow-sm" style="width: 100px; height: 100px; align-items: center; justify-content: center; font-size: 3rem;">
-                      💬
+                    <div class="rounded-circle d-inline-flex p-1 bg-white shadow-sm overflow-hidden" style="width: 100px; height: 100px; border: 3px solid #F7941D; box-shadow: 0 8px 24px rgba(247, 148, 29, 0.35);">
+                      <img src="img/logo-chatbot.jpg" alt="Logo Maskot Betawi JAKEVO" class="w-100 h-100 rounded-circle" style="object-fit: cover;">
                     </div>
                   </div>
                   <h5 class="fw-bold text-dark mb-1">Buka Chatbot JAKEVO Assistant</h5>
@@ -969,8 +969,8 @@
       <div class="row g-4 pb-4 border-bottom border-secondary">
         <div class="col-lg-5">
           <div class="d-flex align-items-center mb-3">
-            <div class="brand-icon-box me-2" style="background:#F7941D; color:#fff;">
-              <i class="fa fa-robot"></i>
+            <div class="brand-icon-box me-2 overflow-hidden p-0" style="border: 1.5px solid rgba(247, 148, 29, 0.5);">
+              <img src="img/logo-chatbot.jpg" alt="Logo JAKEVO" class="w-100 h-100" style="object-fit: cover; border-radius: 8px;">
             </div>
             <h5 class="mb-0 text-white fw-bold">JAKEVO Assistant · Portfolio</h5>
           </div>
@@ -1034,13 +1034,16 @@
       <div class="header-main-content">
 
         <!-- KIRI: Judul & Status Online -->
-        <div class="header-info-col">
-          <div class="header-title-row">
-            <h3 class="main-title">Tanya Solusi</h3>
-          </div>
-          <div class="header-online-status">
-            <span class="online-pulse-dot"></span>
-            <span class="online-label-text">Online</span>
+        <div class="header-info-col d-flex align-items-center gap-2">
+          <img src="img/logo-chatbot.jpg" alt="Logo JAKEVO" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover; border: 2px solid rgba(255,255,255,0.85); box-shadow: 0 2px 8px rgba(0,0,0,0.25);">
+          <div>
+            <div class="header-title-row">
+              <h3 class="main-title">Tanya Solusi</h3>
+            </div>
+            <div class="header-online-status">
+              <span class="online-pulse-dot"></span>
+              <span class="online-label-text">Online</span>
+            </div>
           </div>
         </div>
 
@@ -1146,57 +1149,7 @@
         <div class="chat-message bot-message">
           <!-- Avatar Pasangan Adat Betawi -->
           <div class="bot-avatar-wrapper modern-avatar-wrapper" title="Avatar JAKEVO Assistant - Karakter Adat Betawi">
-            <svg class="betawi-avatar-svg" viewBox="0 0 100 100" width="75" height="75" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar Pasangan Betawi JAKEVO">
-              <defs>
-                <linearGradient id="avatarOrangeGradInit" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#FFA229"/>
-                  <stop offset="100%" stop-color="#E26D00"/>
-                </linearGradient>
-              </defs>
-              <rect width="100" height="100" rx="18" fill="url(#avatarOrangeGradInit)"/>
-              <circle cx="50" cy="20" r="3.5" fill="#FFF275" opacity="0.9"/>
-              <path d="M50 13 L51.5 19.5 L58 20 L51.5 20.5 L50 27 L48.5 20.5 L42 20 L48.5 19.5 Z" fill="#FFF9C4" opacity="0.75"/>
-              <!-- Abang Betawi -->
-              <path d="M12 94 C12 77 22 71 35 71 C43 71 48 75 50 81 C44 86 36 94 36 94 Z" fill="#FFFFFF"/>
-              <path d="M26 67 C32 67 38 71 40 77 C36 83 32 94 32 94 L24 94 C24 87 22 77 26 67 Z" fill="#DC2626"/>
-              <path d="M27 74 L37 76 M26 81 L35 83 M25 88 L33 90" stroke="#FEF08A" stroke-width="1.3" stroke-linecap="round"/>
-              <rect x="29" y="59" width="10" height="11" rx="4" fill="#F8C798"/>
-              <ellipse cx="34" cy="49" rx="13" ry="14" fill="#FCD3AD"/>
-              <path d="M20 43 C20 31 26 29 34 29 C42 29 48 31 48 43 Z" fill="#1E293B"/>
-              <path d="M20 41 L48 41" stroke="#FBBF24" stroke-width="0.8" opacity="0.8"/>
-              <path d="M25 45 Q29 43 32 45" stroke="#334155" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-              <path d="M37 45 Q40 43 43 45" stroke="#334155" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-              <circle cx="28" cy="48" r="1.6" fill="#0F172A"/>
-              <circle cx="39" cy="48" r="1.6" fill="#0F172A"/>
-              <path d="M34 49 L33 52 L35 52" stroke="#D97706" stroke-width="1" fill="none" stroke-linecap="round"/>
-              <path d="M30 54 Q34 58 38 54" stroke="#B45309" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-              <circle cx="25" cy="51" r="2.5" fill="#FCA5A5" opacity="0.65"/>
-              <circle cx="42" cy="51" r="2.5" fill="#FCA5A5" opacity="0.65"/>
-              <!-- None Betawi -->
-              <path d="M50 81 C52 75 57 71 65 71 C78 71 88 77 88 94 L64 94 C64 94 56 86 50 81 Z" fill="#0284C7"/>
-              <path d="M60 71 L66 83 L72 71" fill="#38BDF8"/>
-              <circle cx="66" cy="77" r="1.8" fill="#FBBF24"/>
-              <circle cx="66" cy="82" r="1.5" fill="#FBBF24"/>
-              <path d="M72 73 C76 79 82 85 85 94 L77 94 C74 88 70 82 68 75 Z" fill="#F59E0B"/>
-              <rect x="61" y="59" width="10" height="11" rx="4" fill="#F8C798"/>
-              <ellipse cx="66" cy="49" rx="13" ry="14" fill="#FCD3AD"/>
-              <ellipse cx="66" cy="37" rx="14" ry="10" fill="#1E293B"/>
-              <circle cx="56" cy="34" r="2.2" fill="#FEF08A"/>
-              <circle cx="66" cy="31" r="2.7" fill="#FBBF24"/>
-              <circle cx="76" cy="34" r="2.2" fill="#FEF08A"/>
-              <circle cx="54" cy="39" r="1.6" fill="#FFFFFF"/>
-              <circle cx="53" cy="43" r="1.6" fill="#FFFFFF"/>
-              <circle cx="53" cy="47" r="1.6" fill="#FFFFFF"/>
-              <path d="M57 45 Q60 43 63 45" stroke="#334155" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-              <path d="M69 45 Q72 43 75 45" stroke="#334155" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-              <circle cx="60" cy="48" r="1.6" fill="#0F172A"/>
-              <circle cx="72" cy="48" r="1.6" fill="#0F172A"/>
-              <path d="M62 46 L63 45 M74 46 L75 45" stroke="#0F172A" stroke-width="0.9"/>
-              <circle cx="66" cy="51" r="0.8" fill="#D97706"/>
-              <path d="M62 54 Q66 58 70 54" stroke="#E11D48" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-              <circle cx="57" cy="52" r="2.5" fill="#FDA4AF" opacity="0.75"/>
-              <circle cx="75" cy="52" r="2.5" fill="#FDA4AF" opacity="0.75"/>
-            </svg>
+            <img src="img/logo-chatbot.jpg" alt="Avatar Maskot Betawi JAKEVO" class="betawi-avatar-img">
           </div>
 
           <div class="message-content-wrapper">
@@ -1208,7 +1161,7 @@
                 </div>
               </div>
               <div class="bubble-body">
-                <p>Halo! Saya <strong>JAKEVO Assistant</strong>. Silakan pilih salah satu pertanyaan cepat di atas atau ketik pertanyaan Anda seputar investasi, perizinan JAKEVO, dan layanan PTSP di DKI Jakarta.</p>
+                <p>Halo! Saya <strong>JAKEVO Assistant</strong>. Silakan pilih salah satu pertanyaan cepat di atas atau ketik pertanyaan Anda seputar persyaratan perizinan JAKEVO, dokumen kependudukan (PM1), dan SOP layanan PTSP di Provinsi DKI Jakarta.</p>
               </div>
 
               <!-- Sumber Basis Pengetahuan RAG (Wajib Muncul di Bawah Jawaban) -->
@@ -1219,7 +1172,7 @@
                 </div>
                 <div class="source-content-box">
                   <span class="source-doc-id">DOC-INIT-000</span>
-                  <span class="source-doc-name">SOP Layanan Informasi Investasi &amp; Panduan PTSP DKI Jakarta</span>
+                  <span class="source-doc-name">SOP Pelayanan Perizinan JAKEVO &amp; Panduan DPMPTSP Provinsi DKI Jakarta</span>
                   <span class="source-verified-tag">✓ Terverifikasi DPMPTSP</span>
                 </div>
               </div>
@@ -1287,35 +1240,9 @@
        ========================================== -->
   <button type="button" class="floating-chat-bubble-widget" id="floatingChatBtn" aria-label="Buka atau Tutup Chatbot JAKEVO Assistant" title="Buka atau Tutup Chatbot JAKEVO Assistant">
     <div class="floating-bubble-avatar">
-      <svg class="bubble-avatar-svg" viewBox="0 0 100 100" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="bubbleAvatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FFA229"/>
-            <stop offset="100%" stop-color="#E26D00"/>
-          </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r="50" fill="url(#bubbleAvatarGrad)"/>
-        <!-- Abang Betawi -->
-        <path d="M18 90 C18 75 26 70 38 70 C44 70 48 73 50 78 C45 83 38 90 38 90 Z" fill="#FFFFFF"/>
-        <path d="M30 67 C35 67 40 70 42 75 C38 80 35 90 35 90 L28 90 Z" fill="#DC2626"/>
-        <ellipse cx="36" cy="50" rx="11" ry="12" fill="#FCD3AD"/>
-        <path d="M24 45 C24 35 29 33 36 33 C43 33 48 35 48 45 Z" fill="#1E293B"/>
-        <circle cx="31" cy="49" r="1.5" fill="#0F172A"/>
-        <circle cx="41" cy="49" r="1.5" fill="#0F172A"/>
-        <path d="M33 54 Q36 57 39 54" stroke="#B45309" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-        <!-- None Betawi -->
-        <path d="M50 78 C52 73 56 70 62 70 C74 70 82 75 82 90 L62 90 Z" fill="#0284C7"/>
-        <ellipse cx="64" cy="50" rx="11" ry="12" fill="#FCD3AD"/>
-        <ellipse cx="64" cy="39" rx="12" ry="9" fill="#1E293B"/>
-        <circle cx="56" cy="37" r="1.8" fill="#FEF08A"/>
-        <circle cx="64" cy="34" r="2.2" fill="#FBBF24"/>
-        <circle cx="72" cy="37" r="1.8" fill="#FEF08A"/>
-        <circle cx="59" cy="49" r="1.5" fill="#0F172A"/>
-        <circle cx="69" cy="49" r="1.5" fill="#0F172A"/>
-        <path d="M61 54 Q64 57 67 54" stroke="#E11D48" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-      </svg>
+      <img src="img/logo-chatbot.jpg" alt="Logo Chatbot JAKEVO" class="floating-avatar-img">
       <span class="bubble-online-dot"></span>
-      <span class="bubble-toggle-cross" aria-hidden="true">✕</span>
+      <span class="bubble-toggle-cross" aria-hidden="true">&times;</span>
     </div>
     <div class="floating-bubble-text-pill">
       <span class="bubble-name" id="floatingBtnLabel">Buka Chatbot</span>

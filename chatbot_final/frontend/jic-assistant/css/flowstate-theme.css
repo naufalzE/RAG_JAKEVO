@@ -887,3 +887,30 @@ div.bg-light {
 .portfolio-footer a:hover {
   color: #F7941D !important;
 }
+
+/* --------------------------------------------------
+   15. Mascot Avatar & Logo Enhancements
+   -------------------------------------------------- */
+.betawi-avatar-img,
+.bot-avatar-wrapper img,
+.floating-avatar-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.bot-avatar-wrapper {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(247, 148, 29, 0.45) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.floating-bubble-avatar {
+  background: #F7941D !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 14px rgba(247, 148, 29, 0.4) !important;
+}
