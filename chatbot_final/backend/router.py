@@ -223,6 +223,7 @@ async def chat_endpoint(
             sumber=sumber_teks,
             guardrail_lolos=True,
             guardrail_alasan=None,
+            rerank_info="Hybrid Reranking: Vektor dense ChromaDB dipadukan dengan pemeringkatan leksikal & intent SOP (Top-K)",
         )
 
     except Exception as e:

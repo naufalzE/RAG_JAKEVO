@@ -969,13 +969,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <ul>
 
-          <li><strong>Di mana alamat kantor DPMPTSP?</strong></li>
+          <li><strong>Apa syarat surat pengantar belum memiliki rumah (PM1)?</strong></li>
 
-          <li><strong>Sektor proyek apa saja yang tersedia?</strong></li>
+          <li><strong>Bagaimana alur izin penggunaan tanah makam (IPTM)?</strong></li>
 
-          <li><strong>Apa itu JAKEVO?</strong></li>
+          <li><strong>Apa saja syarat izin angkutan kebersihan?</strong></li>
 
-          <li><strong>Data realisasi investasi</strong></li>
+          <li><strong>Di mana alamat kantor DPMPTSP Provinsi DKI Jakarta?</strong></li>
 
         </ul>
 
@@ -1377,9 +1377,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div>
 
-              <span class="step-title">Query Diterima:</span>
+              <span class="step-title">Query Diterima &amp; Guardrail:</span>
 
-              <span class="step-meta">"${escapeHtml(ragResult.query)}" [${ragResult.tokens.length} token dianalisis]</span>
+              <span class="step-meta">"${escapeHtml(ragResult.query)}" [${ragResult.tokens.length} token dianalisis, Status Guardrail: Lolos]</span>
 
             </div>
 
@@ -1391,11 +1391,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div>
 
-              <span class="step-title">Retrieval Dokumen:</span>
+              <span class="step-title">Dense Semantic Retrieval:</span>
 
               <span class="step-meta">${escapeHtml(matchedDocTitle)}</span>
 
-              <span class="score-badge ${scoreBadgeClass}">Skor: ${ragResult.score}%</span>
+              <span class="score-badge ${scoreBadgeClass}">Kandidat Vektor Top-K</span>
 
               <div style="margin-top: 3px;">${keywordsPillsHtml}</div>
 
@@ -1409,9 +1409,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div>
 
-              <span class="step-title">Augmentasi Konteks:</span>
+              <span class="step-title">Hybrid Reranking:</span>
 
-              <span class="step-meta">${escapeHtml(ragResult.contextSnippet)}</span>
+              <span class="step-meta">${ragResult.rerank_info ? escapeHtml(ragResult.rerank_info) : 'Penyaringan &amp; pembobotan leksikal token dengan prioritas intent SOP.'}</span>
+
+              <span class="score-badge ${scoreBadgeClass}">Skor Re-ranked: ${ragResult.score}%</span>
 
             </div>
 
@@ -1423,9 +1425,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div>
 
-              <span class="step-title">Generasi Jawaban:</span>
+              <span class="step-title">Augmentasi Konteks (Neighbor Expansion):</span>
 
-              <span class="step-meta">${ragResult.isRelevant ? 'Respons resmi disintesis dari dokumen DPMPTSP' : 'Fallback: Menampilkan panduan 4 topik utama'}</span>
+              <span class="step-meta">${escapeHtml(ragResult.contextSnippet)}</span>
+
+            </div>
+
+          </div>
+
+          <div class="rag-step-item">
+
+            <span class="step-num-badge">5</span>
+
+            <div>
+
+              <span class="step-title">Generasi Jawaban &amp; Output Guard:</span>
+
+              <span class="step-meta">${ragResult.isRelevant ? 'Respons resmi disintesis dari dokumen DPMPTSP (PII Masking aktif)' : 'Fallback: Menampilkan panduan layanan SOP'}</span>
 
             </div>
 

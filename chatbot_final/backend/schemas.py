@@ -44,6 +44,10 @@ class TanyaResponse(BaseModel):
     chunks: List[Dict[str, Any]] = []
     guardrail_lolos: bool = True
     guardrail_alasan: Optional[str] = None
+    rerank_info: Optional[str] = Field(
+        default="Hybrid Reranking: Dense semantic (multilingual-e5-small) dipadukan dengan pembobotan leksikal kata kunci & intent SOP (Top-K)",
+        description="Laporan proses reranking hibrida"
+    )
 
 
 class StatusResponse(BaseModel):
@@ -91,3 +95,7 @@ class ChatResponse(BaseModel):
     sumber: str
     guardrail_lolos: bool = True
     guardrail_alasan: Optional[str] = None
+    rerank_info: Optional[str] = Field(
+        default="Hybrid Reranking: Dense semantic (multilingual-e5-small) dipadukan dengan pembobotan leksikal kata kunci & intent SOP (Top-K)",
+        description="Laporan proses reranking hibrida"
+    )

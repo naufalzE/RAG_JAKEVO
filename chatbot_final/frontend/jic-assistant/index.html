@@ -304,9 +304,9 @@
             <div class="feature-icon mb-3">
               <i class="fa fa-database text-primary"></i>
             </div>
-            <h5 class="feature-title">Hybrid Retrieval &amp; ChromaDB</h5>
+            <h5 class="feature-title">Dense Retrieval &amp; Hybrid Reranking</h5>
             <p class="feature-desc text-muted">
-              Pencarian semantik dense berbasis model <em>multilingual-e5-small</em> pada ChromaDB dipadukan dengan kamus deteksi kata kunci target pada 12 dokumen perizinan resmi.
+              Pencarian semantik dense model <em>multilingual-e5-small</em> pada ChromaDB dipadukan dengan modul <strong>Hybrid Reranking</strong> untuk menyaring kandidat terbaik berdasarkan bobot leksikal token dan prioritas bagian SOP (INFO/SYARAT/ALUR).
             </p>
           </div>
         </div>
@@ -462,9 +462,9 @@
         </p>
       </div>
 
-      <!-- Pipeline Steps Flowchart -->
-      <div class="row g-3 mb-5">
-        <div class="col-md">
+      <!-- Pipeline Steps Flowchart (6 Steps with Hybrid Reranking) -->
+      <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-6">
+        <div class="col">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">1</div>
             <i class="fa fa-keyboard fa-2x text-primary my-2"></i>
@@ -472,7 +472,7 @@
             <small class="text-muted">Pertanyaan syarat izin atau teknis JAKEVO.</small>
           </div>
         </div>
-        <div class="col-md">
+        <div class="col">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">2</div>
             <i class="fa fa-shield-alt fa-2x text-primary my-2"></i>
@@ -480,25 +480,33 @@
             <small class="text-muted">Cek panjang, anti-jailbreak, toxic, &amp; kamus entitas.</small>
           </div>
         </div>
-        <div class="col-md">
+        <div class="col">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">3</div>
             <i class="fa fa-database fa-2x text-primary my-2"></i>
             <h6 class="fw-bold mb-1">ChromaDB Search</h6>
-            <small class="text-muted">Dense search model <em>multilingual-e5-small</em> Top-K.</small>
+            <small class="text-muted">Dense search model <em>multilingual-e5-small</em> (154 kandidat).</small>
           </div>
         </div>
-        <div class="col-md">
+        <div class="col">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">4</div>
-            <i class="fa fa-expand-arrows-alt fa-2x text-primary my-2"></i>
-            <h6 class="fw-bold mb-1">Neighbor Expansion</h6>
-            <small class="text-muted">Penarikan chunk tetangga &amp; validasi konteks.</small>
+            <i class="fa fa-sort-amount-down fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">Hybrid Reranking</h6>
+            <small class="text-muted">Pengurutan ulang leksikal token &amp; intent prioritas SOP.</small>
           </div>
         </div>
-        <div class="col-md">
+        <div class="col">
           <div class="pipeline-step-card text-center p-3 h-100">
             <div class="step-badge">5</div>
+            <i class="fa fa-expand-arrows-alt fa-2x text-primary my-2"></i>
+            <h6 class="fw-bold mb-1">Neighbor Expansion</h6>
+            <small class="text-muted">Penarikan chunk tetangga &amp; validasi kontinuitas konteks.</small>
+          </div>
+        </div>
+        <div class="col">
+          <div class="pipeline-step-card text-center p-3 h-100">
+            <div class="step-badge">6</div>
             <i class="fa fa-robot fa-2x text-primary my-2"></i>
             <h6 class="fw-bold mb-1">LLM &amp; Output Guard</h6>
             <small class="text-muted">Sintesis jawaban, sitasi berkas, &amp; sensor NIK/kontak.</small>
@@ -529,17 +537,25 @@
             </div>
 
             <div class="d-flex mb-3">
+              <i class="fa fa-sort-amount-down text-primary fa-lg me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark d-block">3. Modul Hybrid Reranking</strong>
+                <small class="text-muted">Penyaringan hingga 154 kandidat dense melalui pembobotan leksikal kata kunci, deteksi jenis query (ringkasan, lintas dokumen, tabel status), dan prioritas bagian SOP.</small>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
               <i class="fa fa-expand-arrows-alt text-primary fa-lg me-3 mt-1"></i>
               <div>
-                <strong class="text-dark d-block">3. Neighbor Expansion &amp; Reranking Hibrida</strong>
-                <small class="text-muted">Penggabungan chunk sebelum dan sesudah serta skoring kombinasi semantik dense dan leksikal kamus.</small>
+                <strong class="text-dark d-block">4. Neighbor Chunk Expansion</strong>
+                <small class="text-muted">Penggabungan chunk sebelum dan sesudah secara dinamis agar alur SOP dan persyaratan perizinan tidak terpotong saat disintesis.</small>
               </div>
             </div>
 
             <div class="d-flex">
               <i class="fa fa-robot text-primary fa-lg me-3 mt-1"></i>
               <div>
-                <strong class="text-dark d-block">4. Prompt Instruction &amp; Multi-LLM Adapter</strong>
+                <strong class="text-dark d-block">5. Prompt Instruction &amp; Multi-LLM Adapter</strong>
                 <small class="text-muted">Sistem instruksi ketat anti-halusinasi dengan adapter multi-provider: Google Gemini, DeepSeek, dan MiMO.</small>
               </div>
             </div>
@@ -870,7 +886,7 @@
                   <strong class="text-dark">Tahap 3: Implementasi Pipeline RAG, ChromaDB &amp; Guardrails</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
                 </div>
-                <p class="text-muted small mb-0">Pembangunan sistem retrieval semantik berbasis embedding multilingual-e5-small, penyimpanan vektor ChromaDB, ekspansi tetangga (neighbor expansion), dan proteksi multi-layer guardrails.</p>
+                <p class="text-muted small mb-0">Pembangunan sistem retrieval semantik berbasis embedding multilingual-e5-small, penyimpanan vektor ChromaDB, modul hybrid reranking leksikal-kontekstual, ekspansi tetangga (neighbor expansion), dan proteksi multi-layer guardrails.</p>
               </div>
             </div>
 
