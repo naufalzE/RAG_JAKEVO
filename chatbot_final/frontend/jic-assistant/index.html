@@ -12,7 +12,7 @@
   <!-- Google Web Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Icon Font Stylesheet (Font Awesome 5 & Bootstrap Icons) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -31,9 +31,14 @@
   <link rel="stylesheet" href="css/chatbot.css">
   <link rel="stylesheet" href="css/widget.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <!-- Flowstate Dark Immersive Theme -->
+  <link rel="stylesheet" href="css/flowstate-theme.css">
 </head>
 
 <body>
+  <!-- WebGL Fluid Simulation & Radial Scrim Background (Flowstate Engine) -->
+  <canvas id="fluid-canvas" class="fluid-canvas" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
   <!-- ==========================================
        1. SPINNER PRELOADER
        ========================================== -->
@@ -389,7 +394,7 @@
 
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="demo-studio-card bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+          <div class="demo-studio-card p-4 p-md-5 rounded-4 shadow-sm border">
             
             <div class="row g-4 align-items-center">
               <div class="col-md-6">
@@ -546,7 +551,7 @@
           <div class="p-4 bg-light rounded-4 h-100 border">
             <h5 class="fw-bold text-dark mb-3"><i class="fa fa-user-lock me-2 text-primary"></i>Matriks Hak Akses (RBAC)</h5>
             
-            <div class="p-3 bg-white rounded-3 mb-2 border shadow-sm">
+            <div class="p-3 rounded-3 mb-2 border shadow-sm rbac-card">
               <div class="d-flex justify-content-between align-items-center mb-1">
                 <strong class="text-dark">Role 1: Pengguna Publik &amp; Investor</strong>
                 <span class="badge bg-secondary rounded-pill">Akses Anonim</span>
@@ -554,7 +559,7 @@
               <small class="text-muted">Konsultasi mandiri 24/7, pencarian syarat izin, dan permohonan tiket eskalasi petugas.</small>
             </div>
 
-            <div class="p-3 bg-white rounded-3 mb-2 border border-primary shadow-sm">
+            <div class="p-3 rounded-3 mb-2 border border-primary shadow-sm rbac-card">
               <div class="d-flex justify-content-between align-items-center mb-1">
                 <strong class="text-primary">Role 2: Petugas Front Office PTSP</strong>
                 <span class="badge bg-primary rounded-pill">Petugas Loket</span>
@@ -562,7 +567,7 @@
               <small class="text-muted">Menerima tiket eskalasi, verifikasi berkas izin JAKEVO, dan menangani kasus pemohon.</small>
             </div>
 
-            <div class="p-3 bg-white rounded-3 border shadow-sm">
+            <div class="p-3 rounded-3 border shadow-sm rbac-card">
               <div class="d-flex justify-content-between align-items-center mb-1">
                 <strong class="text-dark">Role 3: Admin AI &amp; Tim Regulasi</strong>
                 <span class="badge bg-dark rounded-pill">Administrator</span>
@@ -593,9 +598,9 @@
       <div class="row g-4">
         <!-- DOC 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold">PM1_PERKAWINAN_PERTAMA-WEB-SYARAT</span>
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PM1_PERKAWINAN_PERTAMA-WEB-SYARAT</span>
               <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
             </div>
             <h5 class="fw-bold text-dark mb-1">Surat Pengantar Perkawinan Pertama (PM1)</h5>
@@ -611,9 +616,9 @@
 
         <!-- DOC 2 -->
         <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold">PM1_PERKAWINAN_BAWAH_UMUR-WEB-SYARAT</span>
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PM1_PERKAWINAN_BAWAH_UMUR-WEB-SYARAT</span>
               <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
             </div>
             <h5 class="fw-bold text-dark mb-1">Katalog Proyek Siap Tawar 2024</h5>
@@ -629,9 +634,9 @@
 
         <!-- DOC 3 -->
         <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold">PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH-WEB-SYARAT</span>
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PM1_KETERANGAN_BELUM_MEMILIKI_RUMAH-WEB-SYARAT</span>
               <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
             </div>
             <h5 class="fw-bold text-dark mb-1">Surat Keterangan Belum Memiliki Rumah (PM1)</h5>
@@ -647,9 +652,9 @@
 
         <!-- DOC 4 -->
         <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold">PANDUAN_JAKEVO_PEMOHON-PDF</span>
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">PANDUAN_JAKEVO_PEMOHON-PDF</span>
               <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
             </div>
             <h5 class="fw-bold text-dark mb-1">Laporan Realisasi Penanaman Modal</h5>
@@ -665,9 +670,9 @@
 
         <!-- DOC 5 -->
         <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 bg-white rounded-4 h-100 border shadow-sm">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge bg-primary-subtle text-primary fw-bold">DOC-PTSP-005</span>
+          <div class="sop-card p-4 rounded-4 h-100 border shadow-sm">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold sop-doc-badge">DOC-PTSP-005</span>
               <span class="badge bg-success-subtle text-success small"><i class="fa fa-check me-1"></i>Terindeks</span>
             </div>
             <h5 class="fw-bold text-dark mb-1">Panduan JAKEVO &amp; Matriks RBAC</h5>
@@ -683,7 +688,7 @@
 
         <!-- Slot Dokumen Tambahan -->
         <div class="col-md-6 col-lg-4">
-          <div class="sop-card p-4 bg-white rounded-4 h-100 border border-2 border-dashed d-flex flex-column justify-content-center text-center">
+          <div class="sop-card p-4 rounded-4 h-100 border border-2 border-dashed d-flex flex-column justify-content-center text-center">
             <i class="fa fa-plus-circle fa-2x text-primary mb-2"></i>
             <h6 class="fw-bold text-dark mb-1">Ekspansi Knowledge Base</h6>
             <p class="text-muted small mb-0">Arsitektur RAG mendukung penambahan dokumen PDF/SOP baru kapan saja secara dinamis.</p>
@@ -711,7 +716,7 @@
       <div class="row g-4 mb-5">
         <!-- Mahasiswa 1 -->
         <div class="col-md-6">
-          <div class="profile-portfolio-card p-4 rounded-4 bg-white border shadow-sm h-100">
+          <div class="profile-portfolio-card p-4 rounded-4 border shadow-sm h-100">
             <div class="d-flex align-items-center justify-content-between pb-3 border-bottom mb-3">
               <span class="badge bg-primary rounded-pill px-3 py-1">Mahasiswa 1 (Ketua Tim)</span>
               <span class="text-muted small"><i class="fa fa-check-circle text-success me-1"></i>Praktikan 1</span>
@@ -749,7 +754,7 @@
 
         <!-- Mahasiswa 2 -->
         <div class="col-md-6">
-          <div class="profile-portfolio-card p-4 rounded-4 bg-white border shadow-sm h-100">
+          <div class="profile-portfolio-card p-4 rounded-4 border shadow-sm h-100">
             <div class="d-flex align-items-center justify-content-between pb-3 border-bottom mb-3">
               <span class="badge bg-primary rounded-pill px-3 py-1">Mahasiswa 2 (Anggota Tim)</span>
               <span class="text-muted small"><i class="fa fa-check-circle text-success me-1"></i>Praktikan 2</span>
@@ -829,7 +834,7 @@
             
             <div class="timeline-item">
               <div class="timeline-dot bg-success"></div>
-              <div class="timeline-content p-3 bg-white rounded-3 border shadow-sm">
+              <div class="timeline-content p-3 rounded-3 border shadow-sm">
                 <div class="d-flex justify-content-between align-items-center mb-1">
                   <strong class="text-dark">Tahap 1: Analisis Kebutuhan &amp; Observasi Pelayanan</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
@@ -840,7 +845,7 @@
 
             <div class="timeline-item">
               <div class="timeline-dot bg-success"></div>
-              <div class="timeline-content p-3 bg-white rounded-3 border shadow-sm">
+              <div class="timeline-content p-3 rounded-3 border shadow-sm">
                 <div class="d-flex justify-content-between align-items-center mb-1">
                   <strong class="text-dark">Tahap 2: Kurasi Knowledge Base &amp; Pembuatan Dokumen Chunking</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
@@ -851,7 +856,7 @@
 
             <div class="timeline-item">
               <div class="timeline-dot bg-success"></div>
-              <div class="timeline-content p-3 bg-white rounded-3 border shadow-sm">
+              <div class="timeline-content p-3 rounded-3 border shadow-sm">
                 <div class="d-flex justify-content-between align-items-center mb-1">
                   <strong class="text-dark">Tahap 3: Implementasi Simulasi Pipeline RAG &amp; Scoring Cosine</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
@@ -862,7 +867,7 @@
 
             <div class="timeline-item">
               <div class="timeline-dot bg-success"></div>
-              <div class="timeline-content p-3 bg-white rounded-3 border shadow-sm">
+              <div class="timeline-content p-3 rounded-3 border shadow-sm">
                 <div class="d-flex justify-content-between align-items-center mb-1">
                   <strong class="text-dark">Tahap 4: Desain Portofolio &amp; Widget Chatbot Interaktif</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
@@ -1247,6 +1252,9 @@
   <!-- Bootstrap 5 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Script Logika JAKEVO Assistant & Portfolio Controls -->
+  <!-- Flowstate Fluid Simulation Engine -->
+  <script src="js/fluid.js"></script>
   <!-- Script Logika JAKEVO Assistant & Portfolio Controls -->
   <script src="script.js"></script>
 </body>

@@ -1,0 +1,826 @@
+/* ==========================================================================
+   FLOWSTATE DARK IMMERSIVE THEME FOR JAKEVO ASSISTANT
+   - Full-bleed WebGL Fluid Simulation & Radial Scrim
+   - Dark Near-Black Base (#04050c) with Crisp Fog-White Typography (#eef0f6)
+   - Dark Glassmorphism across ALL cards, sections, widgets, and modals
+   - Robust Overflow & Word-Wrap Guards preventing any text breach
+   - 100% Preservation of all Chatbot Features, Widgets, and Event Handlers
+   ========================================================================== */
+
+:root {
+  /* Flowstate Core Color Tokens */
+  --hero-base:            #04050c;   /* Base background behind shader */
+  --heading:              #eef0f6;   /* Bright heading / primary text */
+  --body-muted:           #b9becf;   /* Body copy, subtitles, muted text */
+  --on-media:             #ffffff;   /* Brand text/icons */
+  --action-inverse:       #ffffff;   /* White pill button bg */
+  --action-inverse-fg:    #1e293b;   /* Dark text on white pill */
+  --glass-fill:           rgba(255, 255, 255, 0.055);
+  --glass-fill-hover:     rgba(255, 255, 255, 0.095);
+  --glass-border:         rgba(255, 255, 255, 0.12);
+  --glass-border-subtle:  rgba(255, 255, 255, 0.07);
+  --scrim:                rgba(4, 5, 12, 0.46);
+  --scrim-strong:         rgba(4, 5, 12, 0.72);
+  --scrim-soft:           rgba(4, 5, 12, 0.12);
+  --duration-fast:        150ms;
+  --ease-entrance:        cubic-bezier(0.2, 0, 0, 1);
+
+  /* Override internal system tokens */
+  --dark:                 #eef0f6;
+  --dark-surface:         rgba(15, 23, 42, 0.85);
+  --text-main:            #eef0f6;
+  --text-muted:           #94a3b8;
+  --white:                #0a0e1c;
+  --light:                #060914;
+  --border-color:         rgba(255, 255, 255, 0.12);
+  --border-subtle:        rgba(255, 255, 255, 0.06);
+}
+
+/* --------------------------------------------------
+   1. Universal Overflow, Box Sizing & Reset Guards
+   -------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+}
+
+/* Prevent ANY long word, slug, URL, or code identifier from breaking containers */
+p, span, h1, h2, h3, h4, h5, h6, a, button, label, td, th, div, code, pre {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
+/* --------------------------------------------------
+   2. Canvas Fluid & Scrim (Fixed Background)
+   -------------------------------------------------- */
+.fluid-canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+}
+
+.scrim {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background: radial-gradient(115% 95% at 50% 46%,
+    var(--scrim-strong) 0%, var(--scrim-strong) 24%, var(--scrim) 52%, var(--scrim-soft) 100%) !important;
+}
+
+/* --------------------------------------------------
+   3. Body & Typography
+   -------------------------------------------------- */
+body {
+  background-color: var(--hero-base) !important;
+  color: var(--heading) !important;
+  font-family: 'Onest', 'Plus Jakarta Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .text-dark, .heading {
+  color: var(--heading) !important;
+  font-family: 'Onest', 'Plus Jakarta Sans', sans-serif !important;
+}
+
+p, span, li, td {
+  color: inherit;
+}
+
+.text-muted {
+  color: var(--body-muted) !important;
+}
+
+.text-secondary {
+  color: #cbd5e1 !important;
+}
+
+/* Spinner preloader */
+#spinner {
+  background-color: var(--hero-base) !important;
+}
+#spinner .spinner-border {
+  border-color: #F7941D transparent #F7941D transparent !important;
+}
+
+/* --------------------------------------------------
+   4. Universal White Utility Override
+   (Ensures NO card or container ever renders stark white)
+   -------------------------------------------------- */
+.bg-white,
+[class*="bg-white"],
+.card.bg-white,
+div.bg-white {
+  background-color: var(--glass-fill) !important;
+  background: var(--glass-fill) !important;
+}
+
+.bg-light,
+[class*="bg-light"],
+div.bg-light {
+  background-color: rgba(255, 255, 255, 0.035) !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+}
+
+/* --------------------------------------------------
+   5. Navbar (Dark Glassmorphic)
+   -------------------------------------------------- */
+.portfolio-navbar {
+  background: rgba(4, 5, 12, 0.8) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.portfolio-navbar.navbar-scrolled {
+  background: rgba(4, 5, 12, 0.94) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.brand-title {
+  color: #ffffff !important;
+}
+
+.brand-badge {
+  color: #fbbf24 !important;
+}
+
+.portfolio-navbar .nav-link {
+  color: var(--body-muted) !important;
+}
+
+.portfolio-navbar .nav-link:hover,
+.portfolio-navbar .nav-link.active {
+  color: #ffffff !important;
+  background: var(--glass-fill) !important;
+}
+
+.btn-nav-cta {
+  background: var(--action-inverse) !important;
+  color: var(--action-inverse-fg) !important;
+  border: none !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2) !important;
+  transition: all var(--duration-fast) var(--ease-entrance) !important;
+}
+.btn-nav-cta:hover {
+  background: rgba(255, 255, 255, 0.88) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* --------------------------------------------------
+   6. Hero Section
+   -------------------------------------------------- */
+.hero-portfolio-section {
+  background: transparent !important;
+}
+
+.shape-circle-1, .shape-circle-2 {
+  opacity: 0.18 !important;
+}
+
+.hero-badge-pill {
+  background: rgba(247, 148, 29, 0.15) !important;
+  border: 1px solid rgba(247, 148, 29, 0.35) !important;
+  color: #fcd34d !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.badge-dot {
+  background-color: #F7941D !important;
+  box-shadow: 0 0 10px #F7941D !important;
+}
+
+.hero-main-title {
+  color: #ffffff !important;
+}
+
+.hero-subtitle {
+  color: var(--body-muted) !important;
+}
+
+.hero-btn-outline {
+  background: var(--glass-fill) !important;
+  border-color: var(--glass-border) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(12px) !important;
+}
+.hero-btn-outline:hover {
+  background: var(--glass-fill-hover) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.hero-metric-box {
+  background: var(--glass-fill) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 14px !important;
+}
+.hero-metric-box:hover {
+  border-color: rgba(247, 148, 29, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+.metric-num {
+  color: #fbbf24 !important;
+}
+.metric-label {
+  color: var(--body-muted) !important;
+}
+
+/* Hero Chatbot Preview Card (Right Column) */
+.hero-interactive-card {
+  background: rgba(10, 14, 26, 0.78) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+.hero-interactive-card:hover {
+  border-color: rgba(247, 148, 29, 0.6) !important;
+  box-shadow: 0 25px 50px rgba(247, 148, 29, 0.2) !important;
+}
+
+.chat-preview-body {
+  background: rgba(4, 5, 12, 0.65) !important;
+  border: 1px solid var(--glass-border-subtle) !important;
+  border-radius: 12px !important;
+}
+
+.preview-bubble.bot {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--heading) !important;
+  backdrop-filter: blur(10px) !important;
+  word-break: break-word !important;
+}
+
+.preview-bubble.user {
+  background: linear-gradient(135deg, #1F4FD8 0%, #2563EB 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  word-break: break-word !important;
+}
+
+/* --------------------------------------------------
+   7. Sections & Cards (Universal Dark Glass System)
+   -------------------------------------------------- */
+.section-padding.bg-light,
+.section-padding {
+  background-color: transparent !important;
+}
+
+.card, 
+.portfolio-card, 
+.feature-card,
+.feature-box,
+.team-card, 
+.sop-card,
+.stat-card,
+.architecture-card,
+.demo-studio-card,
+.pipeline-step-card,
+.profile-portfolio-card,
+.timeline-content {
+  background: var(--glass-fill) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
+  color: var(--heading) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important; /* CRITICAL: guarantees text never bleeds outside borders */
+  min-width: 0 !important;
+}
+
+.card:hover, 
+.portfolio-card:hover, 
+.feature-card:hover,
+.feature-box:hover,
+.team-card:hover,
+.sop-card:hover,
+.pipeline-step-card:hover,
+.profile-portfolio-card:hover {
+  border-color: rgba(247, 148, 29, 0.5) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(247, 148, 29, 0.15) !important;
+}
+
+.section-tag-pill {
+  background: rgba(247, 148, 29, 0.15) !important;
+  border: 1px solid rgba(247, 148, 29, 0.35) !important;
+  color: #fbbf24 !important;
+}
+
+/* Section Title & Description */
+.section-title {
+  color: #ffffff !important;
+}
+
+.section-desc {
+  color: var(--body-muted) !important;
+}
+
+/* --------------------------------------------------
+   8. Feature Section (#fitur & .feature-box)
+   (Addresses Image 1: White Card & Invisibility Bug)
+   -------------------------------------------------- */
+.feature-box {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-radius: 16px !important;
+  padding: 1.6rem !important;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.feature-box .feature-icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  background: rgba(247, 148, 29, 0.15) !important;
+  border: 1px solid rgba(247, 148, 29, 0.32) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.25rem !important;
+}
+
+.feature-box .feature-icon i {
+  color: #F7941D !important;
+}
+
+.feature-box .feature-title {
+  color: #eef0f6 !important;
+  font-weight: 600 !important;
+  font-size: 1.15rem !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.5rem !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.feature-box .feature-desc {
+  color: #b9becf !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+/* --------------------------------------------------
+   9. Knowledge Base & SOP Cards (#knowledge-base & .sop-card)
+   (Addresses Image 2: Long Text Overflow & Border Breach)
+   -------------------------------------------------- */
+.sop-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+/* Flex row wrapper inside SOP card */
+.sop-card .d-flex.justify-content-between:first-child {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+/* Responsive code badge that safely wraps long document identifiers */
+.sop-card .badge,
+.sop-doc-badge {
+  white-space: normal !important;
+  word-break: break-all !important;
+  overflow-wrap: anywhere !important;
+  text-align: left !important;
+  line-height: 1.35 !important;
+}
+
+.sop-card .badge.bg-primary-subtle,
+.sop-doc-badge {
+  background: rgba(31, 79, 216, 0.22) !important;
+  color: #93c5fd !important;
+  border: 1px solid rgba(96, 165, 250, 0.35) !important;
+  font-size: 0.72rem !important;
+  padding: 0.35rem 0.65rem !important;
+  border-radius: 6px !important;
+  max-width: calc(100% - 90px) !important; /* Leaves dedicated room for Terindeks badge */
+  display: inline-block !important;
+  letter-spacing: -0.01em !important;
+}
+
+.sop-card .badge.bg-success-subtle {
+  background: rgba(22, 163, 74, 0.2) !important;
+  color: #4ade80 !important;
+  border: 1px solid rgba(74, 222, 128, 0.35) !important;
+  font-size: 0.72rem !important;
+  padding: 0.35rem 0.65rem !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  border-radius: 6px !important;
+}
+
+.sop-card h5 {
+  color: #eef0f6 !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  margin-top: 0.65rem !important;
+  margin-bottom: 0.4rem !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.sop-card p {
+  color: #b9becf !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.sop-card .border-top {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --------------------------------------------------
+   10. Universal Badge & Chip Styling
+   -------------------------------------------------- */
+.badge {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  line-height: 1.35 !important;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(31, 79, 216, 0.22) !important;
+  color: #93c5fd !important;
+  border: 1px solid rgba(96, 165, 250, 0.3) !important;
+}
+
+.bg-success-subtle {
+  background-color: rgba(22, 163, 74, 0.2) !important;
+  color: #4ade80 !important;
+  border: 1px solid rgba(74, 222, 128, 0.3) !important;
+}
+
+.bg-danger-subtle {
+  background-color: rgba(220, 38, 38, 0.2) !important;
+  color: #f87171 !important;
+  border: 1px solid rgba(248, 113, 113, 0.3) !important;
+}
+
+.bg-warning-subtle {
+  background-color: rgba(245, 158, 11, 0.2) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(251, 191, 36, 0.3) !important;
+}
+
+.badge.bg-light.text-primary {
+  background: rgba(247, 148, 29, 0.15) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(247, 148, 29, 0.35) !important;
+}
+
+/* --------------------------------------------------
+   11. Live Demo Studio (#demo-live)
+   -------------------------------------------------- */
+.demo-studio-card {
+  background: rgba(10, 14, 26, 0.8) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+.demo-studio-card h4, .demo-studio-card h5 {
+  color: #eef0f6 !important;
+}
+
+.demo-studio-card p, .demo-studio-card small {
+  color: #b9becf !important;
+}
+
+.demo-studio-card .bg-light {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+}
+
+.avatar-large-showcase .rounded-circle {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+.btn-ask-topic {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: #eef0f6 !important;
+  backdrop-filter: blur(8px) !important;
+  white-space: normal !important;
+  text-align: left !important;
+  word-break: break-word !important;
+}
+.btn-ask-topic:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(247, 148, 29, 0.6) !important;
+  color: #ffffff !important;
+  transform: translateX(4px) !important;
+}
+
+.bg-gradient-orange-subtle {
+  background: rgba(247, 148, 29, 0.08) !important;
+  border-color: rgba(247, 148, 29, 0.3) !important;
+}
+
+/* --------------------------------------------------
+   12. Architecture Section (#arsitektur)
+   -------------------------------------------------- */
+.pipeline-step-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(12px) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+.pipeline-step-card h6 {
+  color: #eef0f6 !important;
+}
+.pipeline-step-card small {
+  color: #b9becf !important;
+}
+
+#arsitektur .bg-light.rounded-4 {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(14px) !important;
+  border-radius: 16px !important;
+}
+#arsitektur .p-3.bg-white.rounded-3 {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+}
+#arsitektur .p-3.bg-white.rounded-3 strong {
+  color: #eef0f6 !important;
+}
+#arsitektur .p-3.bg-white.rounded-3 small {
+  color: #b9becf !important;
+}
+
+/* --------------------------------------------------
+   13. Team Section (#tim-pengembang)
+   -------------------------------------------------- */
+.profile-portfolio-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(14px) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+.profile-portfolio-card h5 {
+  color: #eef0f6 !important;
+  word-break: break-word !important;
+}
+.profile-portfolio-card p,
+.profile-portfolio-card span {
+  color: #b9becf !important;
+  word-break: break-word !important;
+}
+.student-photo-frame {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(247, 148, 29, 0.4) !important;
+  border-radius: 12px !important;
+}
+.role-badge-box {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+}
+.role-badge-box strong {
+  color: #fbbf24 !important;
+}
+#tim-pengembang .bg-light.rounded-4 {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(14px) !important;
+  border-radius: 16px !important;
+}
+.border-start-lg {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --------------------------------------------------
+   14. Milestones Section (#milestone)
+   -------------------------------------------------- */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(12px) !important;
+  border-radius: 12px !important;
+  color: #eef0f6 !important;
+  overflow: hidden !important;
+}
+.timeline-content strong {
+  color: #eef0f6 !important;
+}
+.timeline-content p {
+  color: #b9becf !important;
+}
+
+/* --------------------------------------------------
+   15. Chatbot Popup Modal (JIC Assistant)
+   -------------------------------------------------- */
+.jic-chatbot-popup-modal {
+  background: rgba(10, 14, 26, 0.94) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75) !important;
+  color: var(--heading) !important;
+}
+
+.modern-chat-area {
+  background: transparent !important;
+}
+
+.chat-messages-container {
+  background: transparent !important;
+}
+
+.modern-bot-bubble {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: #eef0f6 !important;
+  backdrop-filter: blur(10px) !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.modern-bot-bubble .bubble-body,
+.modern-bot-bubble .bubble-body p {
+  color: #eef0f6 !important;
+  word-break: break-word !important;
+}
+
+.chat-message.user-message .modern-user-bubble,
+.chat-message.user-message .message-content-wrapper > div {
+  background: linear-gradient(135deg, #1F4FD8 0%, #2563EB 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.modern-input-section {
+  background: rgba(6, 9, 20, 0.9) !important;
+  border-top: 1px solid var(--glass-border-subtle) !important;
+}
+
+.modern-input-wrapper {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.modern-input-wrapper:focus-within {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(247, 148, 29, 0.7) !important;
+  box-shadow: 0 0 15px rgba(247, 148, 29, 0.3) !important;
+}
+
+.modern-input-field {
+  color: #ffffff !important;
+}
+.modern-input-field::placeholder {
+  color: var(--body-muted) !important;
+}
+
+.modern-typing-indicator {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: #eef0f6 !important;
+}
+
+/* RAG Source Citation Inside Bot Bubble */
+.rag-source-citation {
+  background: rgba(247, 148, 29, 0.08) !important;
+  border: 1px solid rgba(247, 148, 29, 0.28) !important;
+  border-left: 3px solid #F7941D !important;
+  border-radius: 8px !important;
+  color: var(--heading) !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.source-header-row {
+  color: #fbbf24 !important;
+}
+
+.source-doc-id {
+  color: #60a5fa !important;
+  font-weight: 800 !important;
+  word-break: break-all !important;
+  overflow-wrap: anywhere !important;
+}
+
+.source-doc-name {
+  color: #b9becf !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.source-verified-tag {
+  color: #4ade80 !important;
+}
+
+/* RAG Inspector Card */
+.rag-inspector-card {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 10px !important;
+  color: #cbd5e1 !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.rag-header {
+  color: #ffffff !important;
+}
+
+.rag-badge {
+  background: rgba(247, 148, 29, 0.2) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(247, 148, 29, 0.35) !important;
+}
+
+.step-title {
+  color: #ffffff !important;
+}
+
+.step-meta {
+  color: #94a3b8 !important;
+}
+
+.keyword-tag-pill {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
+}
+
+.score-badge {
+  background: rgba(22, 163, 74, 0.2) !important;
+  color: #4ade80 !important;
+}
+
+/* Floating Chat Bubble Widget */
+.floating-chat-bubble-widget {
+  background: rgba(10, 14, 26, 0.88) !important;
+  border: 1px solid rgba(247, 148, 29, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(247, 148, 29, 0.25) !important;
+}
+.floating-chat-bubble-widget .bubble-name {
+  color: #ffffff !important;
+}
+.floating-chat-bubble-widget .bubble-sub {
+  color: #fbbf24 !important;
+}
+
+/* --------------------------------------------------
+   16. Footer
+   -------------------------------------------------- */
+.portfolio-footer {
+  background: rgba(4, 5, 12, 0.95) !important;
+  border-top: 1px solid var(--glass-border) !important;
+  color: var(--body-muted) !important;
+}
+.portfolio-footer h5, .portfolio-footer a {
+  color: #ffffff !important;
+}
+.portfolio-footer a:hover {
+  color: #F7941D !important;
+}
