@@ -234,7 +234,7 @@
             </div>
             <h5 class="card-heading">Tantangan Layanan Informasi</h5>
             <p class="card-text text-muted">
-              Calon investor dan masyarakat sering menghadapi kendala dalam mencari SOP regulasi, persyaratan perizinan JAKEVO, dan katalog investasi yang tersebar di banyak dokumen tebal, serta keterbatasan jam layanan tatap muka.
+              Masyarakat dan pemohon izin sering menghadapi kendala dalam mencari persyaratan perizinan JAKEVO, dokumen regulasi, dan petunjuk teknis yang tersebar di berbagai berkas tebal, serta keterbatasan jam layanan tatap muka.
             </p>
             <ul class="custom-list-check small text-muted">
               <li>Pertanyaan berulang menyita waktu petugas</li>
@@ -833,7 +833,7 @@
         <span class="section-tag-pill">Jejak Langkah</span>
         <h2 class="section-title">Milestone Proyek Praktik Kerja Lapangan</h2>
         <p class="section-desc">
-          Tahapan realisasi perancangan purwarupa chatbot dari riset kebutuhan instansi hingga peluncuran versi terpadu.
+          Tahapan realisasi perancangan purwarupa (prototype) chatbot RAG mulai dari observasi kebutuhan instansi, kurasi korpus dokumen, implementasi pipeline, hingga pengujian benchmark akurasi.
         </p>
       </div>
 
@@ -848,7 +848,7 @@
                   <strong class="text-dark">Tahap 1: Analisis Kebutuhan &amp; Observasi Pelayanan</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
                 </div>
-                <p class="text-muted small mb-0">Wawancara dengan petugas pelayanan PTSP dan pemetaan pertanyaan yang paling sering diajukan oleh calon investor dan warga seputar perizinan JAKEVO.</p>
+                <p class="text-muted small mb-0">Observasi alur pelayanan perizinan JAKEVO dan pemetaan pertanyaan yang sering diajukan masyarakat seputar persyaratan dokumen di DPMPTSP Provinsi DKI Jakarta.</p>
               </div>
             </div>
 
@@ -856,10 +856,10 @@
               <div class="timeline-dot bg-success"></div>
               <div class="timeline-content p-3 rounded-3 border shadow-sm">
                 <div class="d-flex justify-content-between align-items-center mb-1">
-                  <strong class="text-dark">Tahap 2: Kurasi Knowledge Base &amp; Pembuatan Dokumen Chunking</strong>
+                  <strong class="text-dark">Tahap 2: Kurasi Knowledge Base &amp; Segmentasi Chunking</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
                 </div>
-                <p class="text-muted small mb-0">Penyusunan 5 matriks dokumen SOP terverifikasi, segmentasi token chunking 250 token, serta pembuatan indeks kata kunci perizinan.</p>
+                <p class="text-muted small mb-0">Pengumpulan 12 dokumen perizinan resmi (PDF panduan &amp; teks web perizinan), segmentasi teks (maksimal 500 karakter), perataan data tabel, dan pembuatan kamus entitas kata kunci.</p>
               </div>
             </div>
 
@@ -867,10 +867,10 @@
               <div class="timeline-dot bg-success"></div>
               <div class="timeline-content p-3 rounded-3 border shadow-sm">
                 <div class="d-flex justify-content-between align-items-center mb-1">
-                  <strong class="text-dark">Tahap 3: Implementasi Simulasi Pipeline RAG &amp; Scoring Cosine</strong>
+                  <strong class="text-dark">Tahap 3: Implementasi Pipeline RAG, ChromaDB &amp; Guardrails</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
                 </div>
-                <p class="text-muted small mb-0">Perancangan engine retrieval dengan normalisasi query, filter stopwords, scoring relevansi, augmentasi konteks, dan guardrails anti-halusinasi.</p>
+                <p class="text-muted small mb-0">Pembangunan sistem retrieval semantik berbasis embedding multilingual-e5-small, penyimpanan vektor ChromaDB, ekspansi tetangga (neighbor expansion), dan proteksi multi-layer guardrails.</p>
               </div>
             </div>
 
@@ -878,10 +878,10 @@
               <div class="timeline-dot bg-success"></div>
               <div class="timeline-content p-3 rounded-3 border shadow-sm">
                 <div class="d-flex justify-content-between align-items-center mb-1">
-                  <strong class="text-dark">Tahap 4: Desain Portofolio &amp; Widget Chatbot Interaktif</strong>
+                  <strong class="text-dark">Tahap 4: Pengujian Akurasi &amp; Purwarupa Web Interaktif</strong>
                   <span class="badge bg-success-subtle text-success">Selesai</span>
                 </div>
-                <p class="text-muted small mb-0">Peluncuran antarmuka web portofolio modern yang bersih, maskot budaya Betawi, widget pop-up responsif, dan pengalih mode layar penuh.</p>
+                <p class="text-muted small mb-0">Pengujian akurasi menggunakan golden dataset standar, evaluasi performa retrieval harness, serta perancangan antarmuka portofolio web dan widget chatbot sebagai purwarupa hasil kegiatan PKL.</p>
               </div>
             </div>
 
