@@ -25,14 +25,14 @@
   <!-- Modular Custom Stylesheets -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/navbar.css?v=2.2">
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/portfolio.css">
-  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/chatbot.css?v=2.8">
   <link rel="stylesheet" href="css/widget.css">
   <link rel="stylesheet" href="css/responsive.css">
   <!-- Flowstate Dark Immersive Theme -->
-  <link rel="stylesheet" href="css/flowstate-theme.css">
+  <link rel="stylesheet" href="css/flowstate-theme.css?v=2.8">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
        2. MODERN PORTFOLIO NAVBAR
        ========================================== -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top portfolio-navbar" id="mainNavbar">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <a class="navbar-brand d-flex align-items-center" href="#beranda">
         <div class="brand-icon-box me-2 overflow-hidden p-0" style="border: 1.5px solid rgba(247, 148, 29, 0.5);">
           <img src="img/logo-chatbot.jpg" alt="Logo JAKEVO" class="w-100 h-100" style="object-fit: cover;">
@@ -1198,14 +1198,14 @@
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
             </div>
-            <input 
-              type="text" 
+            <textarea 
               class="modern-input-field" 
               id="userInput" 
+              rows="1"
               placeholder="Tulis pertanyaan Anda seputar layanan JAKEVO..." 
               required
               aria-label="Tulis pertanyaan Anda seputar JAKEVO"
-            >
+            ></textarea>
             <button type="submit" class="modern-send-btn" id="sendBtn">
               <span>Kirim</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1261,7 +1261,7 @@
   <!-- Script Logika JAKEVO Assistant & Portfolio Controls -->
   <!-- Flowstate Fluid Simulation Engine -->
   <script src="js/fluid.js"></script>
-  <!-- Script Logika JAKEVO Assistant & Portfolio Controls -->
-  <script src="script.js"></script>
+  <!-- Script Logika JAKEVO Assistant & Portfolio Controls (Cache Busting) -->
+  <script src="script.js?v=2.8"></script>
 </body>
 </html>

@@ -452,6 +452,11 @@
   color: var(--primary-dark);
 }
 
+.jakevo-doc-title {
+  color: #FACC15;
+  font-weight: 700;
+}
+
 .source-verified-tag {
   color: #16A34A;
   font-weight: 700;
@@ -634,11 +639,12 @@ body.hide-rag-process .rag-inspector-card {
 
 .modern-input-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background: #F8FAFC;
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-full);
-  padding: 4px 6px 4px 14px;
+  border-radius: 22px;
+  padding: 6px 6px 6px 14px;
+  gap: 6px;
   transition: var(--trans-smooth);
 }
 .modern-input-wrapper:focus-within {
@@ -650,7 +656,9 @@ body.hide-rag-process .rag-inspector-card {
 .input-icon-left {
   display: flex;
   align-items: center;
-  margin-right: 8px;
+  height: 34px;
+  margin-right: 4px;
+  flex-shrink: 0;
 }
 
 .modern-input-field {
@@ -661,6 +669,21 @@ body.hide-rag-process .rag-inspector-card {
   font-size: 0.88rem;
   font-family: inherit;
   color: var(--text-main);
+  resize: none;
+  min-height: 24px;
+  max-height: 130px;
+  line-height: 1.45;
+  padding: 5px 0;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.modern-input-field::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .modern-send-btn {
@@ -669,6 +692,8 @@ body.hide-rag-process .rag-inspector-card {
   border: none;
   border-radius: var(--radius-full);
   padding: 7px 14px;
+  height: 34px;
+  flex-shrink: 0;
   font-size: 0.82rem;
   font-weight: 700;
   display: flex;

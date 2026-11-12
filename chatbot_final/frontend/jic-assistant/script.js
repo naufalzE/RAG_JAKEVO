@@ -1488,82 +1488,206 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-
-     14. HANDLER PENGIRIMAN PESAN (TERHUBUNG KE BACKEND FASTAPI)
-
+     14. HANDLER PENGIRIMAN PESAN & LIVE AGENT HANDOVER (WEBSOCKET + FASTAPI)
      ========================================================================== */
 
-  const API_ENDPOINT = "http://127.0.0.1:8000/api/chat";
+  const API_ENDPOINT = (window.location.origin && window.location.origin.startsWith("http")) 
+    ? `${window.location.origin}/api/chat` 
+    : "http://127.0.0.1:8000/api/chat";
 
+  // Inisialisasi Session ID Pemohon
+  let userSessionId = sessionStorage.getItem("jakevo_session_id");
+  if (!userSessionId) {
+    userSessionId = "pemohon_" + Math.random().toString(36).substring(2, 9);
+    sessionStorage.setItem("jakevo_session_id", userSessionId);
+  }
 
+  // Set untuk mencegah duplikasi render pesan staf
+  const renderedStaffMsgKeys = new Set();
+
+  // Koneksi WebSocket Real-time Pemohon
+  let clientSocket = null;
+
+  function initClientWebSocket() {
+    try {
+      const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+      const host = window.location.host || "127.0.0.1:8000";
+      const wsUrl = `${protocol}//${host}/ws/chat/${userSessionId}`;
+      clientSocket = new WebSocket(wsUrl);
+
+      clientSocket.onopen = () => {
+        console.log("[Client WS] Terhubung ke session:", userSessionId);
+      };
+
+      clientSocket.onmessage = (event) => {
+        try {
+          const payload = JSON.parse(event.data);
+          if (payload.event === "staff_joined") {
+            appendSystemNotice(payload.data.message || "Petugas pelayanan telah bergabung dalam obrolan.", "👨‍💼");
+            if (userInput) userInput.placeholder = "Ketik balasan untuk Petugas PTSP di sini...";
+          } else if (payload.event === "staff_message") {
+            appendStaffBubble(payload.data.staff_name, payload.data.text, payload.data.timestamp);
+          } else if (payload.event === "session_resolved") {
+            appendSystemNotice(payload.data.message || "Sesi bantuan petugas selesai. Chatbot kembali aktif.", "✅");
+            if (userInput) userInput.placeholder = "Tulis pertanyaan Anda seputar layanan JAKEVO...";
+          }
+        } catch (e) {
+          console.error("Gagal proses WS event:", e);
+        }
+      };
+
+      clientSocket.onclose = () => {
+        setTimeout(initClientWebSocket, 4000);
+      };
+    } catch (e) {
+      console.warn("Client WS init error:", e);
+    }
+  }
+
+  // Panggil koneksi WebSocket client
+  initClientWebSocket();
+
+  // Polling cadangan (setiap 2 detik) untuk menjamin pesan staf 100% muncul
+  function pollStaffUpdates() {
+    if (!userSessionId) return;
+    fetch(`/rag/handover/session/${userSessionId}`)
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        if (!data) return;
+        if (data.status === "STAFF_ACTIVE" && userInput) {
+          userInput.placeholder = "Ketik balasan untuk Petugas PTSP di sini...";
+        }
+        if (data.messages && Array.isArray(data.messages)) {
+          data.messages.forEach(msg => {
+            if (msg.sender === "staff") {
+              appendStaffBubble(msg.meta?.staff_name || "Petugas PTSP", msg.text, msg.timestamp);
+            }
+          });
+        }
+      })
+      .catch(() => {});
+  }
+  setInterval(pollStaffUpdates, 2000);
+
+  function appendStaffBubble(staffName, text, timestamp) {
+    if (!chatMessages) return;
+
+    // Cek apakah pesan ini sudah pernah di-render sebelumnya
+    const msgKey = `${staffName}_${text}_${timestamp || ''}`;
+    if (renderedStaffMsgKeys.has(msgKey)) return;
+    renderedStaffMsgKeys.add(msgKey);
+
+    const staffMsgDiv = document.createElement("div");
+    staffMsgDiv.className = "chat-message bot-message staff-message";
+    staffMsgDiv.innerHTML = `
+      <div class="bot-avatar-wrapper" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:1.15rem; box-shadow:0 4px 12px rgba(16,185,129,0.35); flex-shrink:0;">
+        👨‍💼
+      </div>
+      <div class="message-content-wrapper">
+        <div class="bot-bubble modern-bot-bubble" style="border: 1px solid rgba(16, 185, 129, 0.4); background: rgba(6, 78, 59, 0.25); box-shadow: 0 4px 14px rgba(16, 185, 129, 0.15);">
+          <div class="bubble-header" style="flex-direction: column; align-items: flex-start; gap: 4px; margin-bottom: 8px;">
+            <div style="color: #34D399; font-weight: 800; font-size: 0.82rem; display: flex; align-items: center; gap: 6px;">
+              <span>👨‍💼</span> <span>${escapeHtml(staffName || "Petugas PTSP")}</span>
+            </div>
+            <div class="ai-verified-badge" style="background: rgba(16, 185, 129, 0.25); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.65rem; padding: 2px 8px; border-radius: 12px; width: fit-content; margin-top: 1px;">
+              Petugas Resmi DPMPTSP
+            </div>
+          </div>
+          <div class="bubble-body" style="color: #FFFFFF; font-size: 0.9rem; line-height: 1.55;">
+            ${escapeHtml(text).replace(/\n/g, '<br>')}
+          </div>
+          <div class="bubble-footer">
+            <span class="message-time" style="color: #94A3B8;">${timestamp ? new Date(timestamp).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : getFormattedTime()}</span>
+          </div>
+        </div>
+      </div>
+    `;
+    chatMessages.appendChild(staffMsgDiv);
+    scrollToBottom();
+  }
+
+  function appendSystemNotice(message, icon = "ℹ️") {
+    if (!chatMessages) return;
+    const notifDiv = document.createElement("div");
+    notifDiv.className = "chat-message system-message";
+    notifDiv.style.cssText = "display: flex; justify-content: center; margin: 12px 0; width: 100%;";
+    notifDiv.innerHTML = `
+      <div style="background: rgba(247, 148, 29, 0.15); border: 1px dashed rgba(247, 148, 29, 0.45); color: #FCD34D; font-size: 0.78rem; padding: 7px 18px; border-radius: 20px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+        <span style="font-size: 1rem;">${icon}</span>
+        <span style="font-weight: 600;">${escapeHtml(message)}</span>
+      </div>
+    `;
+    chatMessages.appendChild(notifDiv);
+    scrollToBottom();
+  }
+
+  // Fungsi global agar bisa dipanggil tombol di HTML respons bot
+  window.requestHandoverToCS = function(reason) {
+    handleSendMessage("Saya ingin berbicara dengan Petugas Pelayanan PTSP.");
+    if (clientSocket && clientSocket.readyState === WebSocket.OPEN) {
+      clientSocket.send(JSON.stringify({
+        action: "request_handover",
+        reason: reason || "Permintaan langsung pemohon via tombol bantuan"
+      }));
+    }
+  };
+
+  function autoResizeUserInput() {
+    if (!userInput) return;
+    userInput.style.height = 'auto';
+    const sh = userInput.scrollHeight;
+    const nextHeight = Math.min(Math.max(sh, 24), 130);
+    userInput.style.height = nextHeight + 'px';
+    userInput.style.overflowY = sh > 130 ? 'auto' : 'hidden';
+  }
+
+  if (userInput) {
+    userInput.addEventListener('input', autoResizeUserInput);
+    userInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        handleSendMessage(userInput.value);
+      }
+    });
+  }
 
   async function handleSendMessage(messageText) {
-
     const text = messageText.trim();
-
     if (!text) return;
 
-
-
     if (userInput) {
-
       userInput.value = '';
-
+      autoResizeUserInput();
       userInput.disabled = true;
-
     }
-
     if (sendBtn) sendBtn.disabled = true;
 
-
-
     // 1. Tambah pesan user
-
     appendUserMessage(text);
 
-
-
     // 2. Indikator mengetik
-
     showTypingIndicator();
 
-
-
     try {
-
-      // 3. Panggil API Backend RAG Asli (FastAPI + ChromaDB + Guardrail)
-
+      // 3. Panggil API Backend RAG Asli (FastAPI + ChromaDB + Guardrail + Handover)
       const response = await fetch(API_ENDPOINT, {
-
         method: "POST",
-
         headers: {
-
           "Content-Type": "application/json"
-
         },
-
-        body: JSON.stringify({ message: text })
-
+        body: JSON.stringify({
+          message: text,
+          session_id: userSessionId
+        })
       });
 
-
-
       if (!response.ok) {
-
         throw new Error(`HTTP error ${response.status}`);
-
       }
 
-
-
       const ragResult = await response.json();
-
       hideTypingIndicator();
-
       appendBotMessage(ragResult);
-
-
 
     } catch (err) {
 

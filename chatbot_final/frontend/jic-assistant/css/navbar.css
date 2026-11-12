@@ -51,10 +51,11 @@
 
 .portfolio-navbar .nav-link {
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  padding: 0.5rem 0.9rem !important;
+  padding: 0.45rem 0.75rem !important;
   border-radius: var(--radius-full);
+  white-space: nowrap !important;
   transition: var(--trans-smooth);
 }
 
@@ -66,7 +67,9 @@
 
 .btn-nav-cta {
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
+  padding: 0.45rem 1rem !important;
+  white-space: nowrap !important;
   background: var(--primary);
   border-color: var(--primary);
   transition: var(--trans-smooth);

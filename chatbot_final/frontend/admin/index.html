@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAKEVO Command Center — Portal Live Agent CS DPMPTSP DKI Jakarta</title>
+  <link rel="icon" type="image/jpeg" href="/img/logo-chatbot.jpg">
+
+  <!-- Google Fonts: Onest, Plus Jakarta Sans & JetBrains Mono (Identik dengan Halaman Utama) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. FLOWSTATE DARK IMMERSIVE TOKENS & RESET
+       ========================================================================== */
+    :root {
+      --hero-base: #04050c;
+      --bg-glass-heavy: rgba(8, 12, 24, 0.84);
+      --bg-glass-panel: rgba(12, 18, 34, 0.72);
+      --bg-glass-card: rgba(255, 255, 255, 0.045);
+      --bg-glass-card-hover: rgba(255, 255, 255, 0.085);
+      --bg-input: rgba(15, 23, 42, 0.78);
+
+      --glass-border: rgba(255, 255, 255, 0.11);
+      --glass-border-subtle: rgba(255, 255, 255, 0.065);
+      --glass-border-bright: rgba(255, 255, 255, 0.22);
+
+      --primary: #F7941D;
+      --primary-hover: #EA580C;
+      --primary-light: rgba(247, 148, 29, 0.15);
+      --primary-glow: rgba(247, 148, 29, 0.35);
+
+      --royal-blue: #1F4FD8;
+      --royal-blue-light: #2563EB;
+      --gold: #FACC15;
+      --amber: #F59E0B;
+
+      --emerald: #10B981;
+      --emerald-dark: #059669;
+      --emerald-glow: rgba(16, 185, 129, 0.28);
+
+      --rose: #EF4444;
+      --rose-glow: rgba(239, 68, 68, 0.35);
+
+      --text-heading: #FFFFFF;
+      --text-body: #EEF0F6;
+      --text-muted: #B9BECF;
+      --text-dim: #64748B;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-full: 9999px;
+
+      --trans-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      --trans-smooth: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      background-color: var(--hero-base);
+      color: var(--text-body);
+      font-family: 'Onest', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* ==========================================================================
+       2. WEBGL FLUID CANVAS & RADIAL SCRIM (SAMA DENGAN HALAMAN UTAMA)
+       ========================================================================== */
+    .fluid-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .scrim {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(247, 148, 29, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(37, 99, 235, 0.14) 0%, transparent 50%),
+        radial-gradient(115% 95% at 50% 46%, rgba(4, 5, 12, 0.76) 0%, rgba(4, 5, 12, 0.58) 52%, rgba(4, 5, 12, 0.38) 100%);
+    }
+
+    /* ==========================================================================
+       3. TOP GLASSMORPHIC NAVBAR (IDENTIK DENGAN BRANDING UTAMA)
+       ========================================================================== */
+    .top-navbar {
+      min-height: 64px;
+      background: rgba(4, 5, 12, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 18px;
+      gap: 12px;
+      flex-shrink: 0;
+      z-index: 20;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .brand-icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      overflow: hidden;
+      border: 1.5px solid rgba(247, 148, 29, 0.65);
+      box-shadow: 0 4px 15px var(--primary-glow);
+      flex-shrink: 0;
+      background: #F7941D;
+    }
+
+    .brand-icon-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+    }
+
+    .brand-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.02rem;
+      color: #FFFFFF;
+      letter-spacing: -0.2px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .badge-gov {
+      background: rgba(247, 148, 29, 0.16);
+      color: #FCD34D;
+      border: 1px solid rgba(247, 148, 29, 0.4);
+      font-size: 0.62rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .brand-sub {
+      font-size: 0.69rem;
+      font-weight: 600;
+      color: #FBBF24;
+      letter-spacing: 0.2px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    /* Live KPI Pills */
+    .stats-pill-group {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 4px 6px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--glass-border);
+      white-space: nowrap;
+    }
+
+    .stat-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .stat-pill.waiting {
+      background: rgba(239, 68, 68, 0.16);
+      color: #FCA5A5;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+
+    .stat-pill.active {
+      background: rgba(16, 185, 129, 0.16);
+      color: #6EE7B7;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .stat-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+    .stat-pill.waiting .stat-dot {
+      background: #EF4444;
+      box-shadow: 0 0 8px #EF4444;
+    }
+    .stat-pill.active .stat-dot {
+      background: #10B981;
+      box-shadow: 0 0 8px #10B981;
+    }
+
+    /* Officer Profile Input Card */
+    .profile-card {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-glass-card);
+      border: 1px solid var(--glass-border);
+      padding: 4px 12px 4px 6px;
+      border-radius: var(--radius-full);
+      transition: var(--trans-fast);
+      white-space: nowrap;
+    }
+
+    .profile-card:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(247, 148, 29, 0.25);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .profile-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px var(--emerald-glow);
+      flex-shrink: 0;
+    }
+
+    .profile-input-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-input-wrap label {
+      font-size: 0.58rem;
+      color: var(--text-muted);
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+    }
+
+    .profile-input-wrap input {
+      background: transparent;
+      border: none;
+      color: #FACC15;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.78rem;
+      outline: none;
+      width: 195px;
+      margin-top: 2px;
+    }
+
+    /* Action Buttons in Navbar */
+    .btn-nav-tool {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--glass-border);
+      color: var(--text-body);
+      padding: 7px 12px;
+      border-radius: var(--radius-full);
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: var(--trans-fast);
+    }
+
+    .btn-nav-tool:hover {
+      background: var(--bg-glass-card-hover);
+      border-color: var(--glass-border-bright);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    /* WebSocket Indicator */
+    .ws-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34D399;
+      font-size: 0.73rem;
+      font-weight: 700;
+      padding: 6px 11px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+    }
+
+    .ws-indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 10px #10B981;
+      animation: pulseOnlineGreen 2s infinite;
+    }
+
+    @keyframes pulseOnlineGreen {
+      0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      50%  { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    .ws-indicator.disconnected {
+      background: rgba(239, 68, 68, 0.14);
+      border-color: rgba(239, 68, 68, 0.35);
+      color: #F87171;
+    }
+    .ws-indicator.disconnected .ws-indicator-dot {
+      background: #EF4444;
+      box-shadow: none;
+      animation: none;
+    }
+
+    /* ==========================================================================
+       4. MAIN 3-COLUMN GLASS WORKSPACE
+       ========================================================================== */
+    .workspace {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+      padding: 14px;
+      gap: 14px;
+    }
+
+    /* --- SIDEBAR KIRI: ANTREAN PERCAKAPAN --- */
+    .sidebar-queue {
+      width: 340px;
+      background: var(--bg-glass-panel);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-xl);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .queue-top {
+      padding: 16px;
+      border-bottom: 1px solid var(--glass-border-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .queue-title-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .queue-title-bar h3 {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .queue-count-badge {
+      background: linear-gradient(135deg, #F7941D 0%, #EA580C 100%);
+      color: #FFFFFF;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 9px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 8px var(--primary-glow);
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--bg-input);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-full);
+      padding: 9px 14px 9px 36px;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 0.8rem;
+      outline: none;
+      transition: var(--trans-fast);
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-dim);
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(247, 148, 29, 0.2);
+    }
+
+    .search-box i {
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .filter-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: rgba(4, 5, 12, 0.65);
+      padding: 4px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--glass-border-subtle);
+      gap: 4px;
+    }
+
+    .filter-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.71rem;
+      font-weight: 700;
+      padding: 7px 4px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--trans-fast);
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .filter-btn:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, rgba(247, 148, 29, 0.25) 0%, rgba(234, 88, 12, 0.25) 100%);
+      color: #FACC15;
+      border: 1px solid rgba(247, 148, 29, 0.45);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .queue-list-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .queue-item {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 13px 14px;
+      cursor: pointer;
+      transition: var(--trans-fast);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .queue-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: transparent;
+      transition: var(--trans-fast);
+    }
+
+    .queue-item:hover {
+      background: var(--bg-glass-card-hover);
+      border-color: var(--glass-border-bright);
+      transform: translateY(-1px);
+    }
+
+    .queue-item.active {
+      background: linear-gradient(135deg, rgba(247, 148, 29, 0.14) 0%, rgba(30, 41, 59, 0.65) 100%);
+      border-color: rgba(247, 148, 29, 0.65);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 15px rgba(247, 148, 29, 0.15);
+    }
+
+    .queue-item.active::before {
+      background: var(--primary);
+    }
+
+    .queue-item.waiting-urgent {
+      border-color: rgba(239, 68, 68, 0.45);
+    }
+    .queue-item.waiting-urgent::before {
+      background: #EF4444;
+    }
+
+    .queue-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 7px;
+      gap: 8px;
+    }
+
+    .item-id-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #60A5FA;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-tag {
+      font-size: 0.64rem;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .status-tag.waiting {
+      background: rgba(239, 68, 68, 0.2);
+      color: #FCA5A5;
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      animation: alert-glow 1.5s infinite alternate;
+    }
+
+    @keyframes alert-glow {
+      from { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      to { box-shadow: 0 0 10px 2px rgba(239, 68, 68, 0.35); }
+    }
+
+    .status-tag.active {
+      background: rgba(16, 185, 129, 0.2);
+      color: #6EE7B7;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+    }
+
+    .status-tag.bot {
+      background: rgba(148, 163, 184, 0.14);
+      color: #CBD5E1;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .item-preview-text {
+      font-size: 0.8rem;
+      color: var(--text-body);
+      opacity: 0.9;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 9px;
+    }
+
+    .item-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.69rem;
+      color: var(--text-muted);
+      padding-top: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* ==========================================================================
+       5. KOLOM TENGAH: CHAT WORKSPACE DENGAN BATIK BETAWI KHAS HALAMAN UTAMA
+       ========================================================================== */
+    .chat-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-glass-panel);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-xl);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Banner Atas Oranye dengan Motif Batik Betawi Pucuk Rebung & Monas (Identik Halaman Utama) */
+    .chat-header-bar {
+      position: relative;
+      overflow: hidden;
+      background-color: #F7941D;
+      background-image:
+        linear-gradient(90deg, rgba(15, 23, 42, 0.48) 0%, rgba(15, 23, 42, 0.22) 50%, rgba(15, 23, 42, 0.48) 100%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.14) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='70' viewBox='0 0 120 70'%3E%3Cg fill='none' stroke='%23FFF4D4' stroke-width='1.2' opacity='0.34'%3E%3Cpath d='M0 70 L30 10 L60 70 L90 10 L120 70' stroke-width='1.6'/%3E%3Cpath d='M10 70 L30 25 L50 70 M70 70 L90 25 L110 70'/%3E%3Ccircle cx='30' cy='38' r='4' fill='%23FFE699'/%3E%3Ccircle cx='90' cy='38' r='4' fill='%23FFE699'/%3E%3Cpath d='M30 6 L30 0 M90 6 L90 0' stroke-width='2' stroke='%23FFF7BA'/%3E%3Cpath d='M60 25 L64 35 L74 35 L66 41 L69 51 L60 45 L51 51 L54 41 L46 35 L56 35 Z' fill='%23FFF7BA' stroke='none' opacity='0.75'/%3E%3Ccircle cx='60' cy='38' r='1.5' fill='%23D97706'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 100% 100%, 100% 100%, 120px 70px;
+      animation: moveBatikLeft 24s linear infinite;
+      padding: 12px 20px;
+      gap: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 4px 18px rgba(247, 148, 29, 0.22);
+      z-index: 10;
+    }
+
+    @keyframes moveBatikLeft {
+      0%   { background-position: 0 0, 0 0, 0 0; }
+      100% { background-position: 0 0, 0 0, -240px 0; }
+    }
+
+    .target-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .target-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      color: #FACC15;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      flex-shrink: 0;
+    }
+
+    .target-details {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .target-details h2 {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .target-details p {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.95);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-action-buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .btn-takeover-action {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: var(--trans-fast);
+      white-space: nowrap;
+    }
+
+    .btn-takeover-action:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+    }
+
+    .btn-resolve-action {
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #FFFFFF;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: var(--trans-fast);
+      white-space: nowrap;
+    }
+
+    .btn-resolve-action:hover {
+      background: rgba(15, 23, 42, 0.92);
+      border-color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    /* Sub-Bar Biru Batik Betawi Ombak Ciliwung untuk Template Balasan Cepat (Canned Responses) */
+    .canned-batik-bar {
+      position: relative;
+      overflow: hidden;
+      background-color: #1F4FD8;
+      background-image:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='65' viewBox='0 0 130 65'%3E%3Cg fill='none' stroke='%23BAE6FD' stroke-width='1.2' opacity='0.28'%3E%3Cpath d='M0 32 Q32 0 65 32 T130 32' stroke-width='1.8'/%3E%3Cpath d='M0 48 Q32 16 65 48 T130 48'/%3E%3Cpath d='M0 16 Q32 -16 65 16 T130 16'/%3E%3Ccircle cx='65' cy='32' r='8' stroke-width='1.4'/%3E%3Ccircle cx='65' cy='32' r='4' fill='%237DD3FC' stroke='none'/%3E%3Ccircle cx='0' cy='32' r='5' fill='%2338BDF8' stroke='none'/%3E%3Ccircle cx='130' cy='32' r='5' fill='%2338BDF8' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 130px 65px;
+      animation: moveBatikRight 25s linear infinite;
+      padding: 8px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 3px 12px rgba(31, 79, 216, 0.28);
+      z-index: 8;
+    }
+
+    @keyframes moveBatikRight {
+      0%   { background-position: 0 0; }
+      100% { background-position: 260px 0; }
+    }
+
+    .canned-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #FDE047;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .canned-scroll-tray {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      flex: 1;
+      padding: 2px 0;
+    }
+    .canned-scroll-tray::-webkit-scrollbar {
+      display: none;
+    }
+
+    .canned-pill {
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      color: #FFFFFF;
+      font-size: 0.73rem;
+      font-weight: 600;
+      padding: 5px 13px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: var(--trans-fast);
+      user-select: none;
+    }
+
+    .canned-pill:hover {
+      background: #FFFFFF;
+      color: #1E3A8A;
+      border-color: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    /* ==========================================================================
+       6. AREA STREAM PESAN & GELEMBUNG CHAT (IDENTIK HALAMAN UTAMA)
+       ========================================================================== */
+    .chat-messages-flow {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: rgba(6, 9, 20, 0.65);
+    }
+
+    .chat-empty-splash {
+      margin: auto;
+      text-align: center;
+      max-width: 430px;
+      padding: 36px 28px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-xl);
+      backdrop-filter: blur(12px);
+    }
+
+    .splash-logo-wrap {
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      margin: 0 auto 16px;
+      overflow: hidden;
+      border: 2px solid rgba(247, 148, 29, 0.6);
+      box-shadow: 0 8px 25px var(--primary-glow);
+    }
+
+    .splash-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .chat-empty-splash h3 {
+      font-size: 1.15rem;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .chat-empty-splash p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Message Row Layout with Avatars */
+    .msg-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      width: 100%;
+      animation: msgFadeIn 0.22s ease-out;
+    }
+
+    @keyframes msgFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .msg-row.user {
+      flex-direction: row-reverse;
+    }
+
+    .msg-row.system {
+      justify-content: center;
+    }
+
+    /* Avatar Wrapper */
+    .msg-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      flex-shrink: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .msg-avatar.bot-av {
+      border: 1.5px solid rgba(247, 148, 29, 0.55);
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .msg-avatar.bot-av img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .msg-avatar.user-av {
+      background: linear-gradient(135deg, #1F4FD8 0%, #3B82F6 100%);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+    }
+
+    .msg-avatar.staff-av {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: #FFFFFF;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      border-radius: 50%;
+      box-shadow: 0 4px 12px var(--emerald-glow);
+    }
+
+    /* Message Card Bubble */
+    .msg-card {
+      max-width: 78%;
+      border-radius: 16px;
+      padding: 14px 18px;
+      position: relative;
+      font-size: 0.89rem;
+      line-height: 1.62;
+      word-break: break-word;
+    }
+
+    .msg-header-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sender-badge-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .sender-title {
+      font-weight: 800;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .verified-pill {
+      font-size: 0.64rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.3px;
+    }
+
+    .verified-pill.bot-pill {
+      background: rgba(16, 185, 129, 0.18);
+      color: #6EE7B7;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .verified-pill.staff-pill {
+      background: rgba(16, 185, 129, 0.25);
+      color: #A7F3D0;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+    }
+
+    .verified-pill.user-pill {
+      background: rgba(255, 255, 255, 0.18);
+      color: #E0F2FE;
+    }
+
+    /* Style Gelembung Bot AI (Identik dengan .modern-bot-bubble di Halaman Utama) */
+    .msg-row.bot .msg-card {
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid var(--glass-border);
+      color: #EEF0F6;
+      border-top-left-radius: 4px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    }
+    .msg-row.bot .sender-title {
+      color: #FBBF24;
+    }
+
+    /* Judul Dokumen Kuning Cerah (#FACC15) Sama Persis dengan Halaman Utama */
+    .jakevo-doc-title {
+      color: #FACC15 !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.3px;
+      margin: 12px 0 6px 0;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(250, 204, 21, 0.38);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+    }
+    .jakevo-doc-title:first-child {
+      margin-top: 2px;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .msg-body-content p {
+      margin: 0 0 6px 0;
+    }
+    .msg-body-content p:last-child {
+      margin-bottom: 0;
+    }
+    .msg-body-content strong {
+      color: #FACC15;
+      font-weight: 700;
+    }
+
+    /* Tombol Unduh Dokumen di dalam Chat */
+    .jakevo-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+      padding: 5px 12px;
+      background: rgba(37, 99, 235, 0.2);
+      border: 1px solid rgba(96, 165, 250, 0.4);
+      border-radius: 8px;
+      color: #93C5FD !important;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none !important;
+      transition: var(--trans-fast);
+    }
+    .jakevo-link-btn:hover {
+      background: rgba(37, 99, 235, 0.38);
+      color: #FFFFFF !important;
+      transform: translateY(-1px);
+    }
+
+    /* Kotak Sumber Dokumen RAG Resmi (Identik dengan Halaman Utama) */
+    .rag-source-citation {
+      margin-top: 12px;
+      padding: 10px 13px;
+      background: rgba(247, 148, 29, 0.08);
+      border: 1px solid rgba(247, 148, 29, 0.28);
+      border-left: 3px solid #F7941D;
+      border-radius: 10px;
+      font-size: 0.76rem;
+    }
+
+    .source-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #FBBF24;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .source-content-box {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .source-doc-id {
+      color: #60A5FA;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 0.74rem;
+    }
+
+    .source-doc-name {
+      color: #FACC15;
+      font-weight: 700;
+    }
+
+    .source-verified-tag {
+      color: #4ADE80;
+      font-weight: 700;
+      font-size: 0.71rem;
+      margin-top: 2px;
+    }
+
+    /* Style Gelembung Warga (Pemohon) */
+    .msg-row.user .msg-card {
+      background: linear-gradient(135deg, #1F4FD8 0%, #2563EB 100%);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-top-right-radius: 4px;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+    }
+    .msg-row.user .sender-title {
+      color: #FFFFFF;
+    }
+    .msg-row.user .msg-body-content strong {
+      color: #FDE047;
+    }
+
+    /* Style Gelembung Staf CS */
+    .msg-row.staff .msg-card {
+      background: linear-gradient(135deg, rgba(6, 78, 59, 0.88) 0%, rgba(4, 120, 87, 0.85) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #FFFFFF;
+      border-top-left-radius: 4px;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.2);
+    }
+    .msg-row.staff .sender-title {
+      color: #6EE7B7;
+    }
+
+    /* Footer Gelembung (Salin & Jam) */
+    .msg-footer-line {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 8px;
+      padding-top: 5px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.69rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .btn-copy-bubble {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.65);
+      font-family: inherit;
+      font-size: 0.69rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: var(--trans-fast);
+    }
+    .btn-copy-bubble:hover {
+      color: #FACC15;
+    }
+
+    /* Style Gelembung Sistem */
+    .msg-row.system .msg-card {
+      background: rgba(247, 148, 29, 0.13);
+      border: 1px dashed rgba(247, 148, 29, 0.45);
+      color: #FDE047;
+      font-size: 0.77rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      padding: 6px 18px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ==========================================================================
+       7. DOCK INPUT BAWAH (GLASSMORPHIC COMPOSE BAR)
+       ========================================================================== */
+    .chat-bottom-dock {
+      background: rgba(6, 9, 20, 0.92);
+      border-top: 1px solid var(--glass-border);
+      padding: 12px 20px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .banner-not-active {
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.16) 0%, rgba(247, 148, 29, 0.08) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: var(--radius-md);
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: #FDE68A;
+      font-size: 0.79rem;
+      font-weight: 600;
+    }
+
+    .input-compose-bar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .compose-input-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 8px 8px 8px 18px;
+      gap: 10px;
+      transition: var(--trans-fast);
+    }
+
+    .compose-input-wrapper:focus-within {
+      background: rgba(255, 255, 255, 0.11);
+      border-color: rgba(247, 148, 29, 0.75);
+      box-shadow: 0 0 18px rgba(247, 148, 29, 0.25);
+    }
+
+    .compose-field {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 4px 0;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 0.88rem;
+      outline: none;
+      resize: none;
+      min-height: 28px;
+      max-height: 160px;
+      line-height: 1.5;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .compose-field::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    .compose-field::placeholder {
+      color: var(--text-dim);
+    }
+
+    .compose-field:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .btn-send-reply {
+      height: 40px;
+      padding: 0 20px;
+      background: linear-gradient(135deg, #F7941D 0%, #EA580C 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-full);
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 0.84rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 4px 14px var(--primary-glow);
+      transition: var(--trans-fast);
+      flex-shrink: 0;
+    }
+
+    .btn-send-reply:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(247, 148, 29, 0.5);
+    }
+
+    .btn-send-reply:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    /* ==========================================================================
+       8. PANEL KANAN: INSPEKTOR PEMOHON, SOP CHEAT-SHEET & CATATAN
+       ========================================================================== */
+    .sidebar-details {
+      width: 310px;
+      background: var(--bg-glass-panel);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-xl);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      padding: 16px;
+      overflow-y: auto;
+      gap: 16px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .info-section-title {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #FBBF24;
+      letter-spacing: 0.6px;
+      margin-bottom: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .info-card-box {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 13px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.76rem;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .info-row:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .info-row span:first-child {
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .info-row span:last-child {
+      font-weight: 700;
+      color: #FFFFFF;
+      text-align: right;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Panduan Kilat SOP (Klik untuk sisipkan ke chat) */
+    .sop-quick-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .sop-quick-item {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 9px 11px;
+      cursor: pointer;
+      transition: var(--trans-fast);
+      text-align: left;
+    }
+
+    .sop-quick-item:hover {
+      background: var(--bg-glass-card-hover);
+      border-color: rgba(247, 148, 29, 0.5);
+      transform: translateX(2px);
+    }
+
+    .sop-item-head {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #FACC15;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sop-item-desc {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .staff-notes-box {
+      width: 100%;
+      height: 96px;
+      background: var(--bg-input);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      color: #FFFFFF;
+      font-size: 0.78rem;
+      font-family: inherit;
+      outline: none;
+      resize: none;
+      line-height: 1.45;
+      transition: var(--trans-fast);
+    }
+    .staff-notes-box:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(247, 148, 29, 0.2);
+    }
+
+    .btn-quick-util {
+      width: 100%;
+      background: var(--bg-glass-card);
+      border: 1px solid var(--glass-border);
+      color: var(--text-body);
+      padding: 9px 12px;
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 0.77rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: var(--trans-fast);
+    }
+    .btn-quick-util:hover {
+      background: var(--bg-glass-card-hover);
+      border-color: var(--glass-border-bright);
+      color: #FACC15;
+      transform: translateY(-1px);
+    }
+
+    /* Toast Notification */
+    .toast-notif {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      color: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(16px);
+      pointer-events: none;
+      transition: var(--trans-smooth);
+    }
+    .toast-notif.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Scrollbar Halus */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(247, 148, 29, 0.5);
+    }
+
+    /* ==========================================================================
+       9. LOGIN GATE OVERLAY (OTENTIKASI KHUSUS PETUGAS CS)
+       ========================================================================== */
+    .login-gate-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(4, 5, 12, 0.88);
+      backdrop-filter: blur(26px);
+      -webkit-backdrop-filter: blur(26px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .login-gate-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(12, 18, 34, 0.88);
+      border: 1px solid rgba(247, 148, 29, 0.4);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(247, 148, 29, 0.15);
+      animation: msgFadeIn 0.35s ease-out;
+    }
+
+    .login-batik-banner {
+      background-color: #F7941D;
+      background-image:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.15) 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='70' viewBox='0 0 120 70'%3E%3Cg fill='none' stroke='%23FFF4D4' stroke-width='1.2' opacity='0.34'%3E%3Cpath d='M0 70 L30 10 L60 70 L90 10 L120 70' stroke-width='1.6'/%3E%3Cpath d='M10 70 L30 25 L50 70 M70 70 L90 25 L110 70'/%3E%3Ccircle cx='30' cy='38' r='4' fill='%23FFE699'/%3E%3Ccircle cx='90' cy='38' r='4' fill='%23FFE699'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 100% 100%, 120px 70px;
+      animation: moveBatikLeft 24s linear infinite;
+      padding: 26px 24px 22px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .login-logo-box {
+      width: 66px;
+      height: 66px;
+      border-radius: 18px;
+      margin: 0 auto 12px;
+      overflow: hidden;
+      border: 2.5px solid #FFFFFF;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      background: #0F172A;
+    }
+
+    .login-logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .login-batik-banner h2 {
+      font-size: 1.22rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+    }
+
+    .login-batik-banner p {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.92);
+      margin-top: 3px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-body {
+      padding: 26px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .login-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .login-field-group label {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #FACC15;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .login-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .login-input-wrap i.field-icon {
+      position: absolute;
+      left: 14px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      pointer-events: none;
+    }
+
+    .login-input-wrap input {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 12px 40px 12px 40px;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: var(--trans-fast);
+    }
+
+    .login-input-wrap input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(247, 148, 29, 0.22);
+    }
+
+    .btn-toggle-pw {
+      position: absolute;
+      right: 12px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.88rem;
+      padding: 4px;
+    }
+    .btn-toggle-pw:hover {
+      color: #FFFFFF;
+    }
+
+    .login-error-box {
+      background: rgba(239, 68, 68, 0.16);
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      color: #FCA5A5;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 10px;
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-login-submit {
+      width: 100%;
+      padding: 13px;
+      background: linear-gradient(135deg, #F7941D 0%, #EA580C 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 20px var(--primary-glow);
+      transition: var(--trans-fast);
+      margin-top: 4px;
+    }
+
+    .btn-login-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 25px rgba(247, 148, 29, 0.5);
+    }
+
+    .login-footer-note {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      padding-top: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .sidebar-details {
+        display: none;
+      }
+    }
+    @media (max-width: 900px) {
+      .stats-pill-group {
+        display: none;
+      }
+      .sidebar-queue {
+        width: 270px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 0. FLOWSTATE WEBGL FLUID SIMULATION & RADIAL SCRIM (SAMA DENGAN HALAMAN UTAMA) -->
+  <canvas id="fluid-canvas" class="fluid-canvas" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+
+  <!-- 0.5. GERBANG LOGIN PETUGAS ADMIN CS -->
+  <div class="login-gate-overlay" id="adminLoginOverlay">
+    <div class="login-card">
+      <div class="login-batik-banner">
+        <div class="login-logo-box">
+          <img src="/img/logo-chatbot.jpg" alt="JAKEVO Logo">
+        </div>
+        <h2>Portal Petugas CS JAKEVO</h2>
+        <p>Otentikasi Resmi Staf DPMPTSP Provinsi DKI Jakarta</p>
+      </div>
+
+      <form class="login-body" id="adminLoginForm" autocomplete="off">
+        <div class="login-error-box" id="loginErrorBox">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span id="loginErrorText">ID Petugas atau Kata Sandi tidak sesuai.</span>
+        </div>
+
+        <div class="login-field-group">
+          <label for="loginUsername">ID Petugas</label>
+          <div class="login-input-wrap">
+            <i class="fa-solid fa-user-shield field-icon"></i>
+            <input type="text" id="loginUsername" placeholder="Masukkan ID Petugas (cth: admin1)" required autofocus>
+          </div>
+        </div>
+
+        <div class="login-field-group">
+          <label for="loginPassword">Kata Sandi (Password)</label>
+          <div class="login-input-wrap">
+            <i class="fa-solid fa-lock field-icon"></i>
+            <input type="password" id="loginPassword" placeholder="Masukkan Kata Sandi" required>
+            <button type="button" class="btn-toggle-pw" id="btnTogglePw" title="Lihat/Sembunyikan Kata Sandi">
+              <i class="fa-regular fa-eye" id="pwEyeIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-login-submit" id="btnSubmitLogin">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <span>Masuk ke Command Center</span>
+        </button>
+
+        <div class="login-footer-note">
+          🔒 Akses terbatas khusus Petugas Pelayanan DPMPTSP.<br>
+          Warga pemohon silakan kembali ke <a href="/" style="color:#FACC15; text-decoration:none; font-weight:700;">Halaman Utama</a>.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 1. TOP GLASSMORPHIC NAVBAR RESMI -->
+  <header class="top-navbar">
+    <div class="nav-brand">
+      <div class="brand-icon-box">
+        <img src="/img/logo-chatbot.jpg" alt="Logo JAKEVO">
+      </div>
+      <div class="brand-titles">
+        <div class="brand-title-row">
+          <span class="brand-title">JAKEVO Command Center</span>
+          <span class="badge-gov">DPMPTSP DKI</span>
+        </div>
+        <span class="brand-sub">
+          <i class="fa-solid fa-headset"></i> Portal Live Agent CS • Human-in-the-Loop
+        </span>
+      </div>
+    </div>
+
+    <div class="nav-controls">
+      <!-- Live Counter Pills -->
+      <div class="stats-pill-group">
+        <div class="stat-pill waiting" title="Pemohon yang menunggu bantuan Petugas CS">
+          <span class="stat-dot"></span>
+          <span id="counterWaiting">0</span> Antrean
+        </div>
+        <div class="stat-pill active" title="Sesi yang sedang ditangani Petugas CS">
+          <span class="stat-dot"></span>
+          <span id="counterActive">0</span> Aktif
+        </div>
+      </div>
+
+      <!-- Identitas Petugas -->
+      <div class="profile-card">
+        <div class="profile-avatar">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <div class="profile-input-wrap">
+          <label for="staffNameInput">Petugas Aktif</label>
+          <input type="text" id="staffNameInput" value="Petugas Pelayanan PTSP" title="Klik untuk mengubah nama tampilan petugas">
+        </div>
+      </div>
+
+      <!-- Tombol Bel Notifikasi -->
+      <button type="button" class="btn-nav-tool" id="btnToggleAudio" title="Nyalakan/Matikan Bunyi Bel Notifikasi Antrean">
+        <i class="fa-solid fa-bell" id="audioIcon" style="color: #FACC15;"></i>
+        <span id="audioStatusText">Bel Aktif</span>
+      </button>
+
+      <!-- Pintasan ke Halaman Utama -->
+      <a href="/" target="_blank" class="btn-nav-tool" title="Buka Halaman Utama Pemohon JAKEVO di Tab Baru">
+        <i class="fa-solid fa-arrow-up-right-from-square" style="color: #60A5FA;"></i>
+        <span>Web Utama</span>
+      </a>
+
+      <!-- Status Koneksi WebSocket -->
+      <div class="ws-indicator" id="wsIndicatorBadge">
+        <span class="ws-indicator-dot"></span>
+        <span id="wsIndicatorText">Online</span>
+      </div>
+
+      <!-- Tombol Logout Petugas -->
+      <button type="button" class="btn-nav-tool" id="btnLogoutAdmin" title="Keluar dari Akun Petugas CS" style="border-color: rgba(239, 68, 68, 0.35); color: #FCA5A5;">
+        <i class="fa-solid fa-power-off"></i>
+        <span>Keluar</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. WORKSPACE 3-KOLOM GLASSMORPHIC -->
+  <div class="workspace">
+
+    <!-- SIDEBAR KIRI: ANTREAN PERCAKAPAN -->
+    <aside class="sidebar-queue">
+      <div class="queue-top">
+        <div class="queue-title-bar">
+          <h3><i class="fa-solid fa-inbox" style="color: #F7941D;"></i> Antrean Percakapan</h3>
+          <span class="queue-count-badge" id="countAllBadge">0 Sesi</span>
+        </div>
+
+        <!-- Pencarian Sesi -->
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="queueSearchInput" placeholder="Cari ID pemohon atau isi pesan...">
+        </div>
+
+        <!-- Filter Tab -->
+        <div class="filter-tabs">
+          <button type="button" class="filter-btn active" data-filter="all">Semua (<span id="countAll">0</span>)</button>
+          <button type="button" class="filter-btn" data-filter="waiting">🔴 CS (<span id="countWaitingTab">0</span>)</button>
+          <button type="button" class="filter-btn" data-filter="staff">🟢 Aktif</button>
+          <button type="button" class="filter-btn" data-filter="bot">🤖 Bot</button>
+        </div>
+      </div>
+
+      <div class="queue-list-scroll" id="queueScrollBox">
+        <!-- Kartu Antrean di-render secara dinamis -->
+      </div>
+    </aside>
+
+    <!-- WORKSPACE TENGAH: RUANG OBROLAN DENGAN HEADER BATIK BETAWI -->
+    <main class="chat-workspace">
+
+      <!-- A. Header Oranye Batik Betawi Pucuk Rebung & Monas -->
+      <div class="chat-header-bar">
+        <div class="target-profile">
+          <div class="target-avatar" id="activeAvatar">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <div class="target-details">
+            <h2 id="activeSessionHeader">Pilih Sesi Percakapan Warga</h2>
+            <p id="activeSessionSub">Klik salah satu pemohon di panel antrean kiri untuk memantau atau mengambil alih</p>
+          </div>
+        </div>
+
+        <div class="header-action-buttons" id="chatActionGroup" style="display: none;">
+          <button type="button" class="btn-takeover-action" id="btnMainTakeover">
+            <i class="fa-solid fa-hand-holding-heart"></i> Ambil Alih Obrolan
+          </button>
+          <button type="button" class="btn-resolve-action" id="btnMainResolve" title="Selesaikan sesi bantuan petugas dan kembalikan ke Chatbot AI">
+            <i class="fa-solid fa-rotate-left"></i> Selesaikan &amp; Ke Bot
+          </button>
+        </div>
+      </div>
+
+      <!-- B. Sub-Bar Biru Batik Betawi Ombak Ciliwung: Template Balasan Cepat -->
+      <div class="canned-batik-bar">
+        <span class="canned-label">
+          <i class="fa-solid fa-bolt"></i> Balasan Cepat:
+        </span>
+        <div class="canned-scroll-tray" id="cannedTray">
+          <div class="canned-pill" data-text="Halo Bapak/Ibu, selamat datang di layanan konsultasi DPMPTSP DKI Jakarta. Saya dengan Petugas PTSP, ada yang bisa saya bantu terkait perizinan Anda?">👋 Sapaan Awal</div>
+          <div class="canned-pill" data-text="Boleh dibantu informasikan Nomor Permohonan atau jenis perizinan JAKEVO yang sedang Bapak/Ibu ajukan?">🔍 Minta Nomor Berkas</div>
+          <div class="canned-pill" data-text="Mohon ditunggu sebentar ya Bapak/Ibu, berkas dan ketentuan persyaratan izin terkait sedang kami periksa terlebih dahulu.">⏳ Mohon Tunggu</div>
+          <div class="canned-pill" data-text="Baik Bapak/Ibu, dokumen persyaratan sudah sesuai ketentuan SOP resmi DPMPTSP. Silakan unggah berkas dalam format PDF/JPG melalui portal jakevo.jakarta.go.id.">✅ Konfirmasi Persyaratan</div>
+          <div class="canned-pill" data-text="Untuk konsultasi tatap muka langsung, Bapak/Ibu juga dapat mengunjungi Gedung Mal Pelayanan Publik (MPP) DKI Jakarta Lt. 5, Jl. H.R. Rasuna Said Kav. C-22, Kuningan (Senin-Jumat 07.30-16.00 WIB) atau hubungi Call Center 1500-164.">🏢 Info Loket MPP &amp; Kontak</div>
+          <div class="canned-pill" data-text="Terima kasih telah berkonsultasi dengan layanan DPMPTSP Provinsi DKI Jakarta. Sesi bantuan petugas kami akhiri ya, semoga proses perizinan Bapak/Ibu berjalan lancar!">🙏 Penutup &amp; Salam</div>
+        </div>
+      </div>
+
+      <!-- C. Area Stream Pesan -->
+      <div class="chat-messages-flow" id="chatStreamBox">
+        <div class="chat-empty-splash">
+          <div class="splash-logo-wrap">
+            <img src="/img/logo-chatbot.jpg" alt="JAKEVO Assistant">
+          </div>
+          <h3>Ruang Konsultasi Live Agent CS</h3>
+          <p>Pilih salah satu sesi pemohon pada daftar antrean di sebelah kiri untuk meninjau riwayat tanya-jawab RAG secara lengkap atau mengambil alih percakapan secara langsung.</p>
+        </div>
+      </div>
+
+      <!-- D. Dock Input Bawah -->
+      <div class="chat-bottom-dock">
+        <!-- Banner Peringatan Belum Diambil Alih -->
+        <div class="banner-not-active" id="dockBannerTakeover" style="display: none;">
+          <span><i class="fa-solid fa-circle-info" style="margin-right:6px;"></i> Sesi ini sedang dilayani oleh Chatbot AI atau menunggu di antrean petugas.</span>
+          <button type="button" class="btn-takeover-action" id="btnQuickTakeover" style="padding: 5px 14px; font-size: 0.74rem;">
+            <i class="fa-solid fa-bolt"></i> Ambil Alih Sekarang
+          </button>
+        </div>
+
+        <!-- Compose Box -->
+        <div class="input-compose-bar">
+          <div class="compose-input-wrapper">
+            <textarea class="compose-field" id="inputStaffReply" placeholder="Pilih sesi dan ambil alih untuk membalas pemohon..." disabled rows="1"></textarea>
+            <button type="button" class="btn-send-reply" id="btnSubmitReply" disabled>
+              <span>Kirim</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR KANAN: INSPEKTOR SESI & PANDUAN SOP -->
+    <aside class="sidebar-details">
+      <div>
+        <h4 class="info-section-title">
+          <span><i class="fa-solid fa-chart-pie"></i> Ringkasan Sesi</span>
+        </h4>
+        <div class="info-card-box">
+          <div class="info-row">
+            <span>ID Sesi</span>
+            <span id="detailSessionId" style="font-family:'JetBrains Mono',monospace; color:#60A5FA;">-</span>
+          </div>
+          <div class="info-row">
+            <span>Status</span>
+            <span id="detailStatus">-</span>
+          </div>
+          <div class="info-row">
+            <span>Petugas</span>
+            <span id="detailStaffName" style="color:#34D399;">-</span>
+          </div>
+          <div class="info-row">
+            <span>Total Pesan</span>
+            <span id="detailMsgCount">0 pesan</span>
+          </div>
+          <div class="info-row">
+            <span>Waktu Mulai</span>
+            <span id="detailStartTime">-</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panduan Cepat SOP (Klik untuk menyisipkan ke kolom balasan) -->
+      <div>
+        <h4 class="info-section-title">
+          <span><i class="fa-solid fa-book-bookmark"></i> Contekan Cepat SOP</span>
+          <span style="font-size:0.62rem; color:var(--text-muted); text-transform:none;">Klik untuk sisipkan</span>
+        </h4>
+        <div class="sop-quick-list">
+          <div class="sop-quick-item" data-insert="Kantor DPMPTSP DKI Jakarta berlokasi di Gedung Mal Pelayanan Publik (MPP) Lt. 5, Jl. H.R. Rasuna Said Kav. C-22, Kuningan, Jakarta Selatan. Jam layanan: Senin-Kamis 07.30-16.00 WIB, Jumat 07.30-16.30 WIB. Call Center: 1500-164.">
+            <div class="sop-item-head">
+              <span>📍 Lokasi MPP &amp; Call Center</span>
+              <i class="fa-solid fa-plus" style="font-size:0.65rem;"></i>
+            </div>
+            <div class="sop-item-desc">Gedung MPP Lt. 5 Kuningan • Telp 1500-164</div>
+          </div>
+
+          <div class="sop-quick-item" data-insert="Untuk layanan Pengantar Kelurahan (PM1 seperti SKTM, Keterangan Belum Memiliki Rumah, dan Pengantar Perkawinan), waktu penyelesaian adalah 1 Hari Kerja dan Biaya Retribusi Rp 0 (Gratis).">
+            <div class="sop-item-head">
+              <span>📄 SLA Layanan PM1 Kelurahan</span>
+              <i class="fa-solid fa-plus" style="font-size:0.65rem;"></i>
+            </div>
+            <div class="sop-item-desc">Estimasi 1 Hari Kerja • Gratis (Rp 0)</div>
+          </div>
+
+          <div class="sop-quick-item" data-insert="Untuk permohonan Surat Izin Praktik (SIP) Dokter, pastikan melampirkan scan STR aktif dari KKI, Rekomendasi Organisasi Profesi (IDI), Surat Keterangan Faskes tempat praktik, KTP, dan pasfoto terbaru.">
+            <div class="sop-item-head">
+              <span>🩺 Syarat Utama SIP Dokter</span>
+              <i class="fa-solid fa-plus" style="font-size:0.65rem;"></i>
+            </div>
+            <div class="sop-item-desc">STR KKI Aktif, Rekomendasi IDI &amp; Surat Faskes</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catatan Internal Petugas -->
+      <div>
+        <h4 class="info-section-title">
+          <span><i class="fa-solid fa-note-sticky"></i> Catatan Internal</span>
+          <span id="notesSavedIndicator" style="font-size:0.62rem; color:#4ADE80; text-transform:none; opacity:0; transition:opacity 0.2s;">✓ Tersimpan</span>
+        </h4>
+        <textarea class="staff-notes-box" id="internalNotesField" placeholder="Ketik catatan internal perizinan pemohon di sini (tersimpan otomatis per sesi)..."></textarea>
+      </div>
+
+      <!-- Aksi Cepat -->
+      <div style="display:flex; flex-direction:column; gap:8px; margin-top:auto;">
+        <h4 class="info-section-title">
+          <span><i class="fa-solid fa-sliders"></i> Utilitas Sesi</span>
+        </h4>
+        <button type="button" class="btn-quick-util" id="btnCopyTranscript">
+          <i class="fa-regular fa-copy"></i> Salin Transkrip Obrolan
+        </button>
+        <button type="button" class="btn-quick-util" id="btnRefreshSession">
+          <i class="fa-solid fa-arrows-rotate"></i> Muat Ulang Sesi
+        </button>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Toast Notifikasi -->
+  <div class="toast-notif" id="toastNotif">
+    <i class="fa-solid fa-circle-check" style="color: #4ADE80; font-size: 1rem;"></i>
+    <span id="toastNotifText">Berhasil!</span>
+  </div>
+
+  <!-- Flowstate WebGL Fluid Engine (Identik dengan Halaman Utama) -->
+  <script src="/js/fluid.js"></script>
+
+  <!-- JAVASCRIPT LOGIKA DASHBOARD ADMIN -->
+  <script>
+    let socket = null;
+    let sessions = [];
+    let currentSessionId = null;
+    let currentFilter = "all";
+    let isSoundEnabled = true;
+
+    // DOM Elements
+    const queueScrollBox = document.getElementById("queueScrollBox");
+    const queueSearchInput = document.getElementById("queueSearchInput");
+    const chatStreamBox = document.getElementById("chatStreamBox");
+    const activeAvatar = document.getElementById("activeAvatar");
+    const activeSessionHeader = document.getElementById("activeSessionHeader");
+    const activeSessionSub = document.getElementById("activeSessionSub");
+    const chatActionGroup = document.getElementById("chatActionGroup");
+    const btnMainTakeover = document.getElementById("btnMainTakeover");
+    const btnQuickTakeover = document.getElementById("btnQuickTakeover");
+    const btnMainResolve = document.getElementById("btnMainResolve");
+    const dockBannerTakeover = document.getElementById("dockBannerTakeover");
+    const inputStaffReply = document.getElementById("inputStaffReply");
+    const btnSubmitReply = document.getElementById("btnSubmitReply");
+    const staffNameInput = document.getElementById("staffNameInput");
+    const wsIndicatorBadge = document.getElementById("wsIndicatorBadge");
+    const wsIndicatorText = document.getElementById("wsIndicatorText");
+    const btnToggleAudio = document.getElementById("btnToggleAudio");
+    const audioIcon = document.getElementById("audioIcon");
+    const audioStatusText = document.getElementById("audioStatusText");
+    const counterWaiting = document.getElementById("counterWaiting");
+    const counterActive = document.getElementById("counterActive");
+    const countAll = document.getElementById("countAll");
+    const countAllBadge = document.getElementById("countAllBadge");
+    const countWaitingTab = document.getElementById("countWaitingTab");
+
+    // Detail Panel Elements
+    const detailSessionId = document.getElementById("detailSessionId");
+    const detailStatus = document.getElementById("detailStatus");
+    const detailStaffName = document.getElementById("detailStaffName");
+    const detailMsgCount = document.getElementById("detailMsgCount");
+    const detailStartTime = document.getElementById("detailStartTime");
+    const internalNotesField = document.getElementById("internalNotesField");
+    const notesSavedIndicator = document.getElementById("notesSavedIndicator");
+    const btnCopyTranscript = document.getElementById("btnCopyTranscript");
+    const btnRefreshSession = document.getElementById("btnRefreshSession");
+    const toastNotif = document.getElementById("toastNotif");
+    const toastNotifText = document.getElementById("toastNotifText");
+
+    function showToast(msg) {
+      toastNotifText.textContent = msg;
+      toastNotif.classList.add("show");
+      setTimeout(() => toastNotif.classList.remove("show"), 2600);
+    }
+
+    // Load & Save Staff Name
+    const savedStaffName = localStorage.getItem("jakevo_staff_name");
+    if (savedStaffName) staffNameInput.value = savedStaffName;
+    staffNameInput.addEventListener("change", () => {
+      localStorage.setItem("jakevo_staff_name", staffNameInput.value.trim());
+      showToast("Nama identitas petugas diperbarui");
+    });
+
+    // Internal Notes Persistence per Session
+    internalNotesField.addEventListener("input", () => {
+      if (currentSessionId) {
+        localStorage.setItem(`jakevo_notes_${currentSessionId}`, internalNotesField.value);
+        notesSavedIndicator.style.opacity = "1";
+        clearTimeout(window._notesTimer);
+        window._notesTimer = setTimeout(() => {
+          notesSavedIndicator.style.opacity = "0";
+        }, 1500);
+      }
+    });
+
+    // Audio Notification Chime (Web Audio API)
+    function playChime() {
+      if (!isSoundEnabled) return;
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5
+        osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.14); // A5
+        gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.35);
+      } catch (e) {
+        console.warn("Audio Context tidak aktif:", e);
+      }
+    }
+
+    btnToggleAudio.addEventListener("click", () => {
+      isSoundEnabled = !isSoundEnabled;
+      audioStatusText.textContent = isSoundEnabled ? "Bel Aktif" : "Senyap";
+      audioIcon.className = isSoundEnabled ? "fa-solid fa-bell" : "fa-solid fa-bell-slash";
+      audioIcon.style.color = isSoundEnabled ? "#FACC15" : "#94A3B8";
+    });
+
+    // --- KONEKSI WEBSOCKET ADMIN ---
+    let isAdminAuthenticated = false;
+
+    function setupAdminWebSocket() {
+      if (!isAdminAuthenticated) return;
+      if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) return;
+
+      const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+      const host = window.location.host || "127.0.0.1:8000";
+      const wsUrl = `${protocol}//${host}/ws/admin`;
+
+      socket = new WebSocket(wsUrl);
+
+      socket.onopen = () => {
+        wsIndicatorBadge.classList.remove("disconnected");
+        wsIndicatorText.textContent = "Online";
+      };
+
+      socket.onclose = () => {
+        wsIndicatorBadge.classList.add("disconnected");
+        wsIndicatorText.textContent = isAdminAuthenticated ? "Reconnecting..." : "Belum Login";
+        if (isAdminAuthenticated) {
+          setTimeout(setupAdminWebSocket, 3000);
+        }
+      };
+
+      socket.onmessage = (event) => {
+        try {
+          const payload = JSON.parse(event.data);
+          handleIncomingEvent(payload);
+        } catch (e) {
+          console.error("Gagal membaca event WS:", e);
+        }
+      };
+    }
+
+    function handleIncomingEvent(payload) {
+      const { event, data, sessions: initList } = payload;
+
+      if (event === "init_sessions") {
+        sessions = initList || [];
+        renderQueueList();
+        // Otomatis pilih sesi pertama jika belum ada yang dipilih
+        if (!currentSessionId && sessions.length > 0) {
+          selectSession(sessions[0].session_id);
+        }
+      } else if (event === "handover_requested") {
+        playChime();
+        syncSession(data);
+        showToast(`🔔 Pemohon #${data.session_id} meminta bantuan Petugas CS!`);
+      } else if (event === "session_updated") {
+        syncSession(data);
+      } else if (event === "user_message" || event === "message_added") {
+        if (data.session) syncSession(data.session);
+        if (currentSessionId && data.session_id === currentSessionId) {
+          appendMessageBubble(data.message);
+        }
+      } else if (event === "bot_reply") {
+        if (data.session) syncSession(data.session);
+        if (currentSessionId && data.session_id === currentSessionId) {
+          loadSessionData(currentSessionId);
+        }
+      } else if (event === "session_detail") {
+        displaySessionDetail(data);
+      }
+    }
+
+    function syncSession(sessionData) {
+      const idx = sessions.findIndex(s => s.session_id === sessionData.session_id);
+      if (idx >= 0) {
+        sessions[idx] = { ...sessions[idx], ...sessionData };
+      } else {
+        sessions.unshift(sessionData);
+      }
+      renderQueueList();
+
+      if (currentSessionId === sessionData.session_id) {
+        syncHeaderAndControls(sessionData);
+      }
+    }
+
+    // --- RENDER DAFTAR ANTREAN ---
+    function renderQueueList() {
+      const waitingTotal = sessions.filter(s => s.status === "WAITING_STAFF").length;
+      const activeTotal = sessions.filter(s => s.status === "STAFF_ACTIVE").length;
+
+      counterWaiting.textContent = waitingTotal;
+      counterActive.textContent = activeTotal;
+      countAll.textContent = sessions.length;
+      countAllBadge.textContent = `${sessions.length} Sesi`;
+      countWaitingTab.textContent = waitingTotal;
+
+      const searchTerm = queueSearchInput.value.trim().toLowerCase();
+
+      let filtered = sessions.filter(s => {
+        if (currentFilter === "waiting" && s.status !== "WAITING_STAFF") return false;
+        if (currentFilter === "staff" && s.status !== "STAFF_ACTIVE") return false;
+        if (currentFilter === "bot" && s.status !== "BOT_ACTIVE") return false;
+
+        if (searchTerm) {
+          const matchId = s.session_id.toLowerCase().includes(searchTerm);
+          const matchMsg = (s.last_message || "").toLowerCase().includes(searchTerm);
+          return matchId || matchMsg;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        queueScrollBox.innerHTML = `
+          <div style="text-align: center; color: var(--text-dim); font-size: 0.8rem; padding: 42px 16px;">
+            <i class="fa-regular fa-folder-open" style="font-size: 1.8rem; margin-bottom: 10px; display: block; opacity: 0.5;"></i>
+            Belum ada sesi percakapan pada filter ini.
+          </div>
+        `;
+        return;
+      }
+
+      queueScrollBox.innerHTML = filtered.map(s => {
+        let tagHtml = "";
+        let urgentClass = "";
+        if (s.status === "WAITING_STAFF") {
+          tagHtml = `<span class="status-tag waiting"><i class="fa-solid fa-bell"></i> Butuh CS</span>`;
+          urgentClass = "waiting-urgent";
+        } else if (s.status === "STAFF_ACTIVE") {
+          tagHtml = `<span class="status-tag active"><i class="fa-solid fa-user-check"></i> Dilayani</span>`;
+        } else {
+          tagHtml = `<span class="status-tag bot"><i class="fa-solid fa-robot"></i> Bot AI</span>`;
+        }
+
+        const isCurrent = s.session_id === currentSessionId ? "active" : "";
+        const timeFormatted = new Date(s.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const cleanPreview = (s.last_message || "(Belum ada pesan)").replace(/<[^>]*>?/gm, '');
+
+        return `
+          <div class="queue-item ${isCurrent} ${urgentClass}" onclick="selectSession('${s.session_id}')">
+            <div class="queue-item-header">
+              <span class="item-id-pill"><i class="fa-solid fa-hashtag" style="font-size:0.65rem; opacity:0.7;"></i>${escapeHtml(s.session_id)}</span>
+              ${tagHtml}
+            </div>
+            <div class="item-preview-text">${escapeHtml(cleanPreview)}</div>
+            <div class="item-meta-bar">
+              <span><i class="fa-regular fa-clock"></i> ${timeFormatted} • ${s.message_count || 0} pesan</span>
+              ${s.staff_name ? `<span style="color:#6EE7B7; font-weight:700;"><i class="fa-solid fa-user-tie"></i> ${escapeHtml(s.staff_name)}</span>` : ""}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Filter Buttons
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentFilter = btn.getAttribute("data-filter");
+        renderQueueList();
+      });
+    });
+
+    queueSearchInput.addEventListener("input", renderQueueList);
+
+    // --- PILIH SESI TERTENTU ---
+    window.selectSession = function(sessionId) {
+      currentSessionId = sessionId;
+      renderQueueList();
+      loadSessionData(sessionId);
+    };
+
+    function loadSessionData(sessionId) {
+      if (socket && socket.readyState === WebSocket.OPEN) {
+        socket.send(JSON.stringify({ action: "get_session", session_id: sessionId }));
+      } else {
+        fetch(`/rag/handover/session/${sessionId}`)
+          .then(res => res.json())
+          .then(displaySessionDetail)
+          .catch(err => console.error("Gagal muat sesi:", err));
+      }
+    }
+
+    function displaySessionDetail(detail) {
+      if (!detail) return;
+      syncHeaderAndControls(detail);
+
+      if (!detail.messages || detail.messages.length === 0) {
+        chatStreamBox.innerHTML = `
+          <div class="chat-empty-splash">
+            <div class="splash-logo-wrap">
+              <img src="/img/logo-chatbot.jpg" alt="JAKEVO">
+            </div>
+            <h3>Belum Ada Riwayat Pesan</h3>
+            <p>Percakapan pada sesi ini masih kosong.</p>
+          </div>
+        `;
+      } else {
+        chatStreamBox.innerHTML = detail.messages.map((msg, i) => buildBubbleHtml(msg, i)).join("");
+        bindCopyButtons();
+        scrollStreamToBottom();
+      }
+
+      // Update Panel Kanan (Inspektor)
+      detailSessionId.textContent = `#${detail.session_id}`;
+      detailStatus.innerHTML = detail.status === "WAITING_STAFF"
+        ? `<span style="color:#FCA5A5;">🔴 Menunggu CS</span>`
+        : (detail.status === "STAFF_ACTIVE" ? `<span style="color:#6EE7B7;">🟢 Dilayani Petugas</span>` : `<span style="color:#CBD5E1;">🤖 Bersama Bot AI</span>`);
+      detailStaffName.textContent = detail.staff_name || "-";
+      detailMsgCount.textContent = `${detail.messages ? detail.messages.length : 0} pesan`;
+      detailStartTime.textContent = new Date(detail.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      internalNotesField.value = localStorage.getItem(`jakevo_notes_${detail.session_id}`) || "";
+    }
+
+    function syncHeaderAndControls(session) {
+      chatActionGroup.style.display = "flex";
+      activeSessionHeader.innerHTML = `Pemohon <span style="font-family:'JetBrains Mono',monospace; background:rgba(15,23,42,0.55); padding:2px 10px; border-radius:8px; font-size:0.9rem; color:#FDE047;">#${escapeHtml(session.session_id)}</span>`;
+
+      if (session.status === "WAITING_STAFF") {
+        activeAvatar.innerHTML = `<i class="fa-solid fa-bell fa-shake" style="color:#FCA5A5;"></i>`;
+        activeSessionSub.innerHTML = `⚠️ Menunggu respons Petugas Pelayanan CS`;
+      } else if (session.status === "STAFF_ACTIVE") {
+        activeAvatar.innerHTML = `<i class="fa-solid fa-user-shield" style="color:#6EE7B7;"></i>`;
+        activeSessionSub.innerHTML = `👨‍💼 Ditangani oleh: <strong>${escapeHtml(session.staff_name || "Anda")}</strong>`;
+      } else {
+        activeAvatar.innerHTML = `<i class="fa-solid fa-robot" style="color:#FACC15;"></i>`;
+        activeSessionSub.innerHTML = `🤖 Dilayani otomatis oleh Chatbot AI JAKEVO`;
+      }
+
+      if (session.status === "STAFF_ACTIVE") {
+        dockBannerTakeover.style.display = "none";
+        btnMainTakeover.style.display = "none";
+        btnMainResolve.style.display = "inline-flex";
+        inputStaffReply.disabled = false;
+        btnSubmitReply.disabled = false;
+        inputStaffReply.placeholder = "Ketik balasan resmi Anda untuk pemohon di sini... (Tekan Enter untuk kirim)";
+        if (typeof autoResizeReplyBox === "function") autoResizeReplyBox();
+      } else {
+        dockBannerTakeover.style.display = "flex";
+        btnMainTakeover.style.display = "inline-flex";
+        btnMainResolve.style.display = "none";
+        inputStaffReply.disabled = true;
+        btnSubmitReply.disabled = true;
+        inputStaffReply.placeholder = "Klik tombol 'Ambil Alih Obrolan' atau pilih Balasan Cepat di atas untuk mulai membalas...";
+      }
+    }
+
+    // --- FORMATTER JAWABAN BOT IDENTIK DENGAN HALAMAN UTAMA (KUNING #FACC15, NOMOR TEBAL, TAUTAN) ---
+    function formatBotAnswerRich(rawText) {
+      if (!rawText) return "";
+
+      let text = String(rawText);
+      // Normalisasi penomoran dalam satu baris
+      text = text.replace(/([;:])\s*([1-9]\d?)\.\s+/g, "$1\n$2. ");
+      text = text.replace(/(?:\n|^)((?:PM1|IZIN|SURAT\s+IZIN)\s+[^\n]+)/gi, "\n\n$1\n");
+
+      const lines = text.trim().split("\n");
+      const htmlLines = [];
+      let seenListItems = false;
+
+      for (let line of lines) {
+        let stripped = line.trim();
+        if (!stripped) continue;
+
+        const matchNum = stripped.match(/^(\d+)[\.\)]\s+(.*)/);
+        const matchBullet = stripped.match(/^[-*•]\s+(.*)/);
+        const isSectionHeader = /^(?:\*\*|\#\#\s*)?(?:PM1|IZIN\s+|SURAT\s+IZIN|Layanan\s+|Ketentuan\s+|Dokumen\s+)/i.test(stripped)
+          || (seenListItems && !matchNum && !matchBullet && stripped.endsWith(":"));
+
+        if (matchNum) {
+          seenListItems = true;
+          let content = formatInlineRich(matchNum[2]);
+          htmlLines.push(`<div style="margin: 0 0 5px 0; padding-left: 22px; text-indent: -22px;"><strong style="color:#FACC15;">${matchNum[1]}.</strong> ${content}</div>`);
+        } else if (matchBullet) {
+          let content = formatInlineRich(matchBullet[1]);
+          htmlLines.push(`<p style="margin: 0 0 5px 0;">• ${content}</p>`);
+        } else if (isSectionHeader) {
+          let cleanTitle = stripped.replace(/^[\*\#\s]+|[\*]+$/g, "");
+          let content = formatInlineRich(cleanTitle);
+          htmlLines.push(`<div class="jakevo-doc-title">${content}</div>`);
+        } else {
+          let content = formatInlineRich(stripped);
+          htmlLines.push(`<p style="margin: 0 0 6px 0;">${content}</p>`);
+        }
+      }
+
+      return htmlLines.join("");
+    }
+
+    function formatInlineRich(str) {
+      let escaped = escapeHtml(str);
+      // Bold **teks**
+      escaped = escaped.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+      // Highlight "| Pelaksana: ..."
+      escaped = escaped.replace(/\|\s*Pelaksana:\s*([^<\n]+)/gi, `| <span style="color:#93C5FD; font-weight:700;">Pelaksana: $1</span>`);
+      // URL clickable
+      escaped = escaped.replace(/(https?:\/\/[^\s<>"'\)]+)/gi, (match, url) => {
+        const cleanUrl = url.replace(/[.,;]+$/, "");
+        return `<a href="${cleanUrl}" target="_blank" rel="noopener noreferrer" class="jakevo-link-btn"><i class="fa-solid fa-file-arrow-down"></i> Unduh Dokumen &nearr;</a>`;
+      });
+      return escaped;
+    }
+
+    function buildBubbleHtml(msg) {
+      const timeStr = new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      if (msg.sender === "system") {
+        return `
+          <div class="msg-row system">
+            <div class="msg-card"><i class="fa-solid fa-bolt" style="margin-right:6px;"></i>${escapeHtml(msg.text)}</div>
+          </div>
+        `;
+      }
+
+      if (msg.sender === "bot") {
+        const formattedBody = msg.meta?.html ? msg.meta.html : formatBotAnswerRich(msg.text);
+        const scoreVal = msg.meta?.score || 85;
+        const sumberVal = msg.meta?.sumber || msg.meta?.doc_source || "Basis Data Dokumen Resmi DPMPTSP DKI Jakarta";
+        const docIdVal = msg.meta?.doc_id || (sumberVal.split(",")[0] || "DOC-JAKEVO").trim();
+
+        const citationHtml = `
+          <div class="rag-source-citation">
+            <div class="source-header-row">
+              <span>📚 Sumber Dokumen RAG Resmi:</span>
+              <span style="background:rgba(22,163,74,0.2); color:#4ADE80; padding:1px 8px; border-radius:99px; font-size:0.68rem;">Relevansi: ${scoreVal}%</span>
+            </div>
+            <div class="source-content-box">
+              <span class="source-doc-id">${escapeHtml(docIdVal)}</span>
+              <span class="source-doc-name">${escapeHtml(sumberVal)}</span>
+              <span class="source-verified-tag">✓ Terverifikasi DPMPTSP</span>
+            </div>
+          </div>
+        `;
+
+        return `
+          <div class="msg-row bot">
+            <div class="msg-avatar bot-av" title="Chatbot AI JAKEVO">
+              <img src="/img/logo-chatbot.jpg" alt="Bot JAKEVO">
+            </div>
+            <div class="msg-card">
+              <div class="msg-header-line">
+                <div class="sender-badge-group">
+                  <span class="sender-title">✨ Chatbot JAKEVO</span>
+                  <span class="verified-pill bot-pill">Resmi DPMPTSP</span>
+                </div>
+              </div>
+              <div class="msg-body-content">${formattedBody}</div>
+              ${citationHtml}
+              <div class="msg-footer-line">
+                <button type="button" class="btn-copy-bubble" title="Salin pesan ini">
+                  <i class="fa-regular fa-copy"></i> <span>Salin</span>
+                </button>
+                <span>${timeStr}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (msg.sender === "staff") {
+        const staffTitle = escapeHtml(msg.meta?.staff_name || "Petugas Pelayanan PTSP");
+        const formattedStaff = escapeHtml(msg.text).replace(/\n/g, "<br>");
+        return `
+          <div class="msg-row staff">
+            <div class="msg-avatar staff-av" title="${staffTitle}">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="msg-card">
+              <div class="msg-header-line">
+                <div class="sender-badge-group">
+                  <span class="sender-title">👨‍💼 ${staffTitle}</span>
+                  <span class="verified-pill staff-pill">Petugas Resmi DPMPTSP</span>
+                </div>
+              </div>
+              <div class="msg-body-content">${formattedStaff}</div>
+              <div class="msg-footer-line">
+                <button type="button" class="btn-copy-bubble" title="Salin pesan ini">
+                  <i class="fa-regular fa-copy"></i> <span>Salin</span>
+                </button>
+                <span>${timeStr}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Default: Pesan Pemohon (User)
+      const formattedUser = escapeHtml(msg.text).replace(/\n/g, "<br>");
+      return `
+        <div class="msg-row user">
+          <div class="msg-avatar user-av" title="Pemohon Warga">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="msg-card">
+            <div class="msg-header-line">
+              <div class="sender-badge-group">
+                <span class="sender-title">Pemohon Warga</span>
+                <span class="verified-pill user-pill">Warga DKI</span>
+              </div>
+            </div>
+            <div class="msg-body-content">${formattedUser}</div>
+            <div class="msg-footer-line">
+              <span>${timeStr}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function bindCopyButtons() {
+      chatStreamBox.querySelectorAll(".btn-copy-bubble").forEach(btn => {
+        if (btn._bound) return;
+        btn._bound = true;
+        btn.addEventListener("click", () => {
+          const card = btn.closest(".msg-card");
+          const bodyEl = card ? card.querySelector(".msg-body-content") : null;
+          if (!bodyEl) return;
+          navigator.clipboard.writeText(bodyEl.innerText).then(() => {
+            btn.innerHTML = `<i class="fa-solid fa-check" style="color:#4ADE80;"></i> <span style="color:#4ADE80;">Tersalin</span>`;
+            setTimeout(() => {
+              btn.innerHTML = `<i class="fa-regular fa-copy"></i> <span>Salin</span>`;
+            }, 1800);
+          });
+        });
+      });
+    }
+
+    function appendMessageBubble(msg) {
+      const emptySplash = chatStreamBox.querySelector(".chat-empty-splash");
+      if (emptySplash) chatStreamBox.innerHTML = "";
+
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = buildBubbleHtml(msg);
+      chatStreamBox.appendChild(tempDiv.firstElementChild);
+      bindCopyButtons();
+      scrollStreamToBottom();
+    }
+
+    function scrollStreamToBottom() {
+      chatStreamBox.scrollTop = chatStreamBox.scrollHeight;
+    }
+
+    // --- AKSI AMBIL ALIH (TAKEOVER) ---
+    function doTakeover(callbackAfter) {
+      if (!currentSessionId) {
+        showToast("Pilih sesi pemohon di sebelah kiri terlebih dahulu");
+        return;
+      }
+      const staffName = staffNameInput.value.trim() || "Petugas Pelayanan PTSP";
+
+      if (socket && socket.readyState === WebSocket.OPEN) {
+        socket.send(JSON.stringify({
+          action: "takeover",
+          session_id: currentSessionId,
+          staff_name: staffName,
+        }));
+        showToast(`✅ Sesi #${currentSessionId} diambil alih oleh ${staffName}`);
+        if (typeof callbackAfter === "function") setTimeout(callbackAfter, 200);
+      } else {
+        fetch("/rag/handover/takeover", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ session_id: currentSessionId, staff_name: staffName })
+        }).then(res => res.json()).then(() => {
+          loadSessionData(currentSessionId);
+          showToast(`✅ Sesi #${currentSessionId} diambil alih`);
+          if (typeof callbackAfter === "function") callbackAfter();
+        });
+      }
+    }
+
+    btnMainTakeover.addEventListener("click", () => doTakeover());
+    btnQuickTakeover.addEventListener("click", () => doTakeover());
+
+    // --- AKSI SELESAIKAN & KEMBALIKAN KE BOT ---
+    btnMainResolve.addEventListener("click", () => {
+      if (!currentSessionId) return;
+      if (!confirm("Selesaikan sesi konsultasi ini dan kembalikan pemohon ke Chatbot AI JAKEVO?")) return;
+
+      if (socket && socket.readyState === WebSocket.OPEN) {
+        socket.send(JSON.stringify({
+          action: "resolve",
+          session_id: currentSessionId,
+        }));
+        showToast("🔄 Sesi dikembalikan ke Chatbot AI JAKEVO");
+      } else {
+        fetch("/rag/handover/resolve", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ session_id: currentSessionId })
+        }).then(res => res.json()).then(() => {
+          loadSessionData(currentSessionId);
+          showToast("🔄 Sesi dikembalikan ke Chatbot AI JAKEVO");
+        });
+      }
+    });
+
+    // --- AUTO-RESIZE TEXTAREA AGAR MENINGGI OTOMATIS SAAT TEKS PANJANG ---
+    function autoResizeReplyBox() {
+      inputStaffReply.style.height = "auto";
+      const nextHeight = Math.min(Math.max(inputStaffReply.scrollHeight, 28), 160);
+      inputStaffReply.style.height = nextHeight + "px";
+    }
+
+    inputStaffReply.addEventListener("input", autoResizeReplyBox);
+
+    // --- KIRIM BALASAN PETUGAS ---
+    function dispatchStaffReply() {
+      const text = inputStaffReply.value.trim();
+      if (!text || !currentSessionId) return;
+      const staffName = staffNameInput.value.trim() || "Petugas Pelayanan PTSP";
+
+      if (socket && socket.readyState === WebSocket.OPEN) {
+        socket.send(JSON.stringify({
+          action: "send_message",
+          session_id: currentSessionId,
+          text: text,
+          staff_name: staffName,
+        }));
+      } else {
+        fetch("/rag/handover/reply", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ session_id: currentSessionId, message: text, staff_name: staffName })
+        });
+      }
+
+      inputStaffReply.value = "";
+      autoResizeReplyBox();
+      inputStaffReply.focus();
+    }
+
+    btnSubmitReply.addEventListener("click", dispatchStaffReply);
+    inputStaffReply.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        dispatchStaffReply();
+      }
+    });
+
+    // Helper: Masukkan teks template ke kolom balasan (otomatis tawarkan/aktifkan takeover bila belum aktif)
+    function insertTemplateToReply(text) {
+      if (!currentSessionId) {
+        showToast("Pilih sesi pemohon terlebih dahulu di panel kiri");
+        return;
+      }
+      if (inputStaffReply.disabled) {
+        doTakeover(() => {
+          inputStaffReply.disabled = false;
+          btnSubmitReply.disabled = false;
+          inputStaffReply.value = text;
+          autoResizeReplyBox();
+          inputStaffReply.focus();
+        });
+      } else {
+        inputStaffReply.value = text;
+        autoResizeReplyBox();
+        inputStaffReply.focus();
+      }
+    }
+
+    // Canned Response Pills Click
+    document.querySelectorAll(".canned-pill").forEach(pill => {
+      pill.addEventListener("click", () => {
+        insertTemplateToReply(pill.getAttribute("data-text"));
+      });
+    });
+
+    // SOP Cheat-Sheet Click
+    document.querySelectorAll(".sop-quick-item").forEach(item => {
+      item.addEventListener("click", () => {
+        insertTemplateToReply(item.getAttribute("data-insert"));
+        showToast("📋 Teks SOP disisipkan ke kolom balasan");
+      });
+    });
+
+    // Salin Transkrip Obrolan
+    btnCopyTranscript.addEventListener("click", () => {
+      if (!currentSessionId) {
+        showToast("Pilih sesi terlebih dahulu");
+        return;
+      }
+      const rows = chatStreamBox.querySelectorAll(".msg-row");
+      let textToCopy = `=== TRANSKRIP LAYANAN JAKEVO (#${currentSessionId}) ===\n\n`;
+      rows.forEach(r => {
+        const title = r.querySelector(".sender-title")?.innerText || "SISTEM";
+        const body = r.querySelector(".msg-body-content")?.innerText || r.querySelector(".msg-card")?.innerText || "";
+        textToCopy += `${title}:\n${body}\n\n`;
+      });
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showToast("✅ Transkrip obrolan berhasil disalin ke clipboard!");
+      });
+    });
+
+    btnRefreshSession.addEventListener("click", () => {
+      if (currentSessionId) {
+        loadSessionData(currentSessionId);
+        showToast("🔄 Riwayat sesi dimuat ulang");
+      }
+    });
+
+    function escapeHtml(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // ==========================================================================
+    // OTENTIKASI LOGIN & LOGOUT PETUGAS ADMIN CS
+    // ==========================================================================
+    const adminLoginOverlay = document.getElementById("adminLoginOverlay");
+    const adminLoginForm = document.getElementById("adminLoginForm");
+    const loginUsername = document.getElementById("loginUsername");
+    const loginPassword = document.getElementById("loginPassword");
+    const loginErrorBox = document.getElementById("loginErrorBox");
+    const loginErrorText = document.getElementById("loginErrorText");
+    const btnTogglePw = document.getElementById("btnTogglePw");
+    const pwEyeIcon = document.getElementById("pwEyeIcon");
+    const btnLogoutAdmin = document.getElementById("btnLogoutAdmin");
+
+    const LOCAL_ADMIN_ACCOUNTS = {
+      "admin1": { password: "admin321", staff_name: "Petugas Pelayanan 1 (admin1)" },
+      "admin2": { password: "admin123", staff_name: "Petugas Pelayanan 2 (admin2)" }
+    };
+
+    // Toggle Lihat/Sembunyikan Password
+    btnTogglePw.addEventListener("click", () => {
+      const isPw = loginPassword.type === "password";
+      loginPassword.type = isPw ? "text" : "password";
+      pwEyeIcon.className = isPw ? "fa-regular fa-eye-slash" : "fa-regular fa-eye";
+    });
+
+    function grantAdminAccess(authData) {
+      isAdminAuthenticated = true;
+      sessionStorage.setItem("jakevo_admin_auth", JSON.stringify(authData));
+
+      if (authData.staff_name) {
+        staffNameInput.value = authData.staff_name;
+        localStorage.setItem("jakevo_staff_name", authData.staff_name);
+      }
+
+      adminLoginOverlay.classList.add("hidden");
+      loginErrorBox.style.display = "none";
+      setupAdminWebSocket();
+      showToast(`👋 Selamat bertugas, ${authData.staff_name}!`);
+    }
+
+    // Cek apakah sudah login pada sesi tab browser ini
+    const existingAuth = sessionStorage.getItem("jakevo_admin_auth");
+    if (existingAuth) {
+      try {
+        const parsedAuth = JSON.parse(existingAuth);
+        if (parsedAuth && parsedAuth.username && LOCAL_ADMIN_ACCOUNTS[parsedAuth.username]) {
+          grantAdminAccess(parsedAuth);
+        }
+      } catch (e) {
+        sessionStorage.removeItem("jakevo_admin_auth");
+      }
+    }
+
+    adminLoginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const uid = loginUsername.value.trim().toLowerCase();
+      const pw = loginPassword.value.trim();
+
+      loginErrorBox.style.display = "none";
+
+      // Verifikasi langsung akun resmi (admin1 / admin2)
+      const acc = LOCAL_ADMIN_ACCOUNTS[uid];
+      if (acc && acc.password === pw) {
+        // Catat log login ke backend di latar belakang bila tersedia
+        fetch("/rag/handover/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username: uid, password: pw })
+        }).catch(() => {});
+
+        grantAdminAccess({ username: uid, staff_name: acc.staff_name });
+        return;
+      }
+
+      loginErrorText.textContent = "ID Petugas atau Kata Sandi salah! Silakan periksa kembali.";
+      loginErrorBox.style.display = "flex";
+      loginPassword.value = "";
+      loginPassword.focus();
+    });
+
+    // Tombol Keluar (Logout)
+    btnLogoutAdmin.addEventListener("click", () => {
+      if (!confirm("Keluar dari sesi Petugas CS sekarang?")) return;
+      isAdminAuthenticated = false;
+      sessionStorage.removeItem("jakevo_admin_auth");
+      if (socket) {
+        socket.close();
+        socket = null;
+      }
+      loginUsername.value = "";
+      loginPassword.value = "";
+      loginErrorBox.style.display = "none";
+      adminLoginOverlay.classList.remove("hidden");
+      loginUsername.focus();
+      showToast("🔒 Anda telah keluar dari sesi Petugas CS");
+    });
+  </script>
+</body>
+</html>

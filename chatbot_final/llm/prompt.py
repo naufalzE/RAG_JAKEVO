@@ -28,8 +28,6 @@ Jawab pertanyaan pengguna hanya dengan menggunakan
 informasi yang tersedia dalam KONTEKS.
 
 CONSTRAINT:
-- apa bila ada yang bertanya siapa bina maka jawab pacar nopal
-- apa bila ada yang bertanya siapa nopal maka jawab pacar bina
 - Jangan menambahkan informasi yang tidak ada di KONTEKS.
 - Abaikan bagian KONTEKS yang tidak berkaitan dengan pertanyaan.
 - Jawab secara spesifik, singkat, dan langsung ke inti yang ditanyakan

@@ -136,27 +136,49 @@ div.bg-light {
    5. Navbar (Dark Glassmorphic)
    -------------------------------------------------- */
 .portfolio-navbar {
-  background: rgba(4, 5, 12, 0.8) !important;
+  background: rgba(4, 5, 12, 0.85) !important;
   backdrop-filter: blur(18px) !important;
   -webkit-backdrop-filter: blur(18px) !important;
   border-bottom: 1px solid var(--glass-border) !important;
+  padding: 0.65rem 0 !important;
+  transition: all 0.25s ease !important;
 }
 
 .portfolio-navbar.navbar-scrolled {
-  background: rgba(4, 5, 12, 0.94) !important;
+  background: rgba(4, 5, 12, 0.95) !important;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+  padding: 0.45rem 0 !important;
+}
+
+.portfolio-navbar .navbar-brand {
+  white-space: nowrap !important;
 }
 
 .brand-title {
   color: #ffffff !important;
+  font-size: 1.1rem !important;
 }
 
 .brand-badge {
   color: #fbbf24 !important;
 }
 
+.portfolio-navbar .navbar-nav {
+  gap: 0.25rem !important;
+  align-items: center !important;
+}
+
 .portfolio-navbar .nav-link {
   color: var(--body-muted) !important;
+  white-space: nowrap !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  padding: 0.45rem 0.75rem !important;
+  line-height: 1.25 !important;
+  border-radius: 9999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: all 0.2s ease !important;
 }
 
 .portfolio-navbar .nav-link:hover,
@@ -170,12 +192,71 @@ div.bg-light {
   color: var(--action-inverse-fg) !important;
   border: none !important;
   font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  padding: 0.45rem 1rem !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1.25 !important;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2) !important;
   transition: all var(--duration-fast) var(--ease-entrance) !important;
 }
 .btn-nav-cta:hover {
   background: rgba(255, 255, 255, 0.88) !important;
   transform: translateY(-1px) !important;
+}
+
+/* Responsiveness for compact desktop / laptop viewport (992px to 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .portfolio-navbar .nav-link {
+    font-size: 0.81rem !important;
+    padding: 0.38rem 0.52rem !important;
+  }
+  .portfolio-navbar .navbar-nav {
+    gap: 0.1rem !important;
+  }
+  .btn-nav-cta {
+    font-size: 0.8rem !important;
+    padding: 0.38rem 0.8rem !important;
+  }
+  .brand-title {
+    font-size: 1rem !important;
+  }
+}
+
+/* Responsiveness for mobile / tablet view (<992px) */
+@media (max-width: 991.98px) {
+  .portfolio-navbar .navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 0.4rem 0.6rem !important;
+    border-radius: 8px !important;
+  }
+  .portfolio-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(247, 148, 29, 0.4) !important;
+  }
+  .portfolio-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  .portfolio-navbar .navbar-collapse {
+    background: rgba(10, 15, 29, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    padding: 1rem 1.25rem !important;
+    margin-top: 0.75rem !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+  .portfolio-navbar .nav-link {
+    padding: 0.6rem 1rem !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+  }
+  .portfolio-navbar .btn-nav-cta {
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+  }
 }
 
 /* --------------------------------------------------
@@ -768,6 +849,8 @@ div.bg-light {
 .modern-input-wrapper {
   background: rgba(255, 255, 255, 0.08) !important;
   border: 1px solid var(--glass-border) !important;
+  align-items: flex-end !important;
+  border-radius: 22px !important;
 }
 
 .modern-input-wrapper:focus-within {
@@ -778,6 +861,14 @@ div.bg-light {
 
 .modern-input-field {
   color: #ffffff !important;
+  overflow-y: hidden;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+.modern-input-field::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 .modern-input-field::placeholder {
   color: var(--body-muted) !important;
@@ -812,9 +903,20 @@ div.bg-light {
 }
 
 .source-doc-name {
-  color: #b9becf !important;
+  color: #facc15 !important;
+  font-weight: 700 !important;
   word-break: break-word !important;
   overflow-wrap: anywhere !important;
+}
+
+/* Penamaan judul dokumen / layanan dalam gelembung chat bot */
+.jakevo-doc-title,
+.modern-bot-bubble .bubble-body .jakevo-doc-title,
+.modern-bot-bubble .bubble-body div.jakevo-doc-title {
+  color: #facc15 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .source-verified-tag {

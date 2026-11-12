@@ -67,6 +67,8 @@ class ChunkSumber(BaseModel):
 class ChatRequest(BaseModel):
     message: Optional[str] = Field(None, description="Teks pesan dari frontend")
     pertanyaan: Optional[str] = Field(None, description="Alias pertanyaan")
+    session_id: Optional[str] = Field(None, description="ID unik sesi pengguna/pemohon")
+    is_handover_request: bool = Field(default=False, description="Flag permintaan pengalihan ke staf CS")
     topk: int = Field(default=10, ge=1, le=30)
     jumlah_chunk: int = Field(default=3, ge=1, le=10)
     jumlah_tetangga: int = Field(default=1, ge=0, le=5)
@@ -84,6 +86,9 @@ class MatchedDoc(BaseModel):
 
 class ChatResponse(BaseModel):
     query: str
+    session_id: Optional[str] = None
+    handover_status: Optional[str] = Field(default="BOT_ACTIVE", description="Status sesi: BOT_ACTIVE, WAITING_STAFF, STAFF_ACTIVE, RESOLVED")
+    staff_name: Optional[str] = None
     tokens: List[str] = []
     isRelevant: bool
     score: int
